@@ -36,9 +36,9 @@ The product was launched publicly and demonstrated in industry-facing sessions t
 Product Security Architecture • Attack Surface Management • Security Data Pipelines • Risk Prioritization • Cross-Functional Delivery
 
 ## External References
-- Product page: https://www.invia.com.au/CyberShield360
-- Demo video 1: https://www.youtube.com/watch?v=a-o99XjxkMw
-- Demo video 2: https://www.youtube.com/watch?v=4FVeZtl4WZs
+- Product page: [CyberShield360](https://www.invia.com.au/CyberShield360)
+- Demo video 1: [CyberShield360 walkthrough](https://www.youtube.com/watch?v=a-o99XjxkMw)
+- Demo video 2: [CyberShield360 demo](https://www.youtube.com/watch?v=4FVeZtl4WZs)
 
 ## Why This Matters
 This case study demonstrates my ability to build a security product from scratch, make architecture decisions under real-world constraints, and deliver an operational capability that security teams can adopt at scale.
