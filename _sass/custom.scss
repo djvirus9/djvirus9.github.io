@@ -81,3 +81,35 @@
     min-height: unset;
   }
 }
+
+/* --- Case Studies: desktop-only card title sizing --- */
+@media (min-width: 768px) {
+  .page__content .feature__wrapper .archive__item-title {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em;
+  }
+
+  /* If theme applies size to link instead of heading */
+  .page__content .feature__wrapper .archive__item-title a {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Optional: keep title to 2 lines max (no ellipsis if possible) */
+  .page__content .feature__wrapper .archive__item-title a {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Mobile untouched */
+  .page__content .feature__wrapper .archive__item-title,
+  .page__content .feature__wrapper .archive__item-title a {
+    font-size: unset !important;
+    -webkit-line-clamp: unset !important;
+  }
+}

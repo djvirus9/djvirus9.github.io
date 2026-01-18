@@ -21,26 +21,16 @@ Visual sanity checklist:
     }
   }
 
-  var stored = null;
-  try {
-    stored = localStorage.getItem('theme');
-  } catch (e) {
-    stored = null;
-  }
-  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  var initial = stored === 'dark' || stored === 'light' ? stored : (prefersDark ? 'dark' : 'light');
-
-  applyTheme(initial);
+  // DEFAULT: light if no saved preference
+  var saved = null;
+  try { saved = localStorage.getItem('theme'); } catch (e) {}
+  applyTheme(saved === 'dark' ? 'dark' : 'light');
 
   if (toggleBtn) {
     toggleBtn.addEventListener('click', function () {
       var current = html.getAttribute('data-theme') || 'light';
       var next = current === 'dark' ? 'light' : 'dark';
-      try {
-        localStorage.setItem('theme', next);
-      } catch (e) {
-        /* ignore storage errors */
-      }
+      try { localStorage.setItem('theme', next); } catch (e) {}
       applyTheme(next);
     });
   }
