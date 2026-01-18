@@ -1,3 +1,8 @@
+---
+layout: default
+title: Exploring LLM Security Risks & OWASP Top 10 for LLMs
+---
+
 # Exploring LLM Security Risks & OWASP Top 10 for LLMs
 
 ## Summary

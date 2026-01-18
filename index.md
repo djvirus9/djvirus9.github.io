@@ -18,6 +18,20 @@ Security engineer with 6+ years of experience building and scaling security prog
 
 ---
 
+## Target Roles
+Product Security • Application Security • Cloud Security (AWS) • DevSecOps
+
+---
+
+## Selected Impact
+- Reduced critical production-bound vulnerabilities by ~30% by integrating Semgrep and Trivy into CI/CD.
+- Built and scaled Product Security as the first dedicated security engineer across web, mobile, APIs, and cloud.
+- Launched CyberShield360 (ASM product), increasing client engagement by ~200%.
+- Led ISO 27001:2022 readiness as primary security SPOC across engineering, IT, HR, and finance.
+- Designed and operated a bug bounty program with clear scope, triage workflows, and payout governance.
+
+---
+
 ## Core Competencies
 - Product & Application Security (Web/API/Mobile)
 - Cloud Security (AWS: IAM, VPC, WAF, ALB, GuardDuty, CloudTrail)
@@ -25,6 +39,13 @@ Security engineer with 6+ years of experience building and scaling security prog
 - Bug Bounty Operations (triage, governance, payout model)
 - Threat Modeling (STRIDE) & Secure-by-Design Reviews
 - Governance & Compliance (ISO 27001:2022 readiness)
+
+---
+
+## Tooling & Stack
+- Semgrep, Trivy, Burp Suite, Prowler, ScoutSuite, ThreatMapper
+- AWS (EC2, IAM, VPC, ALB, WAF, CloudTrail, GuardDuty)
+- Nessus, Metasploit, Nmap, Wireshark
 
 ---
 
@@ -40,6 +61,13 @@ Security engineer with 6+ years of experience building and scaling security prog
 ## Writing & Research
 - [Writing Index](blog/index.md)
 - [Exploring LLM Security Risks & OWASP Top 10 for LLMs](blog/llm-security-owasp-top10.md)
+
+---
+
+## Certifications
+- Multi-Cloud Red Team Analyst (2024–Present)
+- Certified Red Team Professional (CRTP) (2022–Present)
+- Certified Ethical Hacker (CEH) (2020–Present)
 
 ---
 
