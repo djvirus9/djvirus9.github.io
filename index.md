@@ -4,6 +4,7 @@ title: Danish Siddiqui | Security Engineer
 ---
 
 # Danish Siddiqui
+<img src="assets/Danish_Siddiqui_passsport_sized_photo.jpg" alt="Danish Siddiqui headshot" width="140" style="float: right; margin: 0 0 12px 12px; border-radius: 6px;" />
 **Senior / Product Security Engineer**  
 AppSec • Cloud Security (AWS) • DevSecOps • Bug Bounty • ISO 27001
 
