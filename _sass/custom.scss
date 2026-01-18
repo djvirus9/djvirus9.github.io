@@ -145,3 +145,79 @@
 @media (max-width: 767px) {
   /* leave mobile behaviour unchanged */
 }
+
+/* ================================
+   Case Studies cards: layout fix
+   Prevent title/excerpt overlap + normalize sizing
+   ================================ */
+
+.page__content .feature__wrapper .archive__item {
+  /* treat each card as a layout container */
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.page__content .feature__wrapper .archive__item-body {
+  /* make body take full height so button can align to bottom */
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+}
+
+.page__content .feature__wrapper .archive__item-title {
+  margin-bottom: 0.6rem !important;
+}
+
+.page__content .feature__wrapper .archive__item-title a {
+  /* readable desktop title size, no overlap, controlled lines */
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
+  hyphens: auto;
+
+  line-height: 1.15 !important;
+  font-size: 1.45rem !important; /* desktop */
+  -webkit-line-clamp: 3 !important; /* max 3 lines */
+}
+
+.page__content .feature__wrapper .archive__item-excerpt {
+  /* clamp excerpt and prevent pushing layout */
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  -webkit-line-clamp: 5 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  min-height: 0 !important;
+}
+
+.page__content .feature__wrapper .btn,
+.page__content .feature__wrapper .btn--primary {
+  /* keep CTA at bottom */
+  margin-top: auto !important;
+  align-self: flex-start !important;
+}
+
+/* Improve the card grid spacing/consistency */
+.page__content .feature__wrapper .archive__item-teaser,
+.page__content .feature__wrapper .archive__item-teaser img {
+  border-radius: 14px !important;
+}
+
+/* Mobile tuning: slightly smaller title but keep style */
+@media (max-width: 767px) {
+  .page__content .feature__wrapper .archive__item-title a {
+    font-size: 1.35rem !important;
+    -webkit-line-clamp: 3 !important;
+  }
+  .page__content .feature__wrapper .archive__item-excerpt {
+    -webkit-line-clamp: 6 !important;
+  }
+}
