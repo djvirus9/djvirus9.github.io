@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Writing & Research | Danish Siddiqui
-published: false
+title: "Writing & Research"
+permalink: /blog/
+layout: single
 ---
 
 # Writing & Research

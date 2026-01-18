@@ -1,0 +1,9 @@
+main:
+  - title: "Case Studies"
+    url: "/case-studies/"
+  - title: "Security Overview"
+    url: "/security-ownership-overview/"
+  - title: "Writing"
+    url: "/blog/"
+  - title: "Resume"
+    url: "/assets/Danish_Security_Engineer_Dubai_6.5_Yrs_Remote.pdf"

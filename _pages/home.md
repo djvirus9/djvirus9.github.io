@@ -1,7 +1,7 @@
 ---
-layout: default
-title: Danish Siddiqui | Senior Product Security Engineer
-published: false
+title: "Home"
+permalink: /
+layout: single
 ---
 
 # Danish Siddiqui

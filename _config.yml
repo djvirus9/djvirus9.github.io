@@ -1,2 +1,66 @@
-theme: jekyll-theme-cayman
-title: Danish Siddiqui | Security Engineer
+title: "Danish Siddiqui | Senior Product Security Engineer"
+description: "Senior Product Security Engineer specializing in Application Security, AWS Cloud Security, DevSecOps, ISO 27001, and security ownership."
+url: "https://djvirus9.github.io"
+baseurl: ""
+repository: "djvirus9/djvirus9.github.io"
+locale: "en-US"
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "air"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+
+permalink: /:categories/:title/
+
+include:
+  - _pages
+
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+
+author:
+  name: "Danish Siddiqui"
+  avatar: "/assets/avatar.jpg"
+  bio: "Senior Product Security Engineer — AppSec, AWS Cloud Security, DevSecOps, ISO 27001, Bug Bounty, CVEs."
+  location: "Dubai / Abu Dhabi (Open to relocate)"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/danish-siddiqui-bb0793197"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/djvirus9"
+    - label: "Writing"
+      icon: "fas fa-pen-nib"
+      url: "/blog/"
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:danishismyname1@gmail.com"
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: false
+      related: false
+
+breadcrumbs: true
+search: true
