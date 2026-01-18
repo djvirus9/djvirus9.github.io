@@ -88,7 +88,8 @@ These lessons informed improvements across DevSecOps and compliance efforts.
 ## Key Skills Demonstrated
 AWS Security Architecture • Cloud Threat Modeling and Attack Path Analysis • Risk-Based Prioritization • CSPM Operations (Prowler, ScoutSuite) • Engineering Collaboration and Change Management • Executive Risk Communication
 
-**Skills & Signals:** Cloud Security (AWS) · IAM · VPC · WAF · CloudTrail · GuardDuty · CSPM · Attack Path Analysis
+### Skills & Signals
+Cloud Security (AWS) · IAM · VPC · WAF · CloudTrail · GuardDuty · CSPM · Attack Path Analysis
 
 ## Why This Matters
 This case study demonstrates my ability to reason about cloud security holistically, prioritize risk under real-world constraints, and help organizations focus effort where it meaningfully reduces attack surface -- a core requirement for Senior and Principal Security Engineers operating at scale.
