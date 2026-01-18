@@ -90,3 +90,59 @@ table, th, td {
 .theme-toggle:hover {
   background: #1a1f27;
 }
+
+/* --- Dark mode: masthead/nav readability fix --- */
+.masthead,
+.masthead__inner-wrap {
+  background: #0f1216 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.10) !important;
+}
+
+.greedy-nav,
+.masthead__menu {
+  background: transparent !important;
+}
+
+.site-title,
+.site-title:visited {
+  color: #f2f5f8 !important;
+}
+
+/* Nav links */
+.greedy-nav a,
+.masthead__menu-item a {
+  color: #e7edf3 !important;
+  opacity: 1 !important;
+}
+
+/* Hover + focus (keyboard accessibility) */
+.greedy-nav a:hover,
+.greedy-nav a:focus,
+.masthead__menu-item a:hover,
+.masthead__menu-item a:focus {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.08) !important;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* Active page link */
+.greedy-nav .active > a,
+.masthead__menu-item.active > a {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+/* Mobile menu button and icons */
+.greedy-nav__toggle,
+.greedy-nav__toggle .navicon,
+.greedy-nav__toggle .navicon:before,
+.greedy-nav__toggle .navicon:after {
+  background: #e7edf3 !important;
+}
+
+/* Ensure any masthead icons/text are readable */
+.masthead * {
+  text-shadow: none !important;
+}
