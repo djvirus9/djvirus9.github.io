@@ -1,0 +1,36 @@
+/* Case Studies: make Minimal Mistakes feature_row responsive and readable */
+.page__content .feature__wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
+}
+
+@media (max-width: 1024px) {
+  .page__content .feature__wrapper {
+    grid-template-columns: repeat(2, minmax(260px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .page__content .feature__wrapper {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.page__content .feature__item {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.page__content .feature__item .archive__item-title,
+.page__content .feature__item .archive__item-excerpt,
+.page__content .feature__item p {
+  word-break: normal !important;
+  overflow-wrap: break-word !important;
+  hyphens: auto !important;
+}
+
+.page__content .feature__item .btn {
+  white-space: nowrap !important;
+  width: auto !important;
+}
