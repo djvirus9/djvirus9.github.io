@@ -221,3 +221,44 @@
     -webkit-line-clamp: 6 !important;
   }
 }
+
+/* ================================
+   Case Studies cards: clean desktop layout (no overlap)
+   ================================ */
+
+.page__content .feature__wrapper .archive__item {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  position: relative !important;
+  overflow: hidden !important; /* prevent any overlay text from spilling */
+}
+
+.page__content .feature__wrapper .archive__item-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+}
+
+/* Kill any overlay/duplicate title rendering used by "stretched-link" patterns */
+.page__content .feature__wrapper .archive__item a::before,
+.page__content .feature__wrapper .archive__item a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Title: readable + controlled (2 lines) */
+.page__content .feature__wrapper .archive__item-title {
+  margin: 0 0 0.75rem 0 !important;
+}
+
+.page__content .feature__wrapper .archive__item-title a {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important; /* 2 clean lines */
+  overflow: hidden !important;
+
+  font-size: 1.35rem !important;    /* smaller for desktop */
+  line-height: 1.2 !important;
+}
