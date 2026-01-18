@@ -19,3 +19,49 @@
 .theme-toggle:hover {
   background: #f6f8fa;
 }
+
+/* --- Fix author sidebar overflow / clipping --- */
+.author__avatar,
+.author__content,
+.author__urls {
+  max-width: 100%;
+}
+
+.author__name,
+.author__bio,
+.author__content,
+.author__urls,
+.author__urls-wrapper,
+.author__urls li,
+.author__urls a {
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Avoid any horizontal scroll in the sidebar */
+.sidebar,
+.sidebar__right,
+.author__profile,
+.author__inner-wrap {
+  overflow-x: hidden !important;
+}
+
+/* Slightly tighter typography so long titles fit nicely */
+.author__name {
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.author__bio {
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* Ensure link labels don’t get cut */
+.author__urls a {
+  display: inline-block;
+  max-width: 100%;
+}
