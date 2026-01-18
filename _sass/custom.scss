@@ -113,3 +113,35 @@
     -webkit-line-clamp: unset !important;
   }
 }
+
+/* --- Case Studies cards: fix clipped titles on desktop --- */
+@media (min-width: 768px) {
+  /* Ensure the title area can grow and isn't clipped */
+  .page__content .feature__wrapper .archive__item-title,
+  .page__content .feature__wrapper .archive__item-title a {
+    font-size: 1.35rem !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  /* If clamp rules exist, ensure they don't cut the title off */
+  .page__content .feature__wrapper .archive__item-title a {
+    display: block !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: unset !important;
+  }
+
+  /* If the card container is clipping its children, stop it */
+  .page__content .feature__wrapper .archive__item {
+    overflow: visible !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* leave mobile behaviour unchanged */
+}
