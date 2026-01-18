@@ -34,3 +34,50 @@
   white-space: nowrap !important;
   width: auto !important;
 }
+
+/* --- Case Studies cards: desktop polish, keep mobile perfect --- */
+.page__content .feature__wrapper .feature__item .archive__item {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.25rem;
+  border-radius: 14px;
+}
+
+/* Give cards a consistent visual height on desktop/tablet */
+@media (min-width: 641px) {
+  .page__content .feature__wrapper .feature__item .archive__item {
+    min-height: 340px;
+  }
+}
+
+/* Stop overly aggressive truncation/ellipsis */
+.page__content .feature__wrapper .feature__item .archive__item-title a,
+.page__content .feature__wrapper .feature__item .archive__item-excerpt {
+  display: block;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+  -webkit-line-clamp: unset !important;
+  line-clamp: unset !important;
+}
+
+/* Excerpt spacing + readability */
+.page__content .feature__wrapper .feature__item .archive__item-excerpt {
+  margin-top: .75rem;
+  margin-bottom: 1.25rem;
+  flex: 1 1 auto;
+}
+
+/* Button stays at the bottom */
+.page__content .feature__wrapper .feature__item .btn {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Mobile: keep full-width cards, no forced min-height */
+@media (max-width: 640px) {
+  .page__content .feature__wrapper .feature__item .archive__item {
+    min-height: unset;
+  }
+}
