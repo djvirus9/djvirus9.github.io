@@ -59,6 +59,11 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 
 ---
 
+## Security Products Built
+- [CyberShield360 — Building an Attack Surface Management Product from Scratch](case-studies/cybershield360.html)
+
+---
+
 ## Case Studies
 - [Building Product Security from Scratch (Licious)](case-studies/licious-product-security.html)
 - [DevSecOps Pipeline Security: Semgrep + Trivy](case-studies/devsecops-pipeline.html)
