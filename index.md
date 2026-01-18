@@ -8,7 +8,8 @@ title: Danish Siddiqui | Security Engineer
 AppSec • Cloud Security (AWS) • DevSecOps • Bug Bounty • ISO 27001
 
 📍 Dubai / Abu Dhabi (Open to relocate)  
-🔗 [LinkedIn](https://linkedin.com/in/danish-siddiqui-bb0793197) • [GitHub](https://github.com/djvirus9) • ✉️ danishismyname1@gmail.com
+🔗 [LinkedIn](https://linkedin.com/in/danish-siddiqui-bb0793197) • [GitHub](https://github.com/djvirus9) • [Writing](blog/index.md) • ✉️ danishismyname1@gmail.com  
+Featured: [Exploring LLM Security Risks & OWASP Top 10 for LLMs](blog/llm-security-owasp-top10.md)
 
 ---
 
@@ -33,6 +34,12 @@ Security engineer with 6+ years of experience building and scaling security prog
 - [AWS Misconfiguration & Attack Path Findings](case-studies/aws-attack-paths.md)
 - [Bug Bounty Program Revamp](case-studies/bug-bounty.md)
 - [ISO 27001 Readiness Ownership](case-studies/iso27001.md)
+
+---
+
+## Writing & Research
+- [Writing Index](blog/index.md)
+- [Exploring LLM Security Risks & OWASP Top 10 for LLMs](blog/llm-security-owasp-top10.md)
 
 ---
 
