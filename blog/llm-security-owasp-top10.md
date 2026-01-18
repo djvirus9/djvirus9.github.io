@@ -15,4 +15,4 @@ The OWASP list provides a shared language to categorize LLM-specific threats and
 - Abuse of tools or plugins that execute actions beyond intended scope
 
 ## External Reference
-- Original article: https://blogs.halodoc.io/exploring-llm-security-risks-and-owasp-top-10-vulnerabilities-for-large-language-models/
+- Original article: [Exploring LLM Security Risks and OWASP Top 10 Vulnerabilities for Large Language Models](https://blogs.halodoc.io/exploring-llm-security-risks-and-owasp-top-10-vulnerabilities-for-large-language-models/)
