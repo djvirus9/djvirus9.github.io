@@ -96,8 +96,7 @@ These lessons reinforced the importance of security ownership over automation.
 ## Key Skills Demonstrated
 Bug Bounty Program Design and Governance • Vulnerability Triage and Risk Assessment • Cross-Team Remediation Coordination • Researcher Communication and Expectation Management • Cost vs Risk Trade-off Analysis • Security Program Ownership
 
-## ATS Keywords
-Bug Bounty Program • Vulnerability Management Lifecycle • Risk Management • Stakeholder Management • External Vulnerability Detection
+**Skills & Signals:** Bug Bounty Program · Vulnerability Management Lifecycle · Risk Management · Stakeholder Management · External Vulnerability Detection
 
 ## Why This Matters
 This case study demonstrates my ability to operate security programs at scale, make risk-informed decisions under ambiguity, and align external attacker input with internal engineering priorities -- a critical capability for Senior and Principal Security Engineers in mature organizations.

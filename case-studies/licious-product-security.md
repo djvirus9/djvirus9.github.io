@@ -87,8 +87,7 @@ Most importantly, security shifted from a reactive function to a trusted enginee
 ## Key Skills Demonstrated
 Product Security Strategy and Ownership • Application and API Security • AWS Cloud Security and Attack Path Analysis • DevSecOps and Security Automation • Bug Bounty Operations and Governance • Security Risk Management and Compliance Enablement
 
-## ATS Keywords
-Secure SDLC • OWASP Top 10 • OWASP API Top 10 • Vulnerability Management Lifecycle • CSPM • Stakeholder Management
+**Skills & Signals:** Secure SDLC · OWASP Top 10 · OWASP API Top 10 · Vulnerability Management Lifecycle · CSPM · Stakeholder Management
 
 ## Why This Matters
 This engagement demonstrates my ability to build security programs from zero, make pragmatic security decisions, and operate as a senior individual contributor with ownership mindset -- not just execute tools or assessments.

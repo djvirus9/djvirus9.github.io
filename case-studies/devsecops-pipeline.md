@@ -100,8 +100,7 @@ These lessons informed subsequent improvements to cloud security and compliance 
 ## Key Skills Demonstrated
 DevSecOps Architecture and Strategy • CI/CD Security Design • SAST Rule Engineering and Tuning • Container and Supply Chain Security • Developer Enablement and Workflow Integration • Risk-Based Security Decision Making
 
-## ATS Keywords
-Secure SDLC • CI/CD Security • SAST • SCA • Container Security • Vulnerability Management Lifecycle
+**Skills & Signals:** Secure SDLC · CI/CD Security · SAST · SCA · Container Security · Vulnerability Management Lifecycle
 
 ## Why This Matters
 This case study demonstrates my ability to design security systems that scale, make pragmatic trade-offs, and operate at the intersection of security, platform engineering, and developer experience -- a core expectation for Senior and Principal Security Engineers.
