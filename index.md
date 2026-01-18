@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Danish Siddiqui | Security Engineer
+title: Danish Siddiqui | Senior Product Security Engineer
 ---
 
 # Danish Siddiqui
 <img src="assets/Danish_Siddiqui_passsport_sized_photo.jpg" alt="Danish Siddiqui headshot" width="140" style="float: right; margin: 0 0 12px 12px; border-radius: 6px;" />
-**Senior / Product Security Engineer**  
+**Senior Product Security Engineer**  
 AppSec • Cloud Security (AWS) • DevSecOps • Bug Bounty • ISO 27001
 
 📍 Dubai / Abu Dhabi (Open to relocate)  
@@ -15,7 +15,11 @@ Featured: [Exploring LLM Security Risks & OWASP Top 10 for LLMs](blog/llm-securi
 ---
 
 ## Summary
-Security engineer with 6+ years of experience building and scaling security programs across application security, cloud security, and DevSecOps. First dedicated security hire at high-growth product companies, owning product security, bug bounty, and ISO 27001 readiness.
+Senior Product Security Engineer with 6+ years of experience owning and scaling end-to-end security programs across application security, cloud security (AWS), and DevSecOps in high-growth product environments.
+
+First dedicated security hire at product companies, responsible for security architecture decisions, vulnerability management, bug bounty operations, and ISO 27001:2022 readiness, working directly with engineering, platform, and leadership teams.
+
+Strong background in offensive security and real-world attack paths, enabling a pragmatic, risk-based approach to security that balances developer velocity, compliance requirements, and business impact. Experienced in embedding security into the SDLC through automation, clear governance, and developer-first enablement.
 
 ---
 
