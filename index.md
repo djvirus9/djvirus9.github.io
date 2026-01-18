@@ -79,6 +79,11 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 
 ---
 
+## Community & Industry Engagement
+- [Seasides Security Conference](https://www.seasides.net/) — Volunteer. Supported event operations and attendee coordination.
+
+---
+
 ## Certifications
 - Multi-Cloud Red Team Analyst (2024–Present)
 - Certified Red Team Professional (CRTP) (2022–Present)
