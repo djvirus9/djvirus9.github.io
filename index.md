@@ -15,11 +15,11 @@ Featured: [Exploring LLM Security Risks & OWASP Top 10 for LLMs](blog/llm-securi
 ---
 
 ## Summary
-Senior Product Security Engineer with 6+ years of experience owning and scaling end-to-end security programs across application security, cloud security (AWS), and DevSecOps in high-growth product environments.
+Senior Product Security Engineer with 6+ years of experience owning and scaling end-to-end security programs across Application Security (AppSec), Cloud Security (AWS), and DevSecOps in high-growth product environments. Experienced in Secure SDLC, CI/CD Security, and vulnerability management lifecycle across web, API, and mobile products.
 
-First dedicated security hire at product companies, responsible for security architecture decisions, vulnerability management, bug bounty operations, and ISO 27001:2022 readiness, working directly with engineering, platform, and leadership teams.
+First dedicated security hire at product companies, responsible for security architecture decisions, risk management, bug bounty program governance, and ISO 27001:2022 compliance readiness, working directly with engineering, platform, and leadership teams.
 
-Strong background in offensive security and real-world attack paths, enabling a pragmatic, risk-based approach to security that balances developer velocity, compliance requirements, and business impact. Experienced in embedding security into the SDLC through automation, clear governance, and developer-first enablement.
+Strong background in offensive security and real-world attack paths, enabling a pragmatic, risk-based approach that balances developer velocity, audit readiness, and business impact. Experienced in embedding security through automation (SAST, SCA, container security), OWASP Top 10 and OWASP API Top 10 coverage, and stakeholder management.
 
 **Security Ownership Overview:** [How I operate as a security owner](security-ownership.html)
 
@@ -41,11 +41,14 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 
 ## Core Competencies
 - Product & Application Security (Web/API/Mobile)
+- API Security (OWASP API Top 10)
 - Cloud Security (AWS: IAM, VPC, WAF, ALB, GuardDuty, CloudTrail)
-- DevSecOps & Security Automation (SAST/SCA/Container)
+- DevSecOps & CI/CD Security (SAST/SCA/Container Security)
 - Bug Bounty Operations (triage, governance, payout model)
 - Threat Modeling (STRIDE) & Secure-by-Design Reviews
-- Governance & Compliance (ISO 27001:2022 readiness)
+- Governance, Risk Management & Compliance (ISO 27001:2022 readiness)
+- Secure SDLC & Vulnerability Management Lifecycle
+- AI/LLM Security (prompt injection, data leakage)
 
 ---
 

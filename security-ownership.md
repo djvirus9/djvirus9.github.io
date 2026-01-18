@@ -15,12 +15,12 @@ I operate as a security owner, not a point contributor.
 
 End-to-end ownership includes:
 - Product Security strategy and execution
-- Application, API, mobile, and cloud security risk
+- Application, API, mobile, and cloud security risk (OWASP Top 10, OWASP API Top 10)
 - DevSecOps controls embedded into CI/CD
 - Bug bounty program governance and triage
 - Vulnerability lifecycle from discovery to remediation to prevention
 - ISO 27001:2022 readiness as primary Security SPOC
-- Security risk communication with engineering and leadership
+- Security risk communication and stakeholder management with engineering and leadership
 
 ## How I Approach Security
 My security philosophy is risk-based, developer-first, and outcome-driven.
@@ -34,17 +34,17 @@ My security philosophy is risk-based, developer-first, and outcome-driven.
 ## Core Security Domains I Own
 **Product and Application Security**
 - Secure design reviews, threat modeling, and real-world attack path analysis
-- Web, API, mobile security assessments
+- Web, API, mobile security assessments (OWASP Top 10, OWASP API Top 10)
 - Business-logic and authorization flaw detection
 
 **DevSecOps and Automation**
-- SAST and container security embedded into CI/CD
+- SAST, SCA, and container security embedded into CI/CD security
 - Risk-based enforcement instead of blanket blocking
 - Security signal tuned for developer adoption
 
 **Cloud Security (AWS)**
-- Attack path analysis across IAM, networking, and services
-- CSPM-driven visibility with exploitability-focused prioritization
+- Attack path analysis across IAM, VPC, networking, and services
+- CSPM-driven visibility with exploitability-focused prioritization (CloudTrail, GuardDuty, WAF)
 - Secure cloud architecture guidance without operational disruption
 
 **Bug Bounty and External Signal**
@@ -55,7 +55,7 @@ My security philosophy is risk-based, developer-first, and outcome-driven.
 **Governance and Compliance**
 - ISO 27001:2022 readiness ownership
 - Control mapping to real technical systems
-- Audit evidence design and cross-functional coordination
+- Audit readiness, evidence design, and cross-functional coordination
 
 ## What I’ve Delivered
 - Built Product Security from scratch as first security hire
