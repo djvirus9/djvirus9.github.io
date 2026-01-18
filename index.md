@@ -94,7 +94,7 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 ## CVEs & Recognition
 - CVE-2026-23521, CVE-2025-29074, CVE-2024-57459, CVE-2025-29075–29078
 - 160+ Hall of Fame mentions (Atlassian, Google, Mastercard, SoundCloud, Paytm, etc.)
-- Bugcrowd profile: https://bugcrowd.com/djvirus
+- Bugcrowd profile: [bugcrowd.com/djvirus](https://bugcrowd.com/djvirus)
 
 ---
 
