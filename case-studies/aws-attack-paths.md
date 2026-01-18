@@ -1,6 +1,7 @@
 ---
-layout: default
-title: AWS Attack Path Analysis and Risk Prioritization
+title: "AWS Attack Path Analysis and Risk Prioritization"
+permalink: /case-studies/aws-attack-paths/
+layout: single
 ---
 
 # Case Study: AWS Attack Path Analysis and Risk Prioritization

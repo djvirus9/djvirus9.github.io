@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Bug Bounty Program Governance at Scale
+title: "Bug Bounty Program Governance at Scale"
+permalink: /case-studies/bug-bounty-governance/
+layout: single
 ---
 
 # Case Study: Bug Bounty Program Governance at Scale

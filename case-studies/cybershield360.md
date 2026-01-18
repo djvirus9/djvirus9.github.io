@@ -1,6 +1,7 @@
 ---
-layout: default
-title: CyberShield360 - Building an Attack Surface Management Product from Scratch
+title: "CyberShield360 — Building an Attack Surface Management Product from Scratch"
+permalink: /case-studies/cybershield360/
+layout: single
 ---
 
 # CyberShield360 — Building an Attack Surface Management Product from Scratch

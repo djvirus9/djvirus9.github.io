@@ -1,76 +1,86 @@
 /* Subtle dark palette overrides for readability */
-html, body {
+html[data-theme="dark"] html,
+html[data-theme="dark"] body {
   background: #0f1115;
   color: #e6e8eb;
 }
 
-body a {
+html[data-theme="dark"] body a {
   color: #8ab4f8;
 }
 
-body a:hover {
+html[data-theme="dark"] body a:hover {
   color: #a3c4ff;
 }
 
-h1, h2, h3, h4, h5, h6,
-.page__title,
-.archive__item-title,
-.site-title {
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] h4,
+html[data-theme="dark"] h5,
+html[data-theme="dark"] h6,
+html[data-theme="dark"] .page__title,
+html[data-theme="dark"] .archive__item-title,
+html[data-theme="dark"] .site-title {
   color: #f2f4f7;
 }
 
-.masthead {
+html[data-theme="dark"] .masthead {
   background: #111418;
   border-bottom: 1px solid #2a2f36;
 }
 
-.masthead__menu-item a {
+html[data-theme="dark"] .masthead__menu-item a {
   color: #e6e8eb;
 }
 
-.masthead__menu-item a:hover {
+html[data-theme="dark"] .masthead__menu-item a:hover {
   color: #ffffff;
 }
 
-.page, .page__content {
+html[data-theme="dark"] .page,
+html[data-theme="dark"] .page__content {
   background: transparent;
   color: #e6e8eb;
 }
 
-hr {
+html[data-theme="dark"] hr {
   border-color: #2a2f36;
 }
 
-code, pre {
+html[data-theme="dark"] code,
+html[data-theme="dark"] pre {
   background: #161a20;
   color: #e8eaed;
   border: 1px solid #2a2f36;
 }
 
-blockquote {
+html[data-theme="dark"] blockquote {
   border-left-color: #2a2f36;
   color: #c8cdd3;
 }
 
-table, th, td {
+html[data-theme="dark"] table,
+html[data-theme="dark"] th,
+html[data-theme="dark"] td {
   border-color: #2a2f36;
 }
 
-.archive__item,
-.feature__item,
-.feature__item--center,
-.page__content .archive__item {
+html[data-theme="dark"] .archive__item,
+html[data-theme="dark"] .feature__item,
+html[data-theme="dark"] .feature__item--center,
+html[data-theme="dark"] .page__content .archive__item {
   background: #12161c;
   border: 1px solid #2a2f36;
   border-radius: 8px;
   padding: 1rem;
 }
 
-.archive__item-title a {
+html[data-theme="dark"] .archive__item-title a {
   color: #f2f4f7;
 }
 
-.theme-toggle {
+html[data-theme="dark"] .theme-toggle {
   margin-left: 0.75rem;
   padding: 0.35rem 0.5rem;
   border: 1px solid #2a2f36;
@@ -82,67 +92,112 @@ table, th, td {
   cursor: pointer;
 }
 
-.theme-toggle:focus {
+html[data-theme="dark"] .theme-toggle:focus {
   outline: 2px solid #8ab4f8;
   outline-offset: 2px;
 }
 
-.theme-toggle:hover {
+html[data-theme="dark"] .theme-toggle:hover {
   background: #1a1f27;
 }
 
 /* --- Dark mode: masthead/nav readability fix --- */
-.masthead,
-.masthead__inner-wrap {
+html[data-theme="dark"] .masthead,
+html[data-theme="dark"] .masthead__inner-wrap {
   background: #0f1216 !important;
   border-bottom: 1px solid rgba(255,255,255,0.10) !important;
 }
 
-.greedy-nav,
-.masthead__menu {
+html[data-theme="dark"] .greedy-nav,
+html[data-theme="dark"] .masthead__menu {
   background: transparent !important;
 }
 
-.site-title,
-.site-title:visited {
+html[data-theme="dark"] .site-title,
+html[data-theme="dark"] .site-title:visited {
   color: #f2f5f8 !important;
 }
 
-/* Nav links */
-.greedy-nav a,
-.masthead__menu-item a {
+html[data-theme="dark"] .greedy-nav a,
+html[data-theme="dark"] .masthead__menu-item a {
   color: #e7edf3 !important;
   opacity: 1 !important;
 }
 
-/* Hover + focus (keyboard accessibility) */
-.greedy-nav a:hover,
-.greedy-nav a:focus,
-.masthead__menu-item a:hover,
-.masthead__menu-item a:focus {
+html[data-theme="dark"] .greedy-nav a:hover,
+html[data-theme="dark"] .greedy-nav a:focus,
+html[data-theme="dark"] .masthead__menu-item a:hover,
+html[data-theme="dark"] .masthead__menu-item a:focus {
   color: #ffffff !important;
   background: rgba(255,255,255,0.08) !important;
   border-radius: 8px;
   outline: none;
 }
 
-/* Active page link */
-.greedy-nav .active > a,
-.masthead__menu-item.active > a {
+html[data-theme="dark"] .greedy-nav .active > a,
+html[data-theme="dark"] .masthead__menu-item.active > a {
   color: #ffffff !important;
   font-weight: 600 !important;
   text-decoration: none !important;
 }
 
-/* Mobile menu button and icons */
-.greedy-nav__toggle,
-.greedy-nav__toggle .navicon,
-.greedy-nav__toggle .navicon:before,
-.greedy-nav__toggle .navicon:after {
+html[data-theme="dark"] .greedy-nav__toggle,
+html[data-theme="dark"] .greedy-nav__toggle .navicon,
+html[data-theme="dark"] .greedy-nav__toggle .navicon:before,
+html[data-theme="dark"] .greedy-nav__toggle .navicon:after {
   background: #e7edf3 !important;
 }
 
-/* Ensure any masthead icons/text are readable */
-.masthead * {
+html[data-theme="dark"] .masthead * {
   text-shadow: none !important;
+}
+
+/* --- Dark mode (attribute-based) --- */
+html[data-theme="dark"] body {
+  background: #0b0f14 !important;
+  color: #e7edf3 !important;
+}
+
+html[data-theme="dark"] .masthead,
+html[data-theme="dark"] .masthead__inner-wrap {
+  background: #0f1216 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.12) !important;
+}
+
+/* Ensure nav container isn't forcing light bg */
+html[data-theme="dark"] .greedy-nav,
+html[data-theme="dark"] .masthead__menu {
+  background: transparent !important;
+}
+
+html[data-theme="dark"] .site-title,
+html[data-theme="dark"] .site-title:visited {
+  color: #ffffff !important;
+}
+
+/* NAV LINKS: FORCE FULL OPACITY + HIGH CONTRAST */
+html[data-theme="dark"] .greedy-nav a,
+html[data-theme="dark"] .masthead__menu-item a {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 600 !important;
+}
+
+/* Hover/focus */
+html[data-theme="dark"] .greedy-nav a:hover,
+html[data-theme="dark"] .greedy-nav a:focus,
+html[data-theme="dark"] .masthead__menu-item a:hover,
+html[data-theme="dark"] .masthead__menu-item a:focus {
+  color: #ffffff !important;
+  background: rgba(255,255,255,0.12) !important;
+  border-radius: 10px;
+  outline: none !important;
+}
+
+/* Active link */
+html[data-theme="dark"] .greedy-nav .active > a,
+html[data-theme="dark"] .masthead__menu-item.active > a {
+  color: #ffffff !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
 }

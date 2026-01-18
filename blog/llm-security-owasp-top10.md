@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Exploring LLM Security Risks & OWASP Top 10 for LLMs
+title: "Exploring LLM Security Risks & OWASP Top 10 for LLMs"
+permalink: /blog/llm-security-owasp-top10/
+layout: single
 ---
 
 # Exploring LLM Security Risks & OWASP Top 10 for LLMs

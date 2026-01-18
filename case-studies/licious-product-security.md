@@ -1,6 +1,7 @@
 ---
-layout: default
-title: Building Product Security from Scratch
+title: "Building Product Security from Scratch (Licious)"
+permalink: /case-studies/licious-product-security/
+layout: single
 ---
 
 # Flagship Case Study: Building Product Security from Scratch at a High-Growth Product Company

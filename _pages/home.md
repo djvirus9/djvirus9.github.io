@@ -10,7 +10,7 @@ AppSec • Cloud Security (AWS) • DevSecOps • Bug Bounty • ISO 27001
 
 📍 Dubai / Abu Dhabi (Open to relocate)  
 🔗 [LinkedIn](https://linkedin.com/in/danish-siddiqui-bb0793197) • [GitHub](https://github.com/djvirus9) • [Writing](/blog/) • ✉️ danishismyname1@gmail.com  
-Featured: [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10.html)
+Featured: [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10/)
 
 ---
 
@@ -60,22 +60,22 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 ---
 
 ## Security Products Built
-- [CyberShield360 — Building an Attack Surface Management Product from Scratch](case-studies/cybershield360.html)
+- [CyberShield360 — Building an Attack Surface Management Product from Scratch](/case-studies/cybershield360/)
 
 ---
 
 ## Case Studies
-- [Building Product Security from Scratch (Licious)](case-studies/licious-product-security.html)
-- [DevSecOps Pipeline Security: Semgrep + Trivy](case-studies/devsecops-pipeline.html)
-- [AWS Misconfiguration & Attack Path Findings](case-studies/aws-attack-paths.html)
-- [Bug Bounty Program Revamp](case-studies/bug-bounty-governance.html)
-- [ISO 27001 Readiness Ownership](case-studies/iso27001.html)
+- [Building Product Security from Scratch (Licious)](/case-studies/licious-product-security/)
+- [DevSecOps Pipeline Security: Semgrep + Trivy](/case-studies/devsecops-pipeline/)
+- [AWS Misconfiguration & Attack Path Findings](/case-studies/aws-attack-paths/)
+- [Bug Bounty Program Revamp](/case-studies/bug-bounty-governance/)
+- [ISO 27001 Readiness Ownership](/case-studies/iso27001/)
 
 ---
 
 ## Writing & Research
 - [Writing Index](/blog/)
-- [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10.html)
+- [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10/)
 
 ---
 
