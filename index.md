@@ -21,6 +21,8 @@ First dedicated security hire at product companies, responsible for security arc
 
 Strong background in offensive security and real-world attack paths, enabling a pragmatic, risk-based approach to security that balances developer velocity, compliance requirements, and business impact. Experienced in embedding security into the SDLC through automation, clear governance, and developer-first enablement.
 
+**Security Ownership Overview:** [How I operate as a security owner](security-ownership.html)
+
 ---
 
 ## Target Roles
