@@ -1,0 +1,21 @@
+/* Minimal overrides for the "air" skin + toggle styling */
+.theme-toggle {
+  margin-left: 0.75rem;
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #d0d7de;
+  background: #ffffff;
+  color: #111111;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.theme-toggle:focus {
+  outline: 2px solid #5b9dd9;
+  outline-offset: 2px;
+}
+
+.theme-toggle:hover {
+  background: #f6f8fa;
+}
