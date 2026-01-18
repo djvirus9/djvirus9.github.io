@@ -55,11 +55,11 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 ---
 
 ## Case Studies
-- [Building Product Security from Scratch (Licious)](case-studies/licious-product-security.md)
-- [DevSecOps Pipeline Security: Semgrep + Trivy](case-studies/devsecops-pipeline.md)
-- [AWS Misconfiguration & Attack Path Findings](case-studies/aws-attack-paths.md)
-- [Bug Bounty Program Revamp](case-studies/bug-bounty.md)
-- [ISO 27001 Readiness Ownership](case-studies/iso27001.md)
+- [Building Product Security from Scratch (Licious)](case-studies/licious-product-security.html)
+- [DevSecOps Pipeline Security: Semgrep + Trivy](case-studies/devsecops-pipeline.html)
+- [AWS Misconfiguration & Attack Path Findings](case-studies/aws-attack-paths.html)
+- [Bug Bounty Program Revamp](case-studies/bug-bounty-governance.html)
+- [ISO 27001 Readiness Ownership](case-studies/iso27001.html)
 
 ---
 

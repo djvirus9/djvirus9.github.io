@@ -1,3 +1,8 @@
+---
+layout: default
+title: Building Product Security from Scratch
+---
+
 # Flagship Case Study: Building Product Security from Scratch at a High-Growth Product Company
 
 ## Context

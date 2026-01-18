@@ -1,3 +1,8 @@
+---
+layout: default
+title: Designing and Operating a Scalable DevSecOps Pipeline
+---
+
 # Case Study: Designing and Operating a Scalable DevSecOps Pipeline
 
 ## Context

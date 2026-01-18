@@ -1,3 +1,8 @@
+---
+layout: default
+title: AWS Attack Path Analysis and Risk Prioritization
+---
+
 # Case Study: AWS Attack Path Analysis and Risk Prioritization
 
 ## Context

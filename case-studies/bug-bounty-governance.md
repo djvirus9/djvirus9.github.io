@@ -1,3 +1,8 @@
+---
+layout: default
+title: Bug Bounty Program Governance at Scale
+---
+
 # Case Study: Bug Bounty Program Governance at Scale
 
 ## Context
