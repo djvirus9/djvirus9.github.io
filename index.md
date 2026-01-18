@@ -88,6 +88,7 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 - Multi-Cloud Red Team Analyst (2024–Present)
 - Certified Red Team Professional (CRTP) (2022–Present)
 - Certified Ethical Hacker (CEH) (2020–Present)
+- Certification repository: [Google Drive](https://drive.google.com/drive/folders/1U9jU9dFOd24TrJGMaVmMXTq7S4010kgr)
 
 ---
 
