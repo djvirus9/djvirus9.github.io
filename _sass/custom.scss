@@ -22,216 +22,17 @@
   max-width: 100% !important;
 }
 
-.page__content .feature__item .archive__item-title,
-.page__content .feature__item .archive__item-excerpt,
-.page__content .feature__item p {
-  word-break: normal !important;
-  overflow-wrap: break-word !important;
-  hyphens: auto !important;
-}
-
-.page__content .feature__item .btn {
-  white-space: nowrap !important;
-  width: auto !important;
-}
-
-/* --- Case Studies cards: desktop polish, keep mobile perfect --- */
-.page__content .feature__wrapper .feature__item .archive__item {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 1.25rem;
-  border-radius: 14px;
-}
-
-/* Give cards a consistent visual height on desktop/tablet */
-@media (min-width: 641px) {
-  .page__content .feature__wrapper .feature__item .archive__item {
-    min-height: 340px;
-  }
-}
-
-/* Stop overly aggressive truncation/ellipsis */
-.page__content .feature__wrapper .feature__item .archive__item-title a,
-.page__content .feature__wrapper .feature__item .archive__item-excerpt {
-  display: block;
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-  -webkit-line-clamp: unset !important;
-  line-clamp: unset !important;
-}
-
-/* Excerpt spacing + readability */
-.page__content .feature__wrapper .feature__item .archive__item-excerpt {
-  margin-top: .75rem;
-  margin-bottom: 1.25rem;
-  flex: 1 1 auto;
-}
-
-/* Button stays at the bottom */
-.page__content .feature__wrapper .feature__item .btn {
-  margin-top: auto;
-  align-self: flex-start;
-}
-
-/* Mobile: keep full-width cards, no forced min-height */
-@media (max-width: 640px) {
-  .page__content .feature__wrapper .feature__item .archive__item {
-    min-height: unset;
-  }
-}
-
-/* --- Case Studies: desktop-only card title sizing --- */
-@media (min-width: 768px) {
-  .page__content .feature__wrapper .archive__item-title {
-    font-size: 1.35rem !important;
-    line-height: 1.2 !important;
-    letter-spacing: -0.01em;
-  }
-
-  /* If theme applies size to link instead of heading */
-  .page__content .feature__wrapper .archive__item-title a {
-    font-size: 1.35rem !important;
-    line-height: 1.2 !important;
-  }
-
-  /* Optional: keep title to 2 lines max (no ellipsis if possible) */
-  .page__content .feature__wrapper .archive__item-title a {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 767px) {
-  /* Mobile untouched */
-  .page__content .feature__wrapper .archive__item-title,
-  .page__content .feature__wrapper .archive__item-title a {
-    font-size: unset !important;
-    -webkit-line-clamp: unset !important;
-  }
-}
-
-/* --- Case Studies cards: fix clipped titles on desktop --- */
-@media (min-width: 768px) {
-  /* Ensure the title area can grow and isn't clipped */
-  .page__content .feature__wrapper .archive__item-title,
-  .page__content .feature__wrapper .archive__item-title a {
-    font-size: 1.35rem !important;
-    line-height: 1.2 !important;
-    white-space: normal !important;
-    overflow: visible !important;
-    text-overflow: unset !important;
-    word-break: normal !important;
-    overflow-wrap: anywhere;
-    hyphens: auto;
-  }
-
-  /* If clamp rules exist, ensure they don't cut the title off */
-  .page__content .feature__wrapper .archive__item-title a {
-    display: block !important;
-    -webkit-line-clamp: unset !important;
-    -webkit-box-orient: unset !important;
-  }
-
-  /* If the card container is clipping its children, stop it */
-  .page__content .feature__wrapper .archive__item {
-    overflow: visible !important;
-  }
-}
-
-@media (max-width: 767px) {
-  /* leave mobile behaviour unchanged */
-}
-
-/* ================================
-   Case Studies cards: layout fix
-   Prevent title/excerpt overlap + normalize sizing
-   ================================ */
-
-.page__content .feature__wrapper .archive__item {
-  /* treat each card as a layout container */
-  display: flex !important;
-  flex-direction: column !important;
-  height: 100% !important;
-}
-
-.page__content .feature__wrapper .archive__item-body {
-  /* make body take full height so button can align to bottom */
-  display: flex !important;
-  flex-direction: column !important;
-  flex: 1 1 auto !important;
-  min-height: 0 !important;
-}
-
-.page__content .feature__wrapper .archive__item-title {
-  margin-bottom: 0.6rem !important;
-}
-
-.page__content .feature__wrapper .archive__item-title a {
-  /* readable desktop title size, no overlap, controlled lines */
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  white-space: normal !important;
-  word-break: normal !important;
-  overflow-wrap: anywhere !important;
-  hyphens: auto;
-
-  line-height: 1.15 !important;
-  font-size: 1.45rem !important; /* desktop */
-  -webkit-line-clamp: 3 !important; /* max 3 lines */
-}
-
-.page__content .feature__wrapper .archive__item-excerpt {
-  /* clamp excerpt and prevent pushing layout */
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  -webkit-line-clamp: 5 !important;
-  margin-top: 0 !important;
-  margin-bottom: 1rem !important;
-  min-height: 0 !important;
-}
-
-.page__content .feature__wrapper .btn,
-.page__content .feature__wrapper .btn--primary {
-  /* keep CTA at bottom */
-  margin-top: auto !important;
-  align-self: flex-start !important;
-}
-
-/* Improve the card grid spacing/consistency */
-.page__content .feature__wrapper .archive__item-teaser,
-.page__content .feature__wrapper .archive__item-teaser img {
-  border-radius: 14px !important;
-}
-
-/* Mobile tuning: slightly smaller title but keep style */
-@media (max-width: 767px) {
-  .page__content .feature__wrapper .archive__item-title a {
-    font-size: 1.35rem !important;
-    -webkit-line-clamp: 3 !important;
-  }
-  .page__content .feature__wrapper .archive__item-excerpt {
-    -webkit-line-clamp: 6 !important;
-  }
-}
-
 /* ================================
    Case Studies cards: clean desktop layout (no overlap)
    ================================ */
 
-.page__content .feature__wrapper .archive__item {
+.page__content .feature__wrapper .archive__item,
+.page__content .feature__wrapper .feature__item {
   display: flex !important;
   flex-direction: column !important;
   height: 100% !important;
   position: relative !important;
-  overflow: hidden !important; /* prevent any overlay text from spilling */
+  overflow: hidden !important;
 }
 
 .page__content .feature__wrapper .archive__item-body {
@@ -239,41 +40,6 @@
   flex-direction: column !important;
   flex: 1 1 auto !important;
   min-height: 0 !important;
-}
-
-/* Kill any overlay/duplicate title rendering used by "stretched-link" patterns */
-.page__content .feature__wrapper .archive__item a::before,
-.page__content .feature__wrapper .archive__item a::after {
-  content: none !important;
-  display: none !important;
-}
-
-/* Title: readable + controlled (2 lines) */
-.page__content .feature__wrapper .archive__item-title {
-  margin: 0 0 0.75rem 0 !important;
-}
-
-.page__content .feature__wrapper .archive__item-title a {
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-line-clamp: 2 !important; /* 2 clean lines */
-  overflow: hidden !important;
-
-  font-size: 1.35rem !important;    /* smaller for desktop */
-  line-height: 1.2 !important;
-}
-
-/* ==== Case Studies card overlap fix (hard override) ==== */
-.page__content .feature__wrapper .archive__item,
-.page__content .feature__wrapper .feature__item {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-.page__content .feature__wrapper .archive__item-title,
-.page__content .feature__wrapper .archive__item-excerpt {
-  position: relative !important;
-  z-index: 2 !important;
 }
 
 /* Disable any overlay / stretched-link pseudo layers */
@@ -283,19 +49,30 @@
   display: none !important;
 }
 
-/* Also neutralize absolute positioning if theme uses it */
+/* Neutralize absolute positioning if theme uses it */
 .page__content .feature__wrapper a {
   position: static !important;
+  transform: none !important;
 }
 
-/* Clean title clamp */
+.page__content .feature__wrapper .archive__item-title {
+  margin: 0 0 0.75rem 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
 .page__content .feature__wrapper .archive__item-title a {
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
   -webkit-line-clamp: 3 !important;
   overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
+  hyphens: auto;
   line-height: 1.2 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.35rem !important;
   text-decoration: none !important;
 }
 
@@ -304,5 +81,23 @@
   -webkit-box-orient: vertical !important;
   -webkit-line-clamp: 6 !important;
   overflow: hidden !important;
-  margin-top: 0.5rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+  min-height: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+.page__content .feature__wrapper .btn,
+.page__content .feature__wrapper .btn--primary {
+  margin-top: auto !important;
+  align-self: flex-start !important;
+}
+
+/* Desktop-only title sizing */
+@media (min-width: 1024px) {
+  .page__content .feature__wrapper .archive__item-title a {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+  }
 }
