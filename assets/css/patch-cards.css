@@ -1,0 +1,81 @@
+/* Case Studies card overlap patch: scoped to case-studies page */
+body.page--case-studies .page__content .feature__wrapper .archive__item,
+body[class*="case-studies"] .page__content .feature__wrapper .archive__item {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+body.page--case-studies .page__content .feature__wrapper .archive__item-body,
+body[class*="case-studies"] .page__content .feature__wrapper .archive__item-body {
+  display: flex !important;
+  flex-direction: column !important;
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+}
+
+/* Disable any overlay / stretched-link pseudo layers */
+body.page--case-studies .page__content .feature__wrapper a::before,
+body.page--case-studies .page__content .feature__wrapper a::after,
+body[class*="case-studies"] .page__content .feature__wrapper a::before,
+body[class*="case-studies"] .page__content .feature__wrapper a::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Neutralize absolute positioning if theme uses it */
+body.page--case-studies .page__content .feature__wrapper a,
+body[class*="case-studies"] .page__content .feature__wrapper a {
+  position: static !important;
+  transform: none !important;
+}
+
+/* Title: readable + controlled (2-3 lines) */
+body.page--case-studies .page__content .feature__wrapper .archive__item-title,
+body[class*="case-studies"] .page__content .feature__wrapper .archive__item-title {
+  display: block !important;
+  margin-bottom: 0.65rem !important;
+  line-height: 1.2 !important;
+}
+
+body.page--case-studies .page__content .feature__wrapper .archive__item-title a,
+body[class*="case-studies"] .page__content .feature__wrapper .archive__item-title a {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: normal !important;
+  word-break: normal !important;
+  overflow-wrap: anywhere !important;
+  hyphens: auto;
+  max-height: calc(1.2em * 3) !important;
+}
+
+/* Excerpt: clamp and spacing */
+body.page--case-studies .page__content .feature__wrapper .archive__item-excerpt,
+body[class*="case-studies"] .page__content .feature__wrapper .archive__item-excerpt {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 5 !important;
+  overflow: hidden !important;
+  margin-top: 0 !important;
+  margin-bottom: 1rem !important;
+}
+
+/* Button remains at bottom */
+body.page--case-studies .page__content .feature__wrapper .btn,
+body.page--case-studies .page__content .feature__wrapper .btn--primary,
+body[class*="case-studies"] .page__content .feature__wrapper .btn,
+body[class*="case-studies"] .page__content .feature__wrapper .btn--primary {
+  margin-top: auto !important;
+  align-self: flex-start !important;
+}
+
+/* Desktop-only title sizing */
+@media (min-width: 1024px) {
+  body.page--case-studies .page__content .feature__wrapper .archive__item-title a,
+  body[class*="case-studies"] .page__content .feature__wrapper .archive__item-title a {
+    font-size: 1.3rem !important;
+    line-height: 1.2 !important;
+  }
+}
