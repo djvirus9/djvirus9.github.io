@@ -101,4 +101,4 @@ Product Security • Application Security • Cloud Security (AWS) • DevSecOps
 
 ## Downloads
 - [Resume (PDF)](assets/Danish_Security_Engineer_Dubai_6.5_Yrs_Remote.pdf)
-- [Cover Letter (PDF)](assets/Danish_Siddiqui_Cover_Letter_Dubai.pdf)
+- [Cover Letter (PDF)](assets/Danish_Security_Engineer_Dubai_Cover_Letter.pdf)
