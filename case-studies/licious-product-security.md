@@ -1,94 +1,93 @@
 ---
 title: "Building Product Security from Scratch (Licious)"
-permalink: /case-studies/licious-product-security/
 layout: single
+author_profile: true
+permalink: /case-studies/licious-product-security/
 ---
 
-# Flagship Case Study: Building Product Security from Scratch at a High-Growth Product Company
+# Building Product Security from Scratch (Licious)
 
-## Context
-Licious is a high-growth consumer product company with rapidly evolving web, mobile, API, and cloud infrastructure. At the time I joined, there was no centralized product security function, limited visibility into security risk, and no consistent security ownership across engineering teams.
+**Role:** SDE-3, Product Security (Founding Security Engineer)  
+**Scope:** Application Security • Cloud Security • DevSecOps • Bug Bounty • Governance  
+**Context:** First dedicated security hire at a D2C product company serving millions of customers across web, mobile, and API surfaces on AWS.
 
-I joined as the first dedicated Product Security Engineer, with the mandate to establish, scale, and operationalize product security end-to-end without slowing engineering velocity.
+---
 
-## Problem Statement
-The core challenges were not tool gaps, but structural security risks:
-- No single owner for product security decisions
-- Security findings scattered across teams with inconsistent triage
-- Limited proactive detection of application and cloud misconfigurations
-- No standardized vulnerability lifecycle or severity model
-- Increasing external attack surface and bug bounty signal without governance
-- Compliance expectations (ISO 27001) without a mature security baseline
+## The Mandate
 
-The risk was not theoretical: vulnerabilities were reaching late stages of delivery, remediation cycles were slow, and security decisions were reactive rather than preventative.
+Establish the Product Security function from zero — covering application security, AWS cloud posture, DevSecOps automation, bug bounty operations, and ISO 27001:2022 readiness — while partnering directly with engineering, platform, and leadership teams.
 
-## My Role and Ownership
-As the first and sole Product Security owner, I was responsible for:
-- Defining the product security strategy across AppSec, Cloud Security, and DevSecOps
-- Making security architecture and tooling decisions
-- Embedding security into the SDLC with minimal developer friction
-- Acting as the single point of accountability for vulnerabilities, bug bounty, and compliance readiness
-- Partnering directly with engineering, platform, IT, HR, and leadership teams
+This meant not just running scans or filing tickets, but designing the **security operating model** for a high-growth engineering org: scope definition, severity taxonomy, SLAs, review gates, and ownership handoffs.
 
-This role required both hands-on execution and decision-making authority.
+---
 
-## Approach and Strategy
-### 1. Establishing Security Ownership and Baselines
-I started by defining clear security ownership, risk classification, and remediation expectations across teams. This included:
-- A unified vulnerability severity and prioritization model
-- Clear ownership mapping for services and infrastructure
-- A standard vulnerability lifecycle from discovery to closure
+## What I Built
 
-This shifted security from "best effort" to measurable accountability.
+### 1. DevSecOps Integration
 
-### 2. Embedding Security into the SDLC (Shift-Left)
-Rather than relying on periodic testing, I focused on early, automated detection:
-- Integrated SAST (Semgrep) into CI/CD to catch code-level issues early
-- Added container and dependency scanning (Trivy) for build-time risk visibility
-- Tuned findings to reduce noise and improve developer trust in results
+- Embedded **SAST (Semgrep)** and **SCA / container scanning (Trivy)** into CI/CD pipelines across services.
+- Authored **custom Semgrep rules** targeting framework-specific and business-logic patterns — beyond out-of-the-box rulesets — to improve true-positive rate and reduce developer noise.
+- **Reduced critical production-bound vulnerabilities by ~30%** via consistent, automated enforcement at the pull-request stage.
 
-The goal was not maximum findings, but actionable signal that developers would actually fix.
+### 2. Pre-Commit Security Hooks ("Shift-Left Done Right")
 
-### 3. Cloud Security and Attack Path Visibility
-To address cloud risk at scale, I designed and operated a lightweight AWS cloud security posture program:
-- Used CSPM tools (Prowler, ScoutSuite) to continuously assess AWS configurations
-- Identified real attack paths, not just isolated misconfigurations
-- Prioritized fixes based on exploitability and business impact, not checklist compliance
+- Built **pre-commit hooks** that run locally on developer machines to catch:
+  - Hardcoded secrets (API keys, tokens, credentials)
+  - IaC misconfigurations (open Security Groups, public S3, missing encryption)
+  - Obvious injection and auth patterns
+- Outcome: issues caught **before code ever reaches CI**, cutting down triage cycles and developer context-switching.
+- See: [Pre-Commit Hooks case study](/case-studies/pre-commit-hooks/).
 
-This allowed teams to focus on high-risk paths rather than chasing low-impact alerts.
+### 3. Cloud-Native Security Posture
 
-### 4. Bug Bounty Program Design and Governance
-I revamped and operated the bug bounty program end-to-end, including:
-- Defining scope boundaries aligned with business risk
-- Creating a consistent severity taxonomy and triage workflow
-- Establishing payout governance to balance researcher engagement and signal quality
-- Acting as the primary triager, coordinating remediation with engineering teams
+- Established **CSPM baseline** using Prowler and ScoutSuite, mapped to CIS AWS Foundations Benchmark.
+- Deployed **CNAPP (ThreatMapper)** to correlate runtime context with misconfiguration findings and prioritize based on exploitability.
+- Led end-to-end **cloud-native security posture improvement program**: IAM hardening, network segmentation review, data-plane access controls, detection coverage.
+- See: [Cloud-Native Security Posture case study](/case-studies/cloud-native-posture/).
 
-This transformed bug bounty from a reactive inbox into a controlled external signal.
+### 4. WAF Detection Coverage
 
-### 5. Compliance Enablement (ISO 27001:2022)
-Alongside technical controls, I acted as the primary security SPOC for ISO 27001 readiness, working across:
-- Engineering (technical controls and evidence)
-- IT and HR (access control, policies, processes)
-- Leadership (risk acceptance and prioritization)
+- Benchmarked existing AWS WAF managed rules against **OWASP Core Rule Set (CRS)** to identify coverage gaps.
+- Proposed rule improvements across SQLi, XSS, bot patterns, login/checkout throttling, and country-based anomaly detection.
+- Validated all new rules in **COUNT mode** first to prove correctness before promoting to BLOCK.
+- See: [WAF Coverage Benchmarking case study](/case-studies/waf-coverage-benchmarking/).
 
-Rather than treating compliance as a checklist, I aligned controls with actual security posture to avoid "paper security".
+### 5. Bug Bounty Program Governance
 
-## Impact and Outcomes
-- ~30% reduction in critical production-bound vulnerabilities through early detection
-- Established a repeatable product security operating model
-- Improved remediation speed and developer security adoption
-- Enabled proactive identification of high-risk cloud attack paths
-- Brought structure and governance to external vulnerability reporting
-- Created a security baseline that supported ISO 27001:2022 readiness
+- Rebuilt the program end-to-end: defined **scope, severity taxonomy, triage SLAs, and payout governance**.
+- Established researcher communication patterns and remediation handoffs to service owners.
+- See: [Bug Bounty Program Governance case study](/case-studies/bug-bounty-governance/).
 
-Most importantly, security shifted from a reactive function to a trusted engineering partner.
+### 6. ISO 27001:2022 Readiness
 
-## Key Skills Demonstrated
-Product Security Strategy and Ownership • Application and API Security • AWS Cloud Security and Attack Path Analysis • DevSecOps and Security Automation • Bug Bounty Operations and Governance • Security Risk Management and Compliance Enablement
+- Primary security SPOC across **Engineering, IT, HR, and Finance**.
+- Established security policies, evidence collection workflows, and audit-readiness controls.
+- See: [ISO 27001 Readiness case study](/case-studies/iso27001/).
 
-### Skills & Signals
-Secure SDLC · OWASP Top 10 · OWASP API Top 10 · Vulnerability Management Lifecycle · CSPM · Stakeholder Management
+### 7. Unified Vulnerability Management
 
-## Why This Matters
-This engagement demonstrates my ability to build security programs from zero, make pragmatic security decisions, and operate as a senior individual contributor with ownership mindset -- not just execute tools or assessments.
+- Consolidated findings from SAST, SCA, CSPM, container scanning, bug bounty, and web-level scanning into a **single unified vulnerability matrix** with resource, severity, business impact, owner, SLA, and status.
+- Gave leadership a **single source of truth** for security risk rather than tool-by-tool dashboards.
+
+---
+
+## Working Principles
+
+**Developer-first tooling.** Every control I added went through the lens of: *does this help developers ship safely, or does it just generate noise?* Pre-commit hooks, custom Semgrep rules, and CSPM tuning were all shaped by that question.
+
+**Outcome over output.** A CSPM dashboard with 2,000 findings is not security — it's an email list. I prioritized by **business impact and exploitability**, not by raw count.
+
+**Evidence before enforcement.** Every new WAF rule, SG change, or pipeline gate ran in observe-only mode first, with logs reviewed, before moving to enforcement. Zero production impact was a hard constraint, not a goal.
+
+**Ownership as a product.** The most sustainable security outcome wasn't a scan — it was getting engineering teams to own their security findings, backed by clear SLAs and governance.
+
+---
+
+## Related Case Studies
+
+- [DevSecOps Pipeline Security: Semgrep + Trivy](/case-studies/devsecops-pipeline/)
+- [Cloud-Native Security Posture](/case-studies/cloud-native-posture/)
+- [Pre-Commit Hooks: Shifting Security Left](/case-studies/pre-commit-hooks/)
+- [WAF Detection Coverage Benchmarking](/case-studies/waf-coverage-benchmarking/)
+- [Bug Bounty Program Governance at Scale](/case-studies/bug-bounty-governance/)
+- [ISO 27001 Readiness as Security Ownership](/case-studies/iso27001/)
