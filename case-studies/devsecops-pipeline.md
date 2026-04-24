@@ -2,6 +2,7 @@
 title: "Designing and Operating a Scalable DevSecOps Pipeline"
 permalink: /case-studies/devsecops-pipeline/
 layout: single
+author_profile: true
 ---
 
 # Case Study: Designing and Operating a Scalable DevSecOps Pipeline

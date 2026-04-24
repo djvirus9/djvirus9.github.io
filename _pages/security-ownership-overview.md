@@ -85,7 +85,7 @@ Especially effective in:
 - Product companies
 - Fintech and healthtech
 - Cloud-native organizations
-- Regulated environments (UAE, MEA)
+- Regulated environments
 
 ## What You Can Expect From Me
 - Ownership, not hand-holding
