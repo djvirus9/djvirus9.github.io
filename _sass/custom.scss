@@ -32,7 +32,7 @@
   flex-direction: column !important;
   height: 100% !important;
   position: relative !important;
-  overflow: hidden !important;
+  overflow: visible !important;
 }
 
 .page__content .feature__wrapper .archive__item-body {
@@ -62,17 +62,13 @@
 }
 
 .page__content .feature__wrapper .archive__item-title a {
-  display: -webkit-box !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-line-clamp: 3 !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
+  display: block !important;
   white-space: normal !important;
   word-break: normal !important;
   overflow-wrap: anywhere !important;
   hyphens: auto;
-  line-height: 1.2 !important;
-  font-size: 1.35rem !important;
+  line-height: 1.25 !important;
+  font-size: 1.15rem !important;
   text-decoration: none !important;
 }
 
@@ -97,7 +93,7 @@
 /* Desktop-only title sizing */
 @media (min-width: 1024px) {
   .page__content .feature__wrapper .archive__item-title a {
-    font-size: 1.3rem !important;
-    line-height: 1.2 !important;
+    font-size: 1.15rem !important;
+    line-height: 1.25 !important;
   }
 }
