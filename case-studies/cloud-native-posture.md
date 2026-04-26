@@ -1,7 +1,8 @@
 ---
 title: "Cloud-Native Security Posture: From Baseline to Hardened"
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 permalink: /case-studies/cloud-native-posture/
 ---
 

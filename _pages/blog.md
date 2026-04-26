@@ -2,6 +2,8 @@
 title: "Writing & Research"
 permalink: /blog/
 layout: single
+author_profile: false
+classes: wide portfolio-subpage
 ---
 
 # Writing & Research

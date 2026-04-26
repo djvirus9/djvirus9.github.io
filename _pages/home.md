@@ -1,136 +1,188 @@
 ---
-title: "Home"
+title: "Danish Siddiqui"
 permalink: /
 layout: single
-author_profile: true
+author_profile: false
+read_time: false
+classes: wide portfolio-home
+description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud Security, DevSecOps, Bug Bounty, ISO 27001, and AI/LLM Security."
 ---
 
-# Danish Siddiqui
+<section class="portfolio-hero" aria-label="Portfolio introduction">
+  <div class="portfolio-hero__content">
+    <p class="portfolio-kicker">Senior Product Security Engineer</p>
+    <h1>Danish Siddiqui</h1>
+    <p class="portfolio-hero__lead">
+      I build practical security programs across AppSec, AWS cloud security, DevSecOps, bug bounty operations, ISO 27001 readiness, and emerging AI/LLM security risks.
+    </p>
+    <div class="portfolio-hero__meta" aria-label="Primary focus areas">
+      <span>AppSec</span>
+      <span>AWS Cloud Security</span>
+      <span>DevSecOps</span>
+      <span>Bug Bounty</span>
+      <span>AI/LLM Security</span>
+    </div>
+    <div class="portfolio-hero__actions">
+      <a class="portfolio-button portfolio-button--primary" href="/case-studies/">View Case Studies</a>
+      <a class="portfolio-button" href="/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf">Download Resume</a>
+      <a class="portfolio-button portfolio-button--ghost" href="mailto:danishismyname1@gmail.com">Contact Me</a>
+    </div>
+  </div>
 
-**Senior Product Security Engineer**  
-AppSec • Cloud Security (AWS) • DevSecOps • Bug Bounty • ISO 27001 • AI/LLM Security
+  <aside class="portfolio-hero__panel" aria-label="Portfolio highlights">
+    <img class="portfolio-hero__avatar" src="/assets/avatar.jpg" alt="Danish Siddiqui">
+    <div>
+      <p class="portfolio-hero__role">Open globally from Bengaluru, India</p>
+      <p class="portfolio-hero__summary">First security hire experience. Security ownership from architecture to evidence, tooling, triage, and measurable risk reduction.</p>
+    </div>
+    <div class="portfolio-hero__links">
+      <a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a>
+      <a href="https://github.com/djvirus9">GitHub</a>
+      <a href="/blog/">Writing</a>
+    </div>
+  </aside>
+</section>
 
-Bengaluru, India / Open globally  
-[LinkedIn](https://www.linkedin.com/in/djvirus9) • [GitHub](https://github.com/djvirus9) • [Writing](/blog/) • danishismyname1@gmail.com  
-Featured: [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10/)
+<section class="portfolio-metrics" aria-label="Security impact metrics">
+  <article>
+    <strong>22+</strong>
+    <span>CVEs credited across open-source and commercial software</span>
+  </article>
+  <article>
+    <strong>160+</strong>
+    <span>Hall of Fame acknowledgements from major programs</span>
+  </article>
+  <article>
+    <strong>30%</strong>
+    <span>Reduction in critical production-bound vulnerabilities</span>
+  </article>
+  <article>
+    <strong>6+</strong>
+    <span>Years across product security, cloud, and DevSecOps</span>
+  </article>
+</section>
 
----
+<section class="portfolio-section">
+  <div class="portfolio-section__header">
+    <p class="portfolio-kicker">Selected impact</p>
+    <h2>Security work that moved engineering outcomes</h2>
+  </div>
 
-## Summary
+  <div class="portfolio-impact-grid">
+    <article>
+      <span class="portfolio-card-icon">01</span>
+      <h3>Built Product Security from scratch</h3>
+      <p>Established AppSec, AWS cloud controls, DevSecOps automation, vulnerability management, bug bounty governance, and security ownership workflows as the first dedicated security engineer.</p>
+    </article>
+    <article>
+      <span class="portfolio-card-icon">02</span>
+      <h3>Embedded security into delivery</h3>
+      <p>Rolled out Semgrep, Trivy, custom rules, CI/CD checks, and pre-commit hooks to catch high-signal issues before they reached production.</p>
+    </article>
+    <article>
+      <span class="portfolio-card-icon">03</span>
+      <h3>Hardened cloud-native posture</h3>
+      <p>Led CSPM baselining, IAM hardening, segmentation review, data-plane access controls, WAF validation, and AWS detection coverage improvements.</p>
+    </article>
+  </div>
+</section>
 
-Senior Product Security Engineer with **6+ years** owning and scaling end-to-end security programs across Application Security (AppSec), Cloud Security (AWS), and DevSecOps in high-growth product environments. Experienced in Secure SDLC, CI/CD security, and vulnerability management lifecycle across web, API, mobile, and cloud-native workloads.
+<section class="portfolio-section portfolio-section--split">
+  <div>
+    <p class="portfolio-kicker">Core strengths</p>
+    <h2>Where I create leverage</h2>
+    <p>
+      My strongest work sits between security architecture, hands-on tooling, research depth, and operational ownership. I focus on systems that developers can actually use and leaders can measure.
+    </p>
+  </div>
 
-First dedicated security hire at product companies, responsible for security architecture decisions, risk management, bug bounty program governance, and ISO 27001:2022 compliance readiness — working directly with engineering, platform, and leadership teams.
+  <div class="portfolio-skill-cloud" aria-label="Core competencies">
+    <span>Product Security</span>
+    <span>Application Security</span>
+    <span>API Security</span>
+    <span>AWS IAM</span>
+    <span>AWS WAF</span>
+    <span>EKS</span>
+    <span>Semgrep</span>
+    <span>Trivy</span>
+    <span>CodeQL</span>
+    <span>Threat Modeling</span>
+    <span>Bug Bounty Ops</span>
+    <span>ISO 27001</span>
+    <span>AI/LLM Security</span>
+    <span>Vulnerability Management</span>
+  </div>
+</section>
 
-Active security researcher with **22+ CVEs** credited across open-source and commercial software, and **160+ Hall of Fame** acknowledgements from Google, Atlassian, Mastercard, SoundCloud, Paytm, and others.
+<section class="portfolio-section">
+  <div class="portfolio-section__header">
+    <p class="portfolio-kicker">Featured case studies</p>
+    <h2>Proof of ownership</h2>
+  </div>
 
-**Security Ownership Overview:** [How I operate as a security owner](/security-ownership-overview/)
+  <div class="portfolio-case-grid">
+    <a href="/case-studies/licious-product-security/">
+      <span>Product Security</span>
+      <h3>Building Product Security from Scratch</h3>
+      <p>Security operating model, controls, governance, tooling, and measurable risk reduction across product surfaces.</p>
+    </a>
+    <a href="/case-studies/devsecops-pipeline/">
+      <span>DevSecOps</span>
+      <h3>Semgrep + Trivy Pipeline Security</h3>
+      <p>CI/CD security controls with custom rules, risk-based thresholds, and developer-first workflow integration.</p>
+    </a>
+    <a href="/case-studies/cloud-native-posture/">
+      <span>AWS Cloud</span>
+      <h3>Cloud-Native Security Posture</h3>
+      <p>CSPM baseline, IAM hardening, segmentation, data-plane controls, and detection coverage for AWS environments.</p>
+    </a>
+    <a href="/case-studies/waf-coverage-benchmarking/">
+      <span>Detection</span>
+      <h3>WAF Detection Coverage</h3>
+      <p>AWS WAF benchmarked against OWASP CRS, tuned in count mode, then promoted with evidence-based confidence.</p>
+    </a>
+  </div>
 
----
+  <p class="portfolio-section__link"><a href="/case-studies/">View all case studies</a></p>
+</section>
 
-## Target Roles
+<section class="portfolio-proof" aria-label="Recognition">
+  <p class="portfolio-kicker">Recognized by security programs</p>
+  <div>
+    <span>Google</span>
+    <span>Atlassian</span>
+    <span>Mastercard</span>
+    <span>SoundCloud</span>
+    <span>Paytm</span>
+    <span>Bugcrowd</span>
+    <span>YesWeHack</span>
+    <span>Synack Red Team</span>
+  </div>
+</section>
 
-Product Security • Application Security • Cloud Security (AWS) • DevSecOps • Security Engineering Lead
+<section class="portfolio-section portfolio-section--split">
+  <div>
+    <p class="portfolio-kicker">Security research</p>
+    <h2>Research with practical impact</h2>
+    <p>
+      My research spans denial-of-service, authentication and authorization flaws, injection, input handling, browser extension issues, and AI/LLM attack surfaces.
+    </p>
+  </div>
+  <div class="portfolio-link-stack">
+    <a href="/cves/">CVE Showcase - 22+ credited findings</a>
+    <a href="/research-methodology/">Security Research Methodology</a>
+    <a href="/blog/llm-security-owasp-top10/">LLM Security Risks and OWASP Top 10</a>
+    <a href="/community/">Community and Speaking</a>
+  </div>
+</section>
 
----
-
-## Selected Impact
-
-- **Reduced critical production-bound vulnerabilities by ~30%** by embedding Semgrep and Trivy into CI/CD pipelines.
-- **Built and scaled Product Security from scratch** as the first dedicated security engineer across web, mobile, APIs, and cloud at Licious.
-- **Shifted security left** via pre-commit hooks that catch secrets, IaC misconfigurations, and obvious vulnerability patterns before code leaves a developer's laptop.
-- **Led cloud-native security posture program** — CSPM baseline, IAM hardening, network segmentation, and detection coverage for production AWS.
-- **Improved WAF detection coverage** by benchmarking AWS WAF rules against OWASP CRS, tuning bot control, and validating rules in count mode before enforcing.
-- **Led ISO 27001:2022 readiness** as primary security SPOC across Engineering, IT, HR, and Finance.
-- **Operated bug bounty program** end-to-end with defined scope, severity taxonomy, triage SLAs, and payout governance.
-- **Launched CyberShield360** (ASM product), increasing client engagement by ~200%.
-- **22+ CVEs credited** across Dovecot, Apache Log4j ecosystem, and others — see [CVE showcase](/cves/).
-
----
-
-## Core Competencies
-
-- Product & Application Security (Web / API / Mobile)
-- API Security (OWASP API Top 10)
-- Cloud Security (AWS: IAM, VPC, WAF, ALB, GuardDuty, CloudTrail, KMS, S3, Lambda)
-- Cloud-Native Security (Kubernetes/EKS, container security)
-- DevSecOps & CI/CD Security (SAST / SCA / Container / Secret Scanning / Pre-commit)
-- Network Security (Security Groups, NACLs, micro-segmentation)
-- Bug Bounty Operations (triage, governance, payout model)
-- Threat Modeling (STRIDE) & Secure-by-Design Reviews
-- Governance, Risk Management & Compliance (ISO 27001:2022 readiness)
-- Secure SDLC & Vulnerability Management Lifecycle
-- AI/LLM Security (prompt injection, data leakage, OWASP Top 10 for LLMs)
-- Offensive Security & Bug Bounty Research
-
----
-
-## Tooling & Stack
-
-**Cloud & IaC:** AWS (EC2, IAM, VPC, ALB, WAF, CloudTrail, GuardDuty, KMS, S3, EKS), Terraform review  
-**SAST / SCA:** Semgrep (incl. custom rules), CodeQL, Trivy  
-**Container & K8s:** Trivy, kube-bench, kube-hunter, ThreatMapper (CNAPP)  
-**CSPM:** Prowler, ScoutSuite, Pingsafe, CloudQuery  
-**Offensive:** Burp Suite Pro, Nuclei, Nmap, Metasploit, Pacu, Drozer  
-**Detection & Visibility:** CloudWatch, VPC Flow Logs, WAF logs, Grafana
-
----
-
-## Security Products Built
-
-- [CyberShield360 — Building an Attack Surface Management Product from Scratch](/case-studies/cybershield360/)
-
----
-
-## Case Studies
-
-- [Building Product Security from Scratch (Licious)](/case-studies/licious-product-security/)
-- [Cloud-Native Security Posture: From Baseline to Hardened](/case-studies/cloud-native-posture/)
-- [Pre-Commit Hooks: Shifting Security Left](/case-studies/pre-commit-hooks/)
-- [DevSecOps Pipeline Security: Semgrep + Trivy](/case-studies/devsecops-pipeline/)
-- [AWS Attack Path Analysis & Risk Prioritization](/case-studies/aws-attack-paths/)
-- [ISO 27001 Readiness as Security Ownership](/case-studies/iso27001/)
-- [Bug Bounty Program Governance at Scale](/case-studies/bug-bounty-governance/)
-- [WAF Detection Coverage: Benchmarking Against OWASP CRS](/case-studies/waf-coverage-benchmarking/)
-
----
-
-## Security Research
-
-- [CVE Showcase — 22+ CVEs Credited](/cves/)
-- [Security Research Methodology](/research-methodology/)
-- [Writing Index](/blog/)
-- [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10/)
-
----
-
-## Community & Industry Engagement
-
-- [Community & Speaking](/community/)
-- [Seasides Security Conference](https://www.seasides.net/) — Volunteer
-- Active researcher: YesWeHack (`djvirus`), HackerOne, Bugcrowd, Intigriti
-- Member, [Synack Red Team](https://www.synack.com/red-team/) — invite-only vulnerability research network
-
----
-
-## Certifications
-
-- Multi-Cloud Red Team Analyst (2024–Present)
-- Certified Red Team Professional (CRTP) (2022–Present)
-- Certified Ethical Hacker (CEH) (2020–Present)
-- Certification repository: [Google Drive](https://drive.google.com/drive/folders/1U9jU9dFOd24TrJGMaVmMXTq7S4010kgr)
-
----
-
-## CVEs & Recognition
-
-- **22+ CVEs** assigned — see [full CVE showcase](/cves/)
-- **160+ Hall of Fame** mentions (Atlassian, Google, Mastercard, SoundCloud, Paytm, Achmea, others)
-- **Top 3 Bug Hunter** on Convertkit (Bugcrowd)
-- [Bugcrowd profile](https://bugcrowd.com/djvirus) • [YesWeHack profile](https://yeswehack.com/hunters/djvirus)
-
----
-
-## Downloads
-
-- [Resume (PDF)](/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf)
+<section class="portfolio-cta" aria-label="Contact">
+  <div>
+    <p class="portfolio-kicker">Open to senior security roles</p>
+    <h2>Product Security, AppSec, Cloud Security, DevSecOps, and Security Engineering Lead roles.</h2>
+  </div>
+  <div class="portfolio-cta__actions">
+    <a class="portfolio-button portfolio-button--primary" href="mailto:danishismyname1@gmail.com">Email Me</a>
+    <a class="portfolio-button" href="/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf">Resume PDF</a>
+  </div>
+</section>

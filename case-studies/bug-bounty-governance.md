@@ -2,7 +2,8 @@
 title: "Bug Bounty Program Governance at Scale"
 permalink: /case-studies/bug-bounty-governance/
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 ---
 
 # Case Study: Bug Bounty Program Governance at Scale

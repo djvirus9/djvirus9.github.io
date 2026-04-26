@@ -2,7 +2,8 @@
 title: "CyberShield360 — Building an Attack Surface Management Product from Scratch"
 permalink: /case-studies/cybershield360/
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 ---
 
 # CyberShield360 — Building an Attack Surface Management Product from Scratch

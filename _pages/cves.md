@@ -1,7 +1,8 @@
 ---
 title: "CVE Showcase"
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 permalink: /cves/
 ---
 

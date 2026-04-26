@@ -2,7 +2,8 @@
 title: "Case Studies"
 permalink: /case-studies/
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 feature_row:
   - title: "Building Product Security from Scratch (Licious)"
     excerpt: "Led end-to-end Product Security as the first dedicated hire — establishing AppSec, AWS cloud controls, DevSecOps automation, bug bounty operations, and governance frameworks across a high-growth production environment."

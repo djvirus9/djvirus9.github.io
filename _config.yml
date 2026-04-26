@@ -4,6 +4,15 @@ url: "https://djvirus9.github.io"
 baseurl: ""
 repository: "djvirus9/djvirus9.github.io"
 locale: "en-US"
+logo: "/assets/avatar.jpg"
+
+social:
+  name: "Danish Siddiqui"
+  links:
+    - "https://www.linkedin.com/in/djvirus9"
+    - "https://github.com/djvirus9"
+    - "https://bugcrowd.com/djvirus"
+    - "https://yeswehack.com/hunters/djvirus"
 
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "air"

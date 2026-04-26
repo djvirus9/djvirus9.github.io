@@ -2,7 +2,8 @@
 title: "AWS Attack Path Analysis and Risk Prioritization"
 permalink: /case-studies/aws-attack-paths/
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 ---
 
 # Case Study: AWS Attack Path Analysis and Risk Prioritization

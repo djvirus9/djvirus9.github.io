@@ -1,7 +1,7 @@
 <header class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.author.name | default: site.title }}</a>
       <nav id="site-nav" class="greedy-nav">
         {% if site.data.navigation.main %}
         <ul class="visible-links">
@@ -17,7 +17,9 @@
           <div class="navicon"></div>
         </button>
         <ul class="hidden-links hidden"></ul>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">🌓</button>
+        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <span class="theme-toggle__icon" aria-hidden="true"></span>
+        </button>
       </nav>
     </div>
   </div>

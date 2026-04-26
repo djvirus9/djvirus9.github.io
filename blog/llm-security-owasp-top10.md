@@ -2,6 +2,8 @@
 title: "Exploring LLM Security Risks & OWASP Top 10 for LLMs"
 permalink: /blog/llm-security-owasp-top10/
 layout: single
+author_profile: false
+classes: wide portfolio-subpage
 ---
 
 # Exploring LLM Security Risks & OWASP Top 10 for LLMs

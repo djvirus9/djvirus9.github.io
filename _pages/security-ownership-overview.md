@@ -2,6 +2,8 @@
 title: "Security Ownership Overview"
 permalink: /security-ownership-overview/
 layout: single
+author_profile: false
+classes: wide portfolio-subpage
 ---
 
 # Security Ownership Overview

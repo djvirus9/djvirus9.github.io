@@ -1,7 +1,8 @@
 ---
 title: "Community & Speaking"
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 permalink: /community/
 ---
 

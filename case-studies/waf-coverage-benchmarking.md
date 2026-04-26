@@ -1,7 +1,8 @@
 ---
 title: "WAF Detection Coverage: Benchmarking Against OWASP CRS"
 layout: single
-author_profile: true
+author_profile: false
+classes: wide portfolio-subpage
 permalink: /case-studies/waf-coverage-benchmarking/
 ---
 

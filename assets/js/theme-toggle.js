@@ -17,7 +17,8 @@ Visual sanity checklist:
     if (toggleBtn) {
       toggleBtn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
       toggleBtn.setAttribute('title', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-      toggleBtn.textContent = mode === 'dark' ? '🌞' : '🌓';
+      toggleBtn.setAttribute('aria-label', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+      toggleBtn.classList.toggle('theme-toggle--dark', mode === 'dark');
     }
   }
 

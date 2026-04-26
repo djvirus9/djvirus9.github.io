@@ -82,14 +82,26 @@ html[data-theme="dark"] .archive__item-title a {
 
 html[data-theme="dark"] .theme-toggle {
   margin-left: 0.75rem;
-  padding: 0.35rem 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
   border: 1px solid #2a2f36;
   background: #12161c;
   color: #e6e8eb;
   border-radius: 6px;
-  font-size: 0.9rem;
-  line-height: 1;
   cursor: pointer;
+}
+
+html[data-theme="dark"] .theme-toggle__icon {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #facc15;
+  box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.16);
 }
 
 html[data-theme="dark"] .theme-toggle:focus {
@@ -190,7 +202,7 @@ html[data-theme="dark"] .masthead__menu-item a:hover,
 html[data-theme="dark"] .masthead__menu-item a:focus {
   color: #ffffff !important;
   background: rgba(255,255,255,0.12) !important;
-  border-radius: 10px;
+  border-radius: 8px;
   outline: none !important;
 }
 
@@ -266,4 +278,103 @@ html[data-theme="dark"] .case-study-grid .feature__item .archive__item-title {
 
 html[data-theme="dark"] .case-study-grid .feature__item .archive__item-excerpt {
   color: rgba(255,255,255,0.75) !important;
+}
+
+/* Homepage portfolio experience */
+html[data-theme="dark"] .portfolio-hero {
+  background: linear-gradient(135deg, #111827 0%, #0f1f1c 58%, #1f2937 100%);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.38);
+}
+
+html[data-theme="dark"] .portfolio-kicker {
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .portfolio-hero h1,
+html[data-theme="dark"] .portfolio-section h2,
+html[data-theme="dark"] .portfolio-impact-grid h3,
+html[data-theme="dark"] .portfolio-case-grid h3,
+html[data-theme="dark"] .portfolio-hero__role,
+html[data-theme="dark"] .portfolio-metrics strong {
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .portfolio-hero__lead,
+html[data-theme="dark"] .portfolio-section p,
+html[data-theme="dark"] .portfolio-impact-grid p,
+html[data-theme="dark"] .portfolio-case-grid p,
+html[data-theme="dark"] .portfolio-hero__summary,
+html[data-theme="dark"] .portfolio-metrics span {
+  color: #cbd5e1 !important;
+}
+
+html[data-theme="dark"] .portfolio-hero__meta span,
+html[data-theme="dark"] .portfolio-skill-cloud span,
+html[data-theme="dark"] .portfolio-proof span {
+  background: rgba(15, 23, 42, 0.76);
+  border-color: rgba(94, 234, 212, 0.2);
+  color: #e2e8f0;
+}
+
+html[data-theme="dark"] .portfolio-button {
+  background: #111827;
+  border-color: rgba(255, 255, 255, 0.18);
+  color: #f8fafc !important;
+}
+
+html[data-theme="dark"] .portfolio-button:hover {
+  border-color: rgba(94, 234, 212, 0.45);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="dark"] .portfolio-button--primary {
+  background: #0f766e;
+  border-color: #14b8a6;
+  color: #ffffff !important;
+}
+
+html[data-theme="dark"] .portfolio-button--ghost {
+  background: rgba(15, 23, 42, 0.58);
+}
+
+html[data-theme="dark"] .portfolio-hero__panel,
+html[data-theme="dark"] .portfolio-metrics article,
+html[data-theme="dark"] .portfolio-impact-grid article,
+html[data-theme="dark"] .portfolio-case-grid a,
+html[data-theme="dark"] .portfolio-proof,
+html[data-theme="dark"] .portfolio-link-stack a {
+  background: #0f172a;
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.34);
+}
+
+html[data-theme="dark"] .portfolio-hero__avatar {
+  border-color: #1e293b;
+}
+
+html[data-theme="dark"] .portfolio-hero__links a,
+html[data-theme="dark"] .portfolio-link-stack a,
+html[data-theme="dark"] .portfolio-section__link a {
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .portfolio-card-icon,
+html[data-theme="dark"] .portfolio-case-grid span {
+  background: rgba(20, 184, 166, 0.14);
+  color: #5eead4;
+}
+
+html[data-theme="dark"] .portfolio-case-grid a:hover {
+  border-color: rgba(94, 234, 212, 0.34);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] .portfolio-cta {
+  background: #020617;
+  border-color: rgba(94, 234, 212, 0.16);
+}
+
+html[data-theme="dark"] .portfolio-cta h2 {
+  color: #ffffff !important;
 }
