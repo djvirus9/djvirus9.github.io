@@ -3,7 +3,7 @@
 Live site: [djvirus9.github.io](https://djvirus9.github.io)
 
 ## Overview
-Senior Product Security Engineer focused on Application Security (AppSec), Cloud Security (AWS), DevSecOps, and security governance. This portfolio highlights case studies, security ownership, and writing for Dubai / Abu Dhabi roles.
+CKA- and CKS-certified Senior Product Security Engineer focused on Application Security (AppSec), AWS and Kubernetes security, DevSecOps, and security governance. This portfolio highlights case studies, security ownership, and technical writing for senior security roles.
 
 ## Key Sections
 - Security Ownership Overview: [Security Ownership](https://djvirus9.github.io/security-ownership.html)

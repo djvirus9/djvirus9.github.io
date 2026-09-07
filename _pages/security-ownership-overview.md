@@ -9,7 +9,7 @@ classes: wide portfolio-subpage
 # Security Ownership Overview
 
 ## Who I Am
-Senior Product Security Engineer with 6+ years of experience owning and scaling security programs end-to-end across application security, cloud security (AWS), DevSecOps, compliance, and external vulnerability detection.
+CKA- and CKS-certified Senior Product Security Engineer with 6+ years of experience owning and scaling security programs end-to-end across application security, cloud and Kubernetes security, DevSecOps, compliance, and external vulnerability detection.
 
 I specialize in building security functions from zero, operating them at scale, and embedding security into engineering workflows without slowing delivery.
 
@@ -45,9 +45,10 @@ My security philosophy is risk-based, developer-first, and outcome-driven.
 - Risk-based enforcement instead of blanket blocking
 - Security signal tuned for developer adoption
 
-**Cloud Security (AWS)**
+**Cloud and Kubernetes Security**
 - Attack path analysis across IAM, VPC, networking, and services
 - CSPM-driven visibility with exploitability-focused prioritization (CloudTrail, GuardDuty, WAF)
+- Performance-based CKA and CKS validation across Kubernetes administration, access control, workload hardening, and runtime security
 - Secure cloud architecture guidance without operational disruption
 
 **Bug Bounty and External Signal**

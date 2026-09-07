@@ -5,7 +5,7 @@ layout: single
 author_profile: false
 read_time: false
 classes: wide portfolio-home
-description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud Security, DevSecOps, Bug Bounty, ISO 27001, and AI/LLM Security."
+description: "CKA- and CKS-certified Senior Product Security Engineer specializing in AppSec, AWS and Kubernetes security, DevSecOps, Bug Bounty, ISO 27001, and AI/LLM Security."
 ---
 
 <section class="portfolio-hero" aria-label="Portfolio introduction">
@@ -13,11 +13,12 @@ description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud
     <p class="portfolio-kicker">Senior Product Security Engineer</p>
     <h1>Danish Siddiqui</h1>
     <p class="portfolio-hero__lead">
-      I build practical security programs across AppSec, AWS cloud security, DevSecOps, bug bounty operations, ISO 27001 readiness, and emerging AI/LLM security risks.
+      I build practical security programs across AppSec, AWS and Kubernetes security, DevSecOps, bug bounty operations, ISO 27001 readiness, and emerging AI/LLM security risks.
     </p>
     <div class="portfolio-hero__meta" aria-label="Primary focus areas">
       <span>AppSec</span>
       <span>AWS Cloud Security</span>
+      <span>Kubernetes Security</span>
       <span>DevSecOps</span>
       <span>Bug Bounty</span>
       <span>AI/LLM Security</span>
@@ -33,7 +34,7 @@ description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud
     <img class="portfolio-hero__avatar" src="/assets/avatar.jpg" alt="Danish Siddiqui">
     <div>
       <p class="portfolio-hero__role">Open globally from Bengaluru, India</p>
-      <p class="portfolio-hero__summary">First security hire experience. Security ownership from architecture to evidence, tooling, triage, and measurable risk reduction.</p>
+      <p class="portfolio-hero__summary">CKA- and CKS-certified, with first-security-hire experience and security ownership from architecture to evidence, tooling, triage, and measurable risk reduction.</p>
     </div>
     <div class="portfolio-hero__links">
       <a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a>
@@ -103,6 +104,9 @@ description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud
     <span>AWS IAM</span>
     <span>AWS WAF</span>
     <span>EKS</span>
+    <span>Kubernetes Administration</span>
+    <span>Kubernetes Security</span>
+    <span>Container Runtime Security</span>
     <span>Semgrep</span>
     <span>Trivy</span>
     <span>CodeQL</span>
@@ -111,6 +115,15 @@ description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud
     <span>ISO 27001</span>
     <span>AI/LLM Security</span>
     <span>Vulnerability Management</span>
+  </div>
+</section>
+
+<section class="portfolio-proof" aria-label="Professional certifications">
+  <p class="portfolio-kicker">Cloud-native credentials</p>
+  <div>
+    <span>Certified Kubernetes Security Specialist (CKS) · 2026</span>
+    <span>Certified Kubernetes Administrator (CKA) · 2026</span>
+    <span>AWS Certified Security – Specialty</span>
   </div>
 </section>
 
@@ -179,7 +192,7 @@ description: "Senior Product Security Engineer specializing in AppSec, AWS Cloud
 <section class="portfolio-cta" aria-label="Contact">
   <div>
     <p class="portfolio-kicker">Open to senior security roles</p>
-    <h2>Product Security, AppSec, Cloud Security, DevSecOps, and Security Engineering Lead roles.</h2>
+    <h2>Product Security, AppSec, Cloud and Kubernetes Security, DevSecOps, and Security Engineering Lead roles.</h2>
   </div>
   <div class="portfolio-cta__actions">
     <a class="portfolio-button portfolio-button--primary" href="mailto:danishismyname1@gmail.com">Email Me</a>
