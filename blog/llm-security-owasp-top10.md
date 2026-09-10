@@ -3,10 +3,10 @@ title: "Exploring LLM Security Risks & OWASP Top 10 for LLMs"
 permalink: /blog/llm-security-owasp-top10/
 layout: single
 author_profile: false
-classes: wide portfolio-subpage
+description: "An introduction to LLM integration risks, threat modeling, and the OWASP Top 10, with a link to Danish Siddiqui’s original Halodoc engineering article."
 ---
 
-# Exploring LLM Security Risks & OWASP Top 10 for LLMs
+Published on the [Halodoc engineering blog](https://blogs.halodoc.io/exploring-llm-security-risks-and-owasp-top-10-vulnerabilities-for-large-language-models/).
 
 ## Summary
 Concise, security-engineer-focused overview of how large language models expand the attack surface of modern products, with a practical framing around governance, threat modeling, and control validation. The piece connects typical LLM integration patterns to concrete risks and explains how to prioritize mitigations using the OWASP Top 10 for LLMs.

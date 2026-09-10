@@ -1,26 +1,18 @@
-<header class="masthead">
-  <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.author.name | default: site.title }}</a>
-      <nav id="site-nav" class="greedy-nav">
-        {% if site.data.navigation.main %}
-        <ul class="visible-links">
-          {% for link in site.data.navigation.main %}
-          <li class="masthead__menu-item">
-            <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-        {% endif %}
-        <button class="greedy-nav__toggle hidden" type="button">
-          <span class="visually-hidden">Toggle menu</span>
-          <div class="navicon"></div>
-        </button>
-        <ul class="hidden-links hidden"></ul>
-        <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
-          <span class="theme-toggle__icon" aria-hidden="true"></span>
-        </button>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}"><span class="site-brand__mark" aria-hidden="true">DS</span><span>Danish Siddiqui</span></a>
+    <div class="site-header__controls">
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <ul class="desktop-nav">{% include nav-links.html %}</ul>
+        <details class="mobile-nav" id="mobile-nav">
+          <summary>Menu <span aria-hidden="true">☰</span></summary>
+          <ul>{% include nav-links.html %}</ul>
+        </details>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>
+        <svg class="theme-icon theme-icon--moon" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 13a9 9 0 1 1-10-10 7 7 0 0 0 10 10Z"/></svg>
+        <svg class="theme-icon theme-icon--sun" aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
     </div>
   </div>
 </header>

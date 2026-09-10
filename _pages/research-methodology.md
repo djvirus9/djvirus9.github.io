@@ -1,94 +1,38 @@
 ---
 title: "Security Research Methodology"
-layout: single
-author_profile: false
-classes: wide portfolio-subpage
 permalink: /research-methodology/
+layout: single
+toc: true
+description: "How Danish Siddiqui investigates security findings: establish reachability, demonstrate impact, reproduce the issue, and work with maintainers through remediation."
+summary: "A finding becomes useful when its prerequisites, impact, and remediation are clear enough for someone else to validate."
 ---
 
-# Security Research Methodology
+## Choose a meaningful boundary
 
-How I approach independent security research, CVE hunting, and bug bounty work. This page exists because I've found that *how* you hunt matters more than *what tools* you use — and the "how" is rarely documented.
+My research includes application authorization, browser and file-handling behavior, and resource consumption in server software. I start by identifying the boundary being tested: one user accessing another user’s data, untrusted content becoming executable, or a small input causing disproportionate processing.
 
----
+For bounty work, the program’s published scope and exclusions shape which hypotheses I pursue. For open-source work, I check the project’s disclosure process and supported versions.
 
-## The Two Phases of a Finding
+## Establish reachability and impact
 
-Every finding I ship goes through two distinct phases, and I treat them differently:
+I distinguish the vulnerable code path from the conditions needed to reach it. Authentication, permissions, configuration, user interaction, and the affected version all belong in that explanation.
 
-### Phase 1 — Discovery
+Impact needs evidence appropriate to the issue: the data or action available across an authorization boundary, the execution context of stored content, or the processing cost of a resource-consumption defect. Severity follows those conditions.
 
-This is the part most researchers focus on: reading code, fuzzing endpoints, identifying the bug. I spend the majority of my time here in **three places**:
+## Make the report reproducible
 
-- **Codebase audits of widely deployed open-source software.** Mail servers (Dovecot), logging frameworks (Log4j ecosystem), OAuth/OIDC libraries, and browser extensions. High impact because a single bug affects thousands of deployments; high acceptance rate because open-source maintainers generally act fast on well-documented reports.
-- **Bug bounty engagements on YesWeHack, Bugcrowd, HackerOne, Intigriti.** I favor programs with open-source components where findings can be responsibly disclosed upstream for CVE credit in addition to the bounty.
-- **Targeted research on emerging attack surfaces.** Currently: AI/LLM integrations, browser extension security, algorithmic complexity bugs in parsers.
+A useful report contains:
 
-### Phase 2 — Acceptance
+1. A concise explanation of the affected behavior.
+2. Exact versions, prerequisites, and relevant configuration.
+3. A minimal reproduction with expected and observed results.
+4. Evidence of the impact and its limits.
+5. A suggested fix or a clear description of the boundary to restore.
 
-This is where most researchers lose findings, and where I've learned the most over the years. A technically valid bug is not the same as an *accepted* bug. Acceptance depends on:
+I keep the reproduction focused so maintainers can isolate the cause and verify the eventual change.
 
-- **Reachability.** Is it pre-auth or post-auth? Own-session or cross-user? Programs pay for multi-user, reachable impact — not for bugs that crash your own session.
-- **Measurable impact.** "DoS" is not an impact claim; "10 requests causing 60 seconds of CPU time per core" is.
-- **Concrete exploit chain.** Type confusion with no demonstrated gadget = informative. Type confusion with a PoC that reads a file = critical.
-- **Fit with program rules.** Before I spend time on a finding, I verify it's in scope, not excluded by program rules (e.g., MITM-required issues are usually excluded), and not already duplicated.
+## Work through remediation
 
-I make a **GO / NO-GO acceptance probability assessment** before investing in a full writeup. If the probability is below ~40%, I keep hunting rather than writing it up.
+I respond to requests for clarification, retest fixes when available, and coordinate disclosure with the maintainer or program. Public writeups should reflect the final advisory’s classification, prerequisites, and severity assessment.
 
----
-
-## What a Good Report Looks Like
-
-The shortest report I can write that gives the triager everything they need to reproduce, validate, and assign severity — in that exact order.
-
-**Standard structure:**
-
-1. **Summary** (one paragraph — what the bug is, what it impacts, why it matters)
-2. **Affected versions / configurations** (exact — not "latest")
-3. **Reproduction steps** (numbered, copy-pasteable, includes exact commands / requests)
-4. **Proof of Concept** (minimal working exploit or curl command)
-5. **Impact** (measurable — "X requests cause Y seconds of CPU per core", not "DoS possible")
-6. **Suggested fix** (patch, mitigation, or at minimum the class of fix needed)
-7. **Credit preference** (researcher handle, whether CVE credit is desired)
-
-No marketing language. No CVSS-score padding. No "this is critical because security is important."
-
----
-
-## Triager Relationship Management
-
-This is underrated. Triagers see hundreds of reports per week. The ones that get taken seriously tend to be:
-
-- **From researchers with a track record of high-signal reports.** Build this deliberately over time.
-- **Written at the triager's level.** Don't over-explain basics; don't under-explain the novel part of the bug.
-- **Responsive to clarifying questions within hours, not days.** Momentum matters.
-- **Gracious about severity adjustments.** If a triager rates something Medium and I'd argue High, I make the case once with evidence, then I accept the decision. Arguing every severity call erodes trust.
-
----
-
-## Lessons from Acceptance Patterns
-
-Observations from hundreds of submissions:
-
-- **Pre-auth > post-auth by a wide margin.** Even modest pre-auth bugs typically outpay significant post-auth bugs.
-- **Measurable multi-user impact is the dividing line.** A bug that crashes my own session is informative; a bug that crashes every active user's session is payable.
-- **Algorithmic complexity (DoS) bugs are under-reported and well-received** when documented with concrete CPU/memory measurements.
-- **Browser extension bugs are growing** — sender validation, web-accessible resource exposure, and credential handling in background scripts are all active areas.
-- **"Hardcoded credentials in a repo" needs a demonstrated impact path.** A production API key in a public repo is high impact; a dev API key with no prod reachability is informative.
-
----
-
-## What I Don't Do
-
-- **I don't file duplicate reports.** If I find something and the program has a likely duplicate, I move on.
-- **I don't inflate severity.** Programs notice. Triagers notice. It costs future findings.
-- **I don't publish PoCs before remediation.** Disclosure timelines exist for a reason.
-- **I don't share internal details of employer security work.** There's a clean line between "what I built" (fair for portfolio) and "how their WAF rules are configured" (never).
-
----
-
-## Related
-
-- [CVE Showcase](/cves/)
-- [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10/)
-- [Bug Bounty Program Governance at Scale](/case-studies/bug-bounty-governance/)
+The [published research collection](/cves/) provides examples with public credit. Related notes explain the [SVG upload boundary](/blog/svg-upload-trust-boundaries/) and [CSV export boundary](/blog/csv-export-trust-boundaries/).

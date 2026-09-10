@@ -2,11 +2,10 @@
 title: "WAF Detection Coverage: Benchmarking Against OWASP CRS"
 layout: single
 author_profile: false
-classes: wide portfolio-subpage
 permalink: /case-studies/waf-coverage-benchmarking/
+description: "Compared AWS WAF coverage with OWASP CRS categories and evaluated proposed rules in count mode before enforcement."
+summary: "Compared AWS WAF coverage with OWASP CRS categories and evaluated proposed rules in count mode before enforcement."
 ---
-
-# WAF Detection Coverage: Benchmarking Against OWASP CRS
 
 **Focus:** Rule coverage analysis, safe rule rollout, count-mode validation, false-positive discipline
 
@@ -27,7 +26,7 @@ The approach here was to **benchmark AWS WAF's existing coverage against the OWA
 Mapped current AWS WAF managed rules against OWASP CRS categories:
 
 - **SQLi** — where were the SQL injection patterns we'd miss?
-- **XSS** — was reflected / stored / DOM-based XSS equally covered?
+- **XSS request patterns** — which server-visible payloads were detected? Browser-only DOM paths require separate application testing.
 - **Request smuggling, path traversal, LFI/RFI** — CRS staples, often under-covered in managed rules
 - **Bot patterns** — beyond AWS BotControl's built-in categories
 - **Country-based anomaly detection** — business-specific geographic patterns
@@ -66,7 +65,7 @@ For rules promoted to BLOCK:
 - Customer support ticket volume tracked for "site is broken" reports
 - WAF log patterns reviewed for unexpected blocks
 
-A WAF rule that breaks a single real checkout costs more than the rule catches in value. Zero false positives during peak business hours was the hard bar.
+Legitimate checkout and login traffic were part of the rollout decision. Count-mode observations informed tuning; a quiet observation period does not prove that future traffic will have no false positives.
 
 ### 5. Bot Control Tuning
 

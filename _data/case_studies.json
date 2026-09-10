@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "licious-product-security",
+    "title": "Building Product Security from Scratch",
+    "category": "Product security",
+    "summary": "Established AppSec, cloud security, vulnerability management, and governance as the first dedicated security engineer at Licious.",
+    "outcome": "One operating model for controls, findings, owners, and remediation.",
+    "featured": true
+  },
+  {
+    "slug": "devsecops-pipeline",
+    "title": "Security in the Delivery Pipeline",
+    "category": "DevSecOps",
+    "summary": "Integrated Semgrep and Trivy into CI/CD, tuned findings, and introduced enforcement based on confidence and risk.",
+    "outcome": "Earlier feedback with a defined path from finding to fix.",
+    "featured": true
+  },
+  {
+    "slug": "cybershield360",
+    "title": "Building CyberShield360",
+    "category": "Security product",
+    "summary": "Built an attack surface management product at Invia, from asset discovery and enrichment to prioritization and reporting.",
+    "outcome": "A launched product with public walkthroughs.",
+    "featured": true
+  },
+  {
+    "slug": "cloud-native-posture",
+    "title": "Hardening AWS Cloud Posture",
+    "category": "Cloud security",
+    "summary": "Connected CSPM findings to IAM, network, and data access controls, then validated changes through traffic and logs."
+  },
+  {
+    "slug": "waf-coverage-benchmarking",
+    "title": "Validating WAF Coverage",
+    "category": "Detection engineering",
+    "summary": "Compared AWS WAF coverage with OWASP CRS categories and evaluated proposed rules in count mode before enforcement."
+  },
+  {
+    "slug": "aws-attack-paths",
+    "title": "Prioritizing AWS Attack Paths",
+    "category": "Cloud security",
+    "summary": "Evaluated how exposure, permissions, and trust relationships could combine, then sequenced remediation by business impact."
+  },
+  {
+    "slug": "pre-commit-hooks",
+    "title": "Security Feedback Before Commit",
+    "category": "Developer tooling",
+    "summary": "Added local checks for secrets, IaC configuration, and common code patterns, backed by independent CI enforcement."
+  },
+  {
+    "slug": "bug-bounty-governance",
+    "title": "Operating a Bug Bounty Program",
+    "category": "Security operations",
+    "summary": "Defined scope, triage criteria, ownership, and remediation workflows to turn external reports into engineering action."
+  },
+  {
+    "slug": "iso27001",
+    "title": "Making ISO 27001 Readiness Operational",
+    "category": "Governance",
+    "summary": "Mapped controls to accountable teams and repeatable evidence workflows across Engineering, IT, HR, and Finance."
+  }
+]

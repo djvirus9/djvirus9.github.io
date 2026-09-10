@@ -1,10 +1,12 @@
 title: "Danish Siddiqui | Senior Product Security Engineer"
-description: "Danish Siddiqui — CKA- and CKS-certified Senior Product Security Engineer with 22+ CVEs and 160+ Hall of Fame mentions. Specializing in AppSec, AWS and Kubernetes security, DevSecOps, Bug Bounty, and ISO 27001. Bengaluru, India."
+description: "Danish Siddiqui builds product security programs across AppSec, AWS, Kubernetes, and DevSecOps. Explore engineering case studies and published vulnerability research."
 url: "https://djvirus9.github.io"
 baseurl: ""
 repository: "djvirus9/djvirus9.github.io"
 locale: "en-US"
-logo: "/assets/avatar.jpg"
+logo: "/assets/avatar-224.jpg"
+og_image: "/assets/social-preview.png"
+timezone: Asia/Kolkata
 
 social:
   name: "Danish Siddiqui"
@@ -39,10 +41,14 @@ exclude:
   - package.json
   - package-lock.json
   - README.md
+  - docs
+  - scripts
+  - artifacts
+  - .github
 
 author:
   name: "Danish Siddiqui"
-  avatar: "/assets/avatar.jpg"
+  avatar: "/assets/avatar-224.jpg"
   bio: "CKA- and CKS-certified Senior Product Security Engineer — AppSec, AWS and Kubernetes Security, DevSecOps, ISO 27001, Bug Bounty, 22+ CVEs."
   location: "Bengaluru, India / Open globally"
   links:
@@ -65,11 +71,23 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
-      read_time: true
+      author_profile: false
+      read_time: false
       comments: false
       share: false
       related: false
+  - scope:
+      path: "case-studies"
+    values:
+      toc: true
+      section: "Case study"
+  - scope:
+      path: "blog"
+    values:
+      toc: true
+      section: "Writing"
 
 breadcrumbs: true
-search: true
+search: false
+atom_feed:
+  hide: true

@@ -2,56 +2,11 @@
 title: "Case Studies"
 permalink: /case-studies/
 layout: single
-author_profile: false
-classes: wide portfolio-subpage
-feature_row:
-  - title: "Building Product Security from Scratch (Licious)"
-    excerpt: "Led end-to-end Product Security as the first dedicated hire — establishing AppSec, AWS cloud controls, DevSecOps automation, bug bounty operations, and governance frameworks across a high-growth production environment."
-    url: "/case-studies/licious-product-security/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "Cloud-Native Security Posture: From Baseline to Hardened"
-    excerpt: "End-to-end AWS posture program: CSPM baseline, network segmentation, IAM hardening, data-plane access controls, and detection coverage — with evidence-based prioritization rather than raw finding counts."
-    url: "/case-studies/cloud-native-posture/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "Pre-Commit Hooks: Shifting Security Left"
-    excerpt: "Developer-first security tooling that catches secrets, IaC misconfigurations, and obvious vulnerability patterns before code leaves the developer's laptop — shortening the feedback loop from 20 minutes to 20 seconds."
-    url: "/case-studies/pre-commit-hooks/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "DevSecOps Pipeline Security: Semgrep + Trivy"
-    excerpt: "Designed and operationalized DevSecOps controls by embedding SAST and container security into CI/CD pipelines, balancing high-signal detection with developer productivity at scale."
-    url: "/case-studies/devsecops-pipeline/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "WAF Detection Coverage: Benchmarking Against OWASP CRS"
-    excerpt: "Benchmarked AWS WAF against OWASP Core Rule Set to identify coverage gaps, proposed custom rules, validated in COUNT mode before enforcement, and tuned bot control without weakening bot-defense posture."
-    url: "/case-studies/waf-coverage-benchmarking/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "AWS Attack Path Analysis & Risk Prioritization"
-    excerpt: "Conducted AWS attack-path analysis to identify chained misconfigurations, enabling risk-based prioritization of remediation aligned with business impact and cloud security posture."
-    url: "/case-studies/aws-attack-paths/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "ISO 27001 Readiness as Security Ownership"
-    excerpt: "Owned ISO 27001:2022 readiness by translating security controls into engineering processes, evidence workflows, and cross-functional accountability across product and platform teams."
-    url: "/case-studies/iso27001/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "Bug Bounty Program Governance at Scale"
-    excerpt: "Established governance for a large-scale bug bounty program — improving triage quality, scope discipline, researcher communication, and remediation outcomes."
-    url: "/case-studies/bug-bounty-governance/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
-  - title: "CyberShield360 — Security Product Built from Scratch"
-    excerpt: "Built and delivered an Attack Surface Management platform from the ground up, covering asset discovery, enrichment, risk scoring, and enterprise-ready reporting."
-    url: "/case-studies/cybershield360/"
-    btn_label: "Read Case Study →"
-    btn_class: "btn btn--primary"
+wide: true
+description: "Engineering case studies from Danish Siddiqui: building Product Security at Licious, DevSecOps pipelines, AWS controls, and the CyberShield360 platform."
+summary: "The problems, decisions, and operating models behind my work in product security."
 ---
 
-<div class="case-study-grid">
-  {% include feature_row id="feature_row" %}
+<div class="card-grid">
+{% for study in site.data.case_studies %}{% include work-card.html study=study level=2 %}{% endfor %}
 </div>

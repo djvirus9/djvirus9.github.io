@@ -1,0 +1,26 @@
+---
+---
+<!doctype html>
+{% include copyright.html %}
+<html lang="en" class="no-js">
+  <head>
+    {% include head.html %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {% include masthead.html %}
+    {{ content }}
+    <footer class="site-footer" id="footer">
+      <div class="site-footer__inner">
+        <p>&copy; {{ site.time | date: '%Y' }} Danish Siddiqui</p>
+        <nav aria-label="Footer">
+          <a href="mailto:danishismyname1@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a>
+          <a href="https://github.com/djvirus9">GitHub</a>
+          <a href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Résumé PDF</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+  </body>
+</html>
