@@ -1,47 +1,51 @@
 ---
-title: "CyberShield360 — Building an Attack Surface Management Product from Scratch"
+title: "Building CyberShield360"
 permalink: /case-studies/cybershield360/
 layout: single
-author_profile: false
-classes: wide portfolio-subpage
+description: "Danish Siddiqui’s role in building CyberShield360 at Invia: attack surface discovery, enrichment, prioritization, reporting, and public product demonstrations."
+summary: "At Invia, I designed and helped launch an attack surface management product that turns external asset discovery into prioritized exposure information."
+context: "Invia · Senior Security Engineer · September 2022–November 2023"
 ---
 
-# CyberShield360 — Building an Attack Surface Management Product from Scratch
+<div class="demo-links">
+  <a class="button button--primary" href="https://www.youtube.com/watch?v=a-o99XjxkMw">Watch the walkthrough <span aria-hidden="true">↗</span></a>
+  <a class="button" href="https://www.youtube.com/watch?v=4FVeZtl4WZs">Watch the second demo <span aria-hidden="true">↗</span></a>
+</div>
 
-## Context
-CyberShield360 was built to help organizations gain continuous visibility into external attack surface exposure. The goal was to move beyond periodic penetration tests by providing a productized, repeatable view of real-world exposure across internet-facing assets.
+## The problem
 
-## Problem Statement
-Security teams lacked a consistent way to map and monitor public-facing assets and emerging exposures at scale. Existing approaches were manual, point-in-time, and hard to operationalize across multiple clients and environments.
+Security teams needed a repeatable view of their internet-facing assets and changing exposure. Periodic assessments and manually maintained inventories made it difficult to keep that view current across multiple customer environments.
 
-## My Role and Ownership
-I owned the end-to-end build of CyberShield360, including:
-- Product architecture and security design decisions
-- Defining the data pipeline for external asset discovery and exposure analysis
-- Translating security requirements into an operational product roadmap
-- Collaborating with engineering and leadership to scope, build, and launch
+CyberShield360 brought discovery, analysis, and reporting into a product workflow that teams could use for ongoing triage.
 
-## Architecture and Approach
-- Designed a modular pipeline for discovery, enrichment, and risk scoring of external assets
-- Focused on signal quality to highlight actionable exposure rather than noise
-- Prioritized repeatability and scalability to support multiple environments and clients
-- Ensured outputs were usable by security teams for triage and remediation
+## My ownership
 
-## Launch and Industry Showcase
-The product was launched publicly and demonstrated in industry-facing sessions to validate usability and outcomes with real security teams.
+I owned product architecture and security design, defined the discovery and analysis pipeline, and worked with engineering and leadership to scope and launch the product.
 
-## Impact
-- Delivered a production-ready ASM product from zero to launch
-- Enabled continuous external exposure monitoring as a repeatable security capability
-- Provided a structured approach for prioritizing high-risk external findings
+This included translating security requirements into product priorities and deciding how findings should be presented to the people responsible for remediation.
 
-## Key Skills Demonstrated
-Product Security Architecture • Attack Surface Management • Security Data Pipelines • Risk Prioritization • Cross-Functional Delivery
+## From assets to decisions
 
-## External References
-- Product page: [CyberShield360](https://www.invia.com.au/CyberShield360)
-- Demo video 1: [CyberShield360 walkthrough](https://www.youtube.com/watch?v=a-o99XjxkMw)
-- Demo video 2: [CyberShield360 demo](https://www.youtube.com/watch?v=4FVeZtl4WZs)
+<figure class="flow-diagram">
+  <ol>
+    <li><strong>Discover</strong>Identify external assets and exposed services within the assessment scope.</li>
+    <li><strong>Enrich</strong>Attach service information and correlate relevant vulnerability data.</li>
+    <li><strong>Prioritize</strong>Use exposure and risk context to identify findings that need investigation.</li>
+    <li><strong>Report</strong>Present the affected assets and supporting evidence for triage and remediation.</li>
+  </ol>
+  <figcaption>Conceptual product pipeline. The public walkthroughs show the delivered interface and workflow.</figcaption>
+</figure>
 
-## Why This Matters
-This case study demonstrates my ability to build a security product from scratch, make architecture decisions under real-world constraints, and deliver an operational capability that security teams can adopt at scale.
+## Design priorities
+
+**Repeatability:** discovery and enrichment needed to support continuing assessment across environments.
+
+**Useful signal:** service identification and CVE correlation are starting points for validation; a matched version alone should not be presented as proof of exploitability.
+
+**Actionable output:** asset context and prioritization needed to help a security team decide what to investigate or fix next.
+
+## Delivery and public evidence
+
+The product reached launch and was demonstrated publicly. The walkthroughs above provide a view of its functionality, while the [Invia product page](https://www.invia.com.au/CyberShield360) provides the product context.
+
+This work extended my role from conducting assessments to building the system through which teams discover, understand, and track exposure.

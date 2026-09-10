@@ -1,109 +1,64 @@
 ---
-title: "Designing and Operating a Scalable DevSecOps Pipeline"
+title: "Security in the Delivery Pipeline"
 permalink: /case-studies/devsecops-pipeline/
 layout: single
-author_profile: false
-classes: wide portfolio-subpage
+description: "Designing CI/CD security with Semgrep, Trivy, tuned rules, clear finding ownership, and gradual enforcement based on confidence and risk."
+summary: "I integrated SAST and container scanning into delivery workflows, then tuned enforcement and remediation ownership so teams could act on the results."
+context: "AppSec · CI/CD · Semgrep · Trivy"
 ---
 
-# Case Study: Designing and Operating a Scalable DevSecOps Pipeline
+## The problem and my role
 
-## Context
-The engineering organization operated multiple CI/CD pipelines supporting web services, APIs, and containerized workloads. While security testing existed in pockets, it was inconsistent, late in the delivery cycle, and largely manual, resulting in security issues surfacing close to production.
+Security testing varied between services and often arrived late in delivery. Unowned findings and false positives made it harder for developers to distinguish urgent defects from background noise.
 
-My mandate was to embed security into CI/CD pipelines in a way that scaled across teams, provided meaningful signal, and did not degrade developer velocity.
+I owned tool selection, integration, rule tuning, enforcement thresholds, and the operational handoff to service owners, working with application and platform teams.
 
-## Problem Statement
-The core challenges were systemic rather than tooling-related:
-- Security testing occurred too late (post-merge or post-release)
-- No standardized SAST or container security coverage
-- High false positives reduced developer trust in security findings
-- Security findings lacked ownership and clear remediation paths
-- Pipelines optimized for speed, not risk visibility
-- Developers viewed security as an external gate, not part of delivery
+## Where the controls run
 
-This resulted in avoidable vulnerabilities reaching production and reactive remediation cycles.
+<figure class="flow-diagram">
+  <ol>
+    <li><strong>Local commit</strong>Fast checks for secrets and common unsafe patterns provide feedback while the developer is editing.</li>
+    <li><strong>Pull request</strong>Semgrep examines code changes with framework-specific rules and actionable remediation messages.</li>
+    <li><strong>Container build</strong>Trivy surfaces image and dependency vulnerabilities for contextual review.</li>
+    <li><strong>Risk decision</strong>High-confidence findings trigger remediation or an explicit exception with an accountable owner.</li>
+  </ol>
+  <figcaption>Simplified control placement. Local hooks provide feedback; CI runs checks independently.</figcaption>
+</figure>
 
-## My Role and Ownership
-I owned the design, rollout, and operationalization of DevSecOps controls across CI/CD pipelines, including:
-- Selecting security tooling aligned with engineering workflows
-- Defining where and how security checks should run
-- Tuning rules and thresholds to balance signal vs noise
-- Integrating security findings into existing developer workflows
-- Defining escalation and exception handling for high-risk issues
+## Rules and enforcement
 
-I operated as both architect and operator, working directly with platform and application teams.
+I selected Semgrep for readable rules and the ability to express application-specific patterns. Custom rules complemented the default rulesets, with tuning focused on framework misuse and recurring code issues.
 
-## Strategy and Design Decisions
-### 1. Security as a Pipeline Control, Not a Gate
-Rather than blocking pipelines aggressively, I designed security checks as early feedback mechanisms, focusing on:
-- Visibility before merge
-- Actionable findings with context
-- Gradual enforcement based on risk severity
+Trivy provided container and dependency findings during builds. Severity informed review alongside exploitability and the affected service; indiscriminately blocking every reported CVE would create avoidable friction.
 
-This reduced friction and improved adoption.
+New checks began with visibility and feedback. Enforcement focused on findings with enough confidence and context for developers to understand the required change.
 
-### 2. Static Application Security Testing (SAST)
-I integrated Semgrep as the primary SAST tool due to its:
-- Language-agnostic coverage
-- Readability for developers
-- Ability to write custom, context-aware rules
+## What an actionable finding contains
 
-Key decisions:
-- Custom rule tuning to reduce noise
-- Focus on framework misuse and business-logic-adjacent issues
-- Fail builds only on clearly exploitable, high-confidence findings
+The following is an illustrative record format, with example values:
 
-This ensured developers trusted the results instead of bypassing them.
+| Field | Example |
+|---|---|
+| Affected component | A service’s changed source file or container image |
+| Detection evidence | Rule ID, location, relevant code, and affected version |
+| Risk explanation | The input or dependency condition that makes the issue reachable |
+| Owner | The team responsible for the affected service |
+| Resolution | Fix guidance, due date, and validation evidence |
+| Exception | Named approver, reason, expiry, and compensating control |
 
-### 3. Container and Dependency Security
-To address supply-chain and runtime risks, I added container and dependency scanning using Trivy:
-- Scanned container images during build
-- Flagged high and critical vulnerabilities early
-- Avoided blocking on low-risk CVEs with no exploitability
+The aim was a finding that a service owner could act on without starting a second investigation simply to understand the report.
 
-The emphasis was on risk-based prioritization, not vulnerability counts.
+## Outcomes and measurement
 
-### 4. Findings Ownership and Workflow Integration
-Security findings were integrated into existing workflows rather than introducing new systems:
-- Clear service ownership mapping
-- Actionable remediation guidance
-- Consistent severity classification
-- Defined expectations for fix timelines
+The rollout contributed to an approximately **30% reduction in critical production-bound vulnerabilities**, alongside more consistent security coverage before release.
 
-This prevented security issues from becoming "orphan findings".
+I also tracked developer fix turnaround, recurring vulnerability classes, and adoption across teams. These indicators helped identify noisy rules and gaps in ownership. Scanner finding counts alone were insufficient to evaluate the program.
 
-### 5. Measuring Effectiveness
-Rather than measuring success by number of findings, I tracked:
-- Reduction in production-bound vulnerabilities
-- Developer fix turnaround time
-- Recurrence of similar vulnerability classes
-- Adoption rate across teams
+## Trade-offs
 
-These metrics informed rule tuning and enforcement decisions.
+- Early, reliable feedback helped establish trust before introducing blocking checks.
+- Local hooks improved turnaround, but could be bypassed; CI remained an independent control.
+- Rule coverage needed ongoing maintenance as frameworks and application patterns changed.
+- Exceptions needed accountable ownership to avoid becoming permanent bypasses.
 
-## Impact and Outcomes
-- ~30% reduction in critical vulnerabilities reaching production
-- Improved detection of security issues before code merge
-- Increased developer trust in security tooling and findings
-- Standardized security coverage across CI/CD pipelines
-- Reduced reactive security firefighting post-release
-
-Security became an engineering enabler, not a delivery bottleneck.
-
-## Trade-offs and Lessons Learned
-- Blocking pipelines too early reduces adoption
-- High-confidence findings matter more than comprehensive coverage
-- Developer trust is a prerequisite for effective DevSecOps
-- Security tooling must adapt to engineering reality, not vice versa
-
-These lessons informed subsequent improvements to cloud security and compliance controls.
-
-## Key Skills Demonstrated
-DevSecOps Architecture and Strategy • CI/CD Security Design • SAST Rule Engineering and Tuning • Container and Supply Chain Security • Developer Enablement and Workflow Integration • Risk-Based Security Decision Making
-
-### Skills & Signals
-Secure SDLC · CI/CD Security · SAST · SCA · Container Security · Vulnerability Management Lifecycle
-
-## Why This Matters
-This case study demonstrates my ability to design security systems that scale, make pragmatic trade-offs, and operate at the intersection of security, platform engineering, and developer experience -- a core expectation for Senior and Principal Security Engineers.
+Read the related [pre-commit workflow](/case-studies/pre-commit-hooks/) and [Product Security operating model](/case-studies/licious-product-security/).

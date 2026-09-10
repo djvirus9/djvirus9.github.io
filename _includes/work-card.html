@@ -1,0 +1,7 @@
+<article class="work-card">
+  <p class="eyebrow">{{ include.study.category }}</p>
+  <h{{ include.level | default: 3 }}><a href="{{ include.study.slug | prepend: '/case-studies/' | append: '/' | relative_url }}">{{ include.study.title }}</a></h{{ include.level | default: 3 }}>
+  <p>{{ include.study.summary }}</p>
+  {% if include.featured %}<p class="work-card__outcome">{{ include.study.outcome }}</p>{% endif %}
+  <a class="work-card__link" href="{{ include.study.slug | prepend: '/case-studies/' | append: '/' | relative_url }}" aria-label="Read {{ include.study.title | escape }}">Read case study <span aria-hidden="true">→</span></a>
+</article>

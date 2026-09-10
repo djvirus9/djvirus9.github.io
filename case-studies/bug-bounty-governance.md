@@ -3,10 +3,9 @@ title: "Bug Bounty Program Governance at Scale"
 permalink: /case-studies/bug-bounty-governance/
 layout: single
 author_profile: false
-classes: wide portfolio-subpage
+description: "Defined scope, triage criteria, ownership, and remediation workflows to turn external reports into engineering action."
+summary: "Defined scope, triage criteria, ownership, and remediation workflows to turn external reports into engineering action."
 ---
-
-# Case Study: Bug Bounty Program Governance at Scale
 
 ## Context
 As the organization’s product footprint and external attack surface grew, vulnerability discovery increasingly shifted toward external researchers via bug bounty platforms. While this provided valuable signal, the program initially lacked clear governance, resulting in inconsistent severity ratings, noisy reports, remediation delays, and misalignment between security, engineering, and business expectations.
@@ -94,12 +93,3 @@ Bug bounty evolved from a reactive inbox into a strategic external detection lay
 - Governance matters more than tooling in bounty programs
 
 These lessons reinforced the importance of security ownership over automation.
-
-## Key Skills Demonstrated
-Bug Bounty Program Design and Governance • Vulnerability Triage and Risk Assessment • Cross-Team Remediation Coordination • Researcher Communication and Expectation Management • Cost vs Risk Trade-off Analysis • Security Program Ownership
-
-### Skills & Signals
-Bug Bounty Program · Vulnerability Management Lifecycle · Risk Management · Stakeholder Management · External Vulnerability Detection
-
-## Why This Matters
-This case study demonstrates my ability to operate security programs at scale, make risk-informed decisions under ambiguity, and align external attacker input with internal engineering priorities -- a critical capability for Senior and Principal Security Engineers in mature organizations.

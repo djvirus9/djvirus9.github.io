@@ -1,38 +1,46 @@
-/*
-Visual sanity checklist:
-- headings readable
-- body text readable
-- links visible
-- code blocks readable
-- nav readable
-- cards/feature_row readable
-*/
 (function () {
-  var html = document.documentElement;
-  var toggleBtn = document.getElementById('theme-toggle');
-
-  function applyTheme(mode) {
-    if (!html) return;
-    html.setAttribute('data-theme', mode);
-    if (toggleBtn) {
-      toggleBtn.setAttribute('aria-pressed', mode === 'dark' ? 'true' : 'false');
-      toggleBtn.setAttribute('title', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-      toggleBtn.setAttribute('aria-label', mode === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
-      toggleBtn.classList.toggle('theme-toggle--dark', mode === 'dark');
-    }
+  var root = document.documentElement;
+  var button = document.getElementById('theme-toggle');
+  var preference = window.matchMedia('(prefers-color-scheme: dark)');
+  function label() {
+    if (!button) return;
+    var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    button.setAttribute('aria-label', 'Switch to ' + next + ' mode');
+    button.setAttribute('title', 'Switch to ' + next + ' mode');
   }
-
-  // DEFAULT: light if no saved preference
-  var saved = null;
-  try { saved = localStorage.getItem('theme'); } catch (e) {}
-  applyTheme(saved === 'dark' ? 'dark' : 'light');
-
-  if (toggleBtn) {
-    toggleBtn.addEventListener('click', function () {
-      var current = html.getAttribute('data-theme') || 'light';
-      var next = current === 'dark' ? 'light' : 'dark';
-      try { localStorage.setItem('theme', next); } catch (e) {}
-      applyTheme(next);
+  if (button) {
+    button.hidden = false;
+    label();
+    button.addEventListener('click', function () {
+      var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      try { localStorage.setItem('theme', next); } catch (error) { /* Storage is optional. */ }
+      label();
     });
   }
+  preference.addEventListener('change', function (event) {
+    var saved;
+    try { saved = localStorage.getItem('theme'); } catch (error) { /* Storage is optional. */ }
+    if (saved !== 'light' && saved !== 'dark') {
+      root.dataset.theme = event.matches ? 'dark' : 'light';
+      label();
+    }
+  });
+  var menu = document.getElementById('mobile-nav');
+  if (!menu) return;
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary').focus();
+    }
+  });
+  document.addEventListener('click', function (event) {
+    if (menu.open && !menu.contains(event.target)) menu.open = false;
+  });
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () { menu.open = false; });
+  });
+  window.matchMedia('(min-width: 56rem)').addEventListener('change', function (event) {
+    if (event.matches) menu.open = false;
+  });
 })();

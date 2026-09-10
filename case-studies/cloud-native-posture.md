@@ -2,11 +2,10 @@
 title: "Cloud-Native Security Posture: From Baseline to Hardened"
 layout: single
 author_profile: false
-classes: wide portfolio-subpage
 permalink: /case-studies/cloud-native-posture/
+description: "Connected CSPM findings to IAM, network, and data access controls, then validated changes through traffic and logs."
+summary: "Connected CSPM findings to IAM, network, and data access controls, then validated changes through traffic and logs."
 ---
-
-# Cloud-Native Security Posture: From Baseline to Hardened
 
 **Focus:** AWS cloud posture, network segmentation, IAM hardening, detection coverage  
 **Scope:** Production cloud environment supporting a high-growth consumer product

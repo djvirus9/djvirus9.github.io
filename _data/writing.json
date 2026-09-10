@@ -1,0 +1,29 @@
+[
+  {
+    "title": "When an Image Upload Becomes Executable Content",
+    "url": "/blog/svg-upload-trust-boundaries/",
+    "summary": "The upload and retrieval boundaries behind Traccar’s CVE-2026-25648.",
+    "type": "Research note",
+    "date": "2026-09-10"
+  },
+  {
+    "title": "The Trust Boundary in a CSV Export",
+    "url": "/blog/csv-export-trust-boundaries/",
+    "summary": "Why correct CSV quoting does not settle how spreadsheet software interprets a cell.",
+    "type": "Research note",
+    "date": "2026-09-10"
+  },
+  {
+    "title": "What to Measure Before Blocking with a WAF Rule",
+    "url": "/blog/waf-count-mode-validation/",
+    "summary": "An evaluation plan connecting rule matches to legitimate traffic, rollout criteria, and rollback.",
+    "type": "Engineering note",
+    "date": "2026-09-10"
+  },
+  {
+    "title": "Exploring LLM Security Risks & OWASP Top 10 for LLMs",
+    "url": "/blog/llm-security-owasp-top10/",
+    "summary": "An introduction to LLM integration risks, originally published on the Halodoc engineering blog.",
+    "type": "Halodoc engineering"
+  }
+]

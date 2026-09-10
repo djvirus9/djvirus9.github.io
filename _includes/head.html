@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if page.url == '/' %}{% assign document_title = site.title %}{% else %}{% assign document_title = page.title | append: ' | Danish Siddiqui' %}{% endif %}
+{% assign description = page.description | default: page.summary | default: site.description %}
+{% assign canonical = page.url | replace: '/index.html', '/' | absolute_url %}
+{% assign preview_image = page.og_image | default: site.og_image | absolute_url %}
+<title>{{ document_title | escape }}</title>
+<meta name="description" content="{{ description | strip_html | normalize_whitespace | escape }}">
+<meta name="author" content="Danish Siddiqui">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Danish Siddiqui">
+<meta property="og:title" content="{{ document_title | escape }}">
+<meta property="og:description" content="{{ description | strip_html | normalize_whitespace | escape }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ preview_image }}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Danish Siddiqui — Senior Product Security Engineer. AppSec, AWS, Kubernetes, and DevSecOps.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ document_title | escape }}">
+<meta name="twitter:description" content="{{ description | strip_html | normalize_whitespace | escape }}">
+<meta name="twitter:image" content="{{ preview_image }}">
+<meta name="twitter:image:alt" content="Danish Siddiqui — Senior Product Security Engineer">
+{% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+<meta name="color-scheme" content="light dark">
+<script src="{{ '/assets/js/theme-init.js' | relative_url }}"></script>
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if page.url == '/' %}{% include schema.html %}{% endif %}

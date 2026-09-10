@@ -1,68 +1,41 @@
 ---
-title: "Community & Speaking"
-layout: single
-author_profile: false
-classes: wide portfolio-subpage
+title: "Community & Recognition"
 permalink: /community/
+layout: single
+description: "Danish Siddiqui’s security community work, Seasides conference volunteering, researcher profiles, and selected public Hall of Fame references."
+summary: "Conference volunteering, independent research, and sharing practical security lessons."
 ---
 
-# Community & Industry Engagement
+## Conference volunteering
 
-My view on community work: it's a forcing function for clarity. Volunteering at conferences, publishing research, and engaging with researcher communities all force you to articulate what you've learned well enough for others to use it — which is a different skill from just *doing* security work.
+At [Seasides Security Conference](https://www.seasides.net/), I have supported event operations, attendee coordination, and speaker support. Working with organizers and researchers gives me another way to contribute to the security community.
 
----
+## Researcher profiles
 
-## Conference Engagement
-
-### Seasides Security Conference — Volunteer
-
-[Seasides](https://www.seasides.net/) is one of India's most well-regarded independent security conferences, held annually in Goa. Volunteering has included event operations, attendee coordination, and speaker support.
-
-Why volunteer at a conference instead of just attending? Because the operational side gives you exposure to **how the security community actually runs** — how talks get selected, how research gets recognized, how the informal networks form.
-
----
-
-## Bug Bounty Platforms — Active Researcher
-
-| Platform | Handle |
+| Platform | Public profile |
 |---|---|
-| YesWeHack | [`djvirus`](https://yeswehack.com/hunters/djvirus) |
-| Bugcrowd | [`djvirus`](https://bugcrowd.com/djvirus) |
-| HackerOne | `djvirus` |
-| Intigriti | `djvirus` |
-| Google Bug Hunters | [Profile](https://bughunters.google.com/profile/bd1b3ef4-5f4c-4593-ae5c-fde182a605e1) |
+| GitHub | [djvirus9](https://github.com/djvirus9) |
+| YesWeHack | [djvirus](https://yeswehack.com/hunters/djvirus) |
+| Bugcrowd | [djvirus](https://bugcrowd.com/djvirus) |
+| HackerOne | [djvirus](https://hackerone.com/djvirus) |
+| Google Bug Hunters | [Researcher profile](https://bughunters.google.com/profile/bd1b3ef4-5f4c-4593-ae5c-fde182a605e1) |
 
-**Synack Red Team member** — invite-only private vulnerability research network (<10% acceptance rate).
+I also participate in the Synack Red Team. My [CVE showcase](/cves/) links selected findings to publisher acknowledgments.
 
----
+## Recognition
 
-## Hall of Fame Recognitions
+My research has received **160+ Hall of Fame acknowledgments**, including programs at Google, Atlassian, Mastercard, SoundCloud, Paytm, and Achmea. Selected public references are available through:
 
-160+ Hall of Fame acknowledgements across programs including:
+- [Google Bug Hunters profile](https://bughunters.google.com/profile/bd1b3ef4-5f4c-4593-ae5c-fde182a605e1)
+- [Achmea Hall of Fame](https://www.achmea.nl/responsibledisclosure/hall-of-fame)
+- [Bugcrowd researcher profile](https://bugcrowd.com/djvirus)
 
-- **Atlassian** • **Google** • **Mastercard**
-- **SoundCloud** • **Paytm** • **Achmea**
-- **Convertkit** — Top 3 Bug Hunter
-- Plus 150+ additional programs across enterprise SaaS, fintech, healthcare, and consumer tech
+These links show selected recognition; they are not a complete archive of every acknowledgment.
 
-[Achmea Hall of Fame](https://www.achmea.nl/responsibledisclosure/hall-of-fame) • [Google Bug Hunters profile](https://bughunters.google.com/profile/bd1b3ef4-5f4c-4593-ae5c-fde182a605e1) • [Bugcrowd profile](https://bugcrowd.com/djvirus)
+## Writing and collaboration
 
----
+My [writing collection](/blog/) includes published vulnerability research, WAF evaluation notes, and an article on LLM security for the Halodoc engineering blog.
 
-## Writing & Research
+I’m open to conference and meetup talks, mentoring early-career researchers, and collaborating on security tooling. Areas I can discuss include AppSec, cloud security, DevSecOps, and moving from an individual finding to an engineering fix.
 
-- [Exploring LLM Security Risks & OWASP Top 10 for LLMs](/blog/llm-security-owasp-top10/) — featured writeup on AI/LLM security for enterprise platforms
-- [Writing Index](/blog/) — all posts
-- [CVE Showcase](/cves/) — 22+ published CVEs
-- [Security Research Methodology](/research-methodology/) — how I approach research and bug bounty
-
----
-
-## Open to
-
-- **Speaking at conferences and meetups** on AppSec, Cloud Security, DevSecOps, and security research methodology
-- **Podcast / panel participation** on security engineering at high-growth product companies
-- **Mentoring** early-career security researchers, especially those moving into bug bounty or cloud security
-- **Collaborating on open-source security tooling**
-
-Get in touch: [danishismyname1@gmail.com](mailto:danishismyname1@gmail.com) • [LinkedIn](https://www.linkedin.com/in/djvirus9)
+[Email me](mailto:danishismyname1@gmail.com) or connect on [LinkedIn](https://www.linkedin.com/in/djvirus9).

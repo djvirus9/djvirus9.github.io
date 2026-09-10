@@ -2,200 +2,75 @@
 title: "Danish Siddiqui"
 permalink: /
 layout: single
-author_profile: false
-read_time: false
-classes: wide portfolio-home
-description: "CKA- and CKS-certified Senior Product Security Engineer specializing in AppSec, AWS and Kubernetes security, DevSecOps, Bug Bounty, ISO 27001, and AI/LLM Security."
+wide: true
+description: "Founding security engineer at Licious. Explore Danish Siddiqui’s work in AppSec, AWS, Kubernetes, DevSecOps, and published vulnerability research."
 ---
 
-<section class="portfolio-hero" aria-label="Portfolio introduction">
-  <div class="portfolio-hero__content">
-    <p class="portfolio-kicker">Senior Product Security Engineer</p>
-    <h1>Danish Siddiqui</h1>
-    <p class="portfolio-hero__lead">
-      I build practical security programs across AppSec, AWS and Kubernetes security, DevSecOps, bug bounty operations, ISO 27001 readiness, and emerging AI/LLM security risks.
-    </p>
-    <div class="portfolio-hero__meta" aria-label="Primary focus areas">
-      <span>AppSec</span>
-      <span>AWS Cloud Security</span>
-      <span>Kubernetes Security</span>
-      <span>DevSecOps</span>
-      <span>Bug Bounty</span>
-      <span>AI/LLM Security</span>
-    </div>
-    <div class="portfolio-hero__actions">
-      <a class="portfolio-button portfolio-button--primary" href="/case-studies/">View Case Studies</a>
-      <a class="portfolio-button" href="/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf">Download Resume</a>
-      <a class="portfolio-button portfolio-button--ghost" href="mailto:danishismyname1@gmail.com">Contact Me</a>
+<section class="hero" aria-labelledby="intro-title">
+  <div>
+    <p class="eyebrow">Senior Product Security Engineer</p>
+    <h1 id="intro-title">Danish Siddiqui</h1>
+    <p class="hero__lead">I build product security programs—from the first control to engineering-wide adoption.</p>
+    <p class="hero__focus">AppSec &nbsp;·&nbsp; AWS &amp; Kubernetes &nbsp;·&nbsp; DevSecOps</p>
+    <div class="actions">
+      <a class="button button--primary" href="{{ '/case-studies/' | relative_url }}">Explore my work <span aria-hidden="true">→</span></a>
+      <a class="button" href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Résumé PDF</a>
+      <a class="button" href="mailto:danishismyname1@gmail.com">Get in touch</a>
     </div>
   </div>
-
-  <aside class="portfolio-hero__panel" aria-label="Portfolio highlights">
-    <img class="portfolio-hero__avatar" src="/assets/avatar.jpg" alt="Danish Siddiqui">
-    <div>
-      <p class="portfolio-hero__role">Open globally from Bengaluru, India</p>
-      <p class="portfolio-hero__summary">CKA- and CKS-certified, with first-security-hire experience and security ownership from architecture to evidence, tooling, triage, and measurable risk reduction.</p>
-    </div>
-    <div class="portfolio-hero__links">
-      <a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a>
-      <a href="https://github.com/djvirus9">GitHub</a>
-      <a href="/blog/">Writing</a>
-    </div>
-  </aside>
-</section>
-
-<section class="portfolio-metrics" aria-label="Security impact metrics">
-  <article>
-    <strong>22+</strong>
-    <span>CVEs credited across open-source and commercial software</span>
-  </article>
-  <article>
-    <strong>160+</strong>
-    <span>Hall of Fame acknowledgements from major programs</span>
-  </article>
-  <article>
-    <strong>30%</strong>
-    <span>Reduction in critical production-bound vulnerabilities</span>
-  </article>
-  <article>
-    <strong>6+</strong>
-    <span>Years across product security, cloud, and DevSecOps</span>
-  </article>
-</section>
-
-<section class="portfolio-section">
-  <div class="portfolio-section__header">
-    <p class="portfolio-kicker">Selected impact</p>
-    <h2>Security work that moved engineering outcomes</h2>
-  </div>
-
-  <div class="portfolio-impact-grid">
-    <article>
-      <span class="portfolio-card-icon">01</span>
-      <h3>Built Product Security from scratch</h3>
-      <p>Established AppSec, AWS cloud controls, DevSecOps automation, vulnerability management, bug bounty governance, and security ownership workflows as the first dedicated security engineer.</p>
-    </article>
-    <article>
-      <span class="portfolio-card-icon">02</span>
-      <h3>Embedded security into delivery</h3>
-      <p>Rolled out Semgrep, Trivy, custom rules, CI/CD checks, and pre-commit hooks to catch high-signal issues before they reached production.</p>
-    </article>
-    <article>
-      <span class="portfolio-card-icon">03</span>
-      <h3>Hardened cloud-native posture</h3>
-      <p>Led CSPM baselining, IAM hardening, segmentation review, data-plane access controls, WAF validation, and AWS detection coverage improvements.</p>
-    </article>
+  <div class="hero__profile">
+    <img class="hero__avatar" src="{{ '/assets/avatar-224.jpg' | relative_url }}" alt="Danish Siddiqui" width="112" height="112" fetchpriority="high">
+    <p><strong>Founding security engineer at Licious.</strong><br>Bengaluru, India. Open to global opportunities.</p>
+    <div class="hero__links"><a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a><a href="https://github.com/djvirus9">GitHub</a></div>
   </div>
 </section>
 
-<section class="portfolio-section portfolio-section--split">
+<div class="proof-strip" aria-label="Experience and research">
+  <a href="#experience"><strong>6+ years</strong><span>Across product and offensive security</span></a>
+  <a href="{{ '/cves/' | relative_url }}"><strong>{{ site.data.cves | size }} advisories</strong><span>Selected CVEs with public credit</span></a>
+  <a href="#credentials"><strong>CKA + CKS</strong><span>Kubernetes administration and security</span></a>
+</div>
+
+<section class="home-section" aria-labelledby="selected-work">
+  <div class="section-heading">
+    <div><p class="eyebrow">Selected work</p><h2 id="selected-work">Security systems I’ve built</h2></div>
+    <a href="{{ '/case-studies/' | relative_url }}">All case studies <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="card-grid">
+    {% for study in site.data.case_studies %}{% if study.featured %}{% include work-card.html study=study featured=true %}{% endif %}{% endfor %}
+  </div>
+</section>
+
+<section class="home-section" aria-labelledby="experience">
+  <div class="section-heading"><div><p class="eyebrow">Experience</p><h2 id="experience">From research to security ownership</h2></div></div>
+  <ol class="experience-list">
+    {% for job in site.data.experience %}
+    <li><span class="period">{{ job.period }}</span><div><h3>{% if job.url %}<a href="{{ job.url | relative_url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</h3><span class="role">{{ job.role }}</span><p>{{ job.summary }}</p></div></li>
+    {% endfor %}
+  </ol>
+  <div class="credentials" id="credentials" aria-label="Certifications">
+    <span><strong>CKS</strong> · Linux Foundation · 2026</span>
+    <span><strong>CKA</strong> · Linux Foundation · 2026</span>
+    <span><strong>AWS Certified Security – Specialty</strong></span>
+  </div>
+</section>
+
+<section class="home-section home-research" aria-labelledby="research">
   <div>
-    <p class="portfolio-kicker">Core strengths</p>
-    <h2>Where I create leverage</h2>
-    <p>
-      My strongest work sits between security architecture, hands-on tooling, research depth, and operational ownership. I focus on systems that developers can actually use and leaders can measure.
-    </p>
+    <p class="eyebrow">Research &amp; writing</p><h2 id="research">Public findings, practical lessons</h2>
+    <p>Published research on Traccar and Dovecot, plus notes on the trust boundaries behind the bugs.</p>
+    <a href="{{ '/cves/' | relative_url }}">Browse advisories and credits <span aria-hidden="true">→</span></a>
   </div>
-
-  <div class="portfolio-skill-cloud" aria-label="Core competencies">
-    <span>Product Security</span>
-    <span>Application Security</span>
-    <span>API Security</span>
-    <span>AWS IAM</span>
-    <span>AWS WAF</span>
-    <span>EKS</span>
-    <span>Kubernetes Administration</span>
-    <span>Kubernetes Security</span>
-    <span>Container Runtime Security</span>
-    <span>Semgrep</span>
-    <span>Trivy</span>
-    <span>CodeQL</span>
-    <span>Threat Modeling</span>
-    <span>Bug Bounty Ops</span>
-    <span>ISO 27001</span>
-    <span>AI/LLM Security</span>
-    <span>Vulnerability Management</span>
-  </div>
+  <ul class="research-links">
+    <li><a href="{{ '/blog/svg-upload-trust-boundaries/' | relative_url }}">When an image upload becomes executable content</a><small>Traccar · Stored XSS · CVE-2026-25648</small></li>
+    <li><a href="{{ '/blog/csv-export-trust-boundaries/' | relative_url }}">The trust boundary in a CSV export</a><small>Traccar · Formula injection · CVE-2026-27644</small></li>
+    <li><a href="{{ '/blog/llm-security-owasp-top10/' | relative_url }}">LLM security risks and the OWASP Top 10</a><small>Published on the Halodoc engineering blog</small></li>
+    <li><a href="{{ '/community/' | relative_url }}">Community and recognition</a><small>Conference volunteering and researcher profiles</small></li>
+  </ul>
 </section>
 
-<section class="portfolio-proof" aria-label="Professional certifications">
-  <p class="portfolio-kicker">Cloud-native credentials</p>
-  <div>
-    <span>Certified Kubernetes Security Specialist (CKS) · 2026</span>
-    <span>Certified Kubernetes Administrator (CKA) · 2026</span>
-    <span>AWS Certified Security – Specialty</span>
-  </div>
-</section>
-
-<section class="portfolio-section">
-  <div class="portfolio-section__header">
-    <p class="portfolio-kicker">Featured case studies</p>
-    <h2>Proof of ownership</h2>
-  </div>
-
-  <div class="portfolio-case-grid">
-    <a href="/case-studies/licious-product-security/">
-      <span>Product Security</span>
-      <h3>Building Product Security from Scratch</h3>
-      <p>Security operating model, controls, governance, tooling, and measurable risk reduction across product surfaces.</p>
-    </a>
-    <a href="/case-studies/devsecops-pipeline/">
-      <span>DevSecOps</span>
-      <h3>Semgrep + Trivy Pipeline Security</h3>
-      <p>CI/CD security controls with custom rules, risk-based thresholds, and developer-first workflow integration.</p>
-    </a>
-    <a href="/case-studies/cloud-native-posture/">
-      <span>AWS Cloud</span>
-      <h3>Cloud-Native Security Posture</h3>
-      <p>CSPM baseline, IAM hardening, segmentation, data-plane controls, and detection coverage for AWS environments.</p>
-    </a>
-    <a href="/case-studies/waf-coverage-benchmarking/">
-      <span>Detection</span>
-      <h3>WAF Detection Coverage</h3>
-      <p>AWS WAF benchmarked against OWASP CRS, tuned in count mode, then promoted with evidence-based confidence.</p>
-    </a>
-  </div>
-
-  <p class="portfolio-section__link"><a href="/case-studies/">View all case studies</a></p>
-</section>
-
-<section class="portfolio-proof" aria-label="Recognition">
-  <p class="portfolio-kicker">Recognized by security programs</p>
-  <div>
-    <span>Google</span>
-    <span>Atlassian</span>
-    <span>Mastercard</span>
-    <span>SoundCloud</span>
-    <span>Paytm</span>
-    <span>Bugcrowd</span>
-    <span>YesWeHack</span>
-    <span>Synack Red Team</span>
-  </div>
-</section>
-
-<section class="portfolio-section portfolio-section--split">
-  <div>
-    <p class="portfolio-kicker">Security research</p>
-    <h2>Research with practical impact</h2>
-    <p>
-      My research spans denial-of-service, authentication and authorization flaws, injection, input handling, browser extension issues, and AI/LLM attack surfaces.
-    </p>
-  </div>
-  <div class="portfolio-link-stack">
-    <a href="/cves/">CVE Showcase - 22+ credited findings</a>
-    <a href="/research-methodology/">Security Research Methodology</a>
-    <a href="/blog/llm-security-owasp-top10/">LLM Security Risks and OWASP Top 10</a>
-    <a href="/community/">Community and Speaking</a>
-  </div>
-</section>
-
-<section class="portfolio-cta" aria-label="Contact">
-  <div>
-    <p class="portfolio-kicker">Open to senior security roles</p>
-    <h2>Product Security, AppSec, Cloud and Kubernetes Security, DevSecOps, and Security Engineering Lead roles.</h2>
-  </div>
-  <div class="portfolio-cta__actions">
-    <a class="portfolio-button portfolio-button--primary" href="mailto:danishismyname1@gmail.com">Email Me</a>
-    <a class="portfolio-button" href="/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf">Resume PDF</a>
-  </div>
+<section class="contact-panel" aria-labelledby="contact-title">
+  <p class="eyebrow">Let’s work together</p><h2 id="contact-title">Building a product security function?</h2>
+  <p>I’m interested in senior Product Security, AppSec, Cloud Security, and security engineering lead opportunities.</p>
+  <div class="actions"><a class="button button--primary" href="mailto:danishismyname1@gmail.com">Email Danish</a><a class="button" href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Read my résumé</a></div>
 </section>

@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<main id="main" class="site-main{% if page.wide %} site-main--wide{% endif %}{% if page.url == '/' %} portfolio-home{% endif %}" tabindex="-1">
+  {% unless page.url == '/' %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+  <article>
+    {% unless page.url == '/' %}
+    <header class="article-header">
+      {% if page.section %}<p class="eyebrow">{{ page.section }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.date %}<p class="article-date"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%-d %B %Y' }}</time>{% if page.article_type %} · {{ page.article_type }}{% endif %}</p>{% endif %}
+      {% if page.summary %}<p class="article-lead">{{ page.summary }}</p>{% endif %}
+      {% if page.context %}<p class="article-context">{{ page.context }}</p>{% endif %}
+    </header>
+    {% endunless %}
+    {% if page.toc %}
+    <details class="article-toc">
+      <summary>On this page</summary>
+      <nav aria-label="On this page">
+        {% include toc.html html=content sanitize=true h_min=2 h_max=2 class="toc-list" %}
+      </nav>
+    </details>
+    {% endif %}
+    <div class="page__content">
+      {{ content }}
+    </div>
+    {% if page.section == 'Case study' %}
+    <div class="article-next">
+      <a href="{{ '/case-studies/' | relative_url }}">← All case studies</a>
+      <a href="mailto:danishismyname1@gmail.com">Discuss this work →</a>
+    </div>
+    {% elsif page.section == 'Writing' %}
+    <div class="article-next"><a href="{{ '/blog/' | relative_url }}">← All writing</a></div>
+    {% endif %}
+  </article>
+</main>

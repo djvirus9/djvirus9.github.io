@@ -2,97 +2,24 @@
 title: "Security Ownership Overview"
 permalink: /security-ownership-overview/
 layout: single
-author_profile: false
-classes: wide portfolio-subpage
+description: "Danish Siddiqui’s approach to owning Product Security: secure delivery, AWS and Kubernetes controls, vulnerability operations, and engineering collaboration."
+summary: "I connect technical controls with the people and processes that keep them effective."
 ---
 
-# Security Ownership Overview
+## Product and application security
 
-## Who I Am
-CKA- and CKS-certified Senior Product Security Engineer with 6+ years of experience owning and scaling security programs end-to-end across application security, cloud and Kubernetes security, DevSecOps, compliance, and external vulnerability detection.
+My work covers design reviews, threat modeling, code review, and assessments of web, API, and mobile applications. At Licious, I established the Product Security function as the first dedicated security engineer. [Read the case study](/case-studies/licious-product-security/).
 
-I specialize in building security functions from zero, operating them at scale, and embedding security into engineering workflows without slowing delivery.
+## Secure delivery and cloud controls
 
-## What I Own (Not Just What I Do)
-I operate as a security owner, not a point contributor.
+I integrate security checks into developer workflows and use application context to prioritize cloud risks. This includes [Semgrep and Trivy in CI/CD](/case-studies/devsecops-pipeline/), [AWS posture review](/case-studies/cloud-native-posture/), and [attack-path prioritization](/case-studies/aws-attack-paths/).
 
-End-to-end ownership includes:
-- Product Security strategy and execution
-- Application, API, mobile, and cloud security risk (OWASP Top 10, OWASP API Top 10)
-- DevSecOps controls embedded into CI/CD
-- Bug bounty program governance and triage
-- Vulnerability lifecycle from discovery to remediation to prevention
-- ISO 27001:2022 readiness as primary Security SPOC
-- Security risk communication and stakeholder management with engineering and leadership
+## Vulnerability operations and governance
 
-## How I Approach Security
-My security philosophy is risk-based, developer-first, and outcome-driven.
+A useful control needs an accountable owner, evidence of operation, and a remediation path. My responsibilities include [bug bounty operations](/case-studies/bug-bounty-governance/) and [ISO 27001 readiness](/case-studies/iso27001/), coordinating work across technical and business teams.
 
-- I prioritize exploitability and blast radius, not checklist compliance
-- I embed security early in the SDLC, not as a late gate
-- I design controls that engineers trust and adopt
-- I focus on reducing real attack paths, not inflating metrics
-- I treat compliance as a by-product of good security, not paperwork
+## Career and contact
 
-## Core Security Domains I Own
-**Product and Application Security**
-- Secure design reviews, threat modeling, and real-world attack path analysis
-- Web, API, mobile security assessments (OWASP Top 10, OWASP API Top 10)
-- Business-logic and authorization flaw detection
+See the [experience timeline](/#experience), [résumé](/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf), and [public research](/cves/) for supporting context.
 
-**DevSecOps and Automation**
-- SAST, SCA, and container security embedded into CI/CD security
-- Risk-based enforcement instead of blanket blocking
-- Security signal tuned for developer adoption
-
-**Cloud and Kubernetes Security**
-- Attack path analysis across IAM, VPC, networking, and services
-- CSPM-driven visibility with exploitability-focused prioritization (CloudTrail, GuardDuty, WAF)
-- Performance-based CKA and CKS validation across Kubernetes administration, access control, workload hardening, and runtime security
-- Secure cloud architecture guidance without operational disruption
-
-**Bug Bounty and External Signal**
-- Scope definition, severity taxonomy, and payout governance
-- High-signal triage and engineering-ready remediation
-- Integration of external findings into internal security programs
-
-**Governance and Compliance**
-- ISO 27001:2022 readiness ownership
-- Control mapping to real technical systems
-- Audit readiness, evidence design, and cross-functional coordination
-
-## What I’ve Delivered
-- Built Product Security from scratch as first security hire
-- Reduced critical production-bound vulnerabilities by ~30%
-- Standardized security coverage across CI/CD pipelines
-- Identified and remediated high-risk AWS attack paths
-- Scaled and governed bug bounty programs with high signal quality
-- Enabled sustainable ISO 27001 readiness without \"paper compliance\"
-
-## How I Add Value to Organizations
-I help organizations:
-- Move from reactive security to proactive risk reduction
-- Scale security without slowing engineering teams
-- Make informed security trade-offs, not fear-driven decisions
-- Build trust between security, engineering, and leadership
-- Prepare for audits while improving real security posture
-
-## Best-Fit Roles
-This profile is best suited for:
-- Senior or Principal Product Security Engineer
-- Senior Application Security Engineer
-- Senior Cloud Security Engineer (product-focused)
-- Security Lead (individual contributor track)
-
-Especially effective in:
-- Product companies
-- Fintech and healthtech
-- Cloud-native organizations
-- Regulated environments
-
-## What You Can Expect From Me
-- Ownership, not hand-holding
-- Clear communication, not noise
-- Practical security decisions
-- Strong collaboration with engineers
-- Accountability for outcomes
+I’m interested in senior Product Security, AppSec, Cloud Security, and security engineering lead roles. [Get in touch](mailto:danishismyname1@gmail.com).

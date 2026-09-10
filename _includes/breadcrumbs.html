@@ -1,0 +1,8 @@
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    {% if page.section == 'Case study' %}<li><a href="{{ '/case-studies/' | relative_url }}">Case studies</a></li>{% endif %}
+    {% if page.section == 'Writing' %}<li><a href="{{ '/blog/' | relative_url }}">Writing</a></li>{% endif %}
+    <li aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>

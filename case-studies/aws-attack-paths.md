@@ -3,10 +3,9 @@ title: "AWS Attack Path Analysis and Risk Prioritization"
 permalink: /case-studies/aws-attack-paths/
 layout: single
 author_profile: false
-classes: wide portfolio-subpage
+description: "Evaluated how exposure, permissions, and trust relationships could combine, then sequenced remediation by business impact."
+summary: "Evaluated how exposure, permissions, and trust relationships could combine, then sequenced remediation by business impact."
 ---
-
-# Case Study: AWS Attack Path Analysis and Risk Prioritization
 
 ## Context
 The organization operated a rapidly evolving AWS environment supporting production web services, APIs, internal tooling, and CI/CD infrastructure. While standard security checks existed, cloud security visibility was largely control- and checklist-driven, making it difficult to understand how individual misconfigurations combined into real attack paths.
@@ -86,12 +85,3 @@ Cloud security shifted from "fix everything" to "fix what matters first."
 - Engineers engage more when risk is explained through attacker perspective
 
 These lessons informed improvements across DevSecOps and compliance efforts.
-
-## Key Skills Demonstrated
-AWS Security Architecture • Cloud Threat Modeling and Attack Path Analysis • Risk-Based Prioritization • CSPM Operations (Prowler, ScoutSuite) • Engineering Collaboration and Change Management • Executive Risk Communication
-
-### Skills & Signals
-Cloud Security (AWS) · IAM · VPC · WAF · CloudTrail · GuardDuty · CSPM · Attack Path Analysis
-
-## Why This Matters
-This case study demonstrates my ability to reason about cloud security holistically, prioritize risk under real-world constraints, and help organizations focus effort where it meaningfully reduces attack surface -- a core requirement for Senior and Principal Security Engineers operating at scale.

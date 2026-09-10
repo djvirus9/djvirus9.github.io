@@ -1,0 +1,34 @@
+[
+  {
+    "company": "Licious",
+    "role": "SDE-3, Product Security \u00b7 Founding Security Engineer",
+    "period": "May 2025 \u2013 Present",
+    "summary": "Established the Product Security function across AppSec, AWS, DevSecOps, bug bounty, and ISO 27001 readiness.",
+    "url": "/case-studies/licious-product-security/"
+  },
+  {
+    "company": "Halodoc",
+    "role": "SDET-2, Product Security",
+    "period": "Dec 2023 \u2013 May 2025",
+    "summary": "Built custom Semgrep rules, integrated security checks into delivery, and assessed applications and AWS environments."
+  },
+  {
+    "company": "Invia",
+    "role": "Senior Security Engineer",
+    "period": "Sep 2022 \u2013 Nov 2023",
+    "summary": "Designed and launched CyberShield360, an attack surface management product.",
+    "url": "/case-studies/cybershield360/"
+  },
+  {
+    "company": "FireCompass",
+    "role": "Security Analyst / Consultant",
+    "period": "Jul 2021 \u2013 Sep 2022",
+    "summary": "Delivered continuous red teaming and external attack surface assessments for enterprise customers."
+  },
+  {
+    "company": "Vast Dreams \u00b7 Codec Networks",
+    "role": "Earlier security consulting roles",
+    "period": "Jun 2019 \u2013 Jul 2021",
+    "summary": "Assessed web, API, mobile, and thick-client applications for clients in India and Australia."
+  }
+]
