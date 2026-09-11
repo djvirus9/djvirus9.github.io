@@ -29,19 +29,41 @@ def assert_axe(page, axe_path, report):
 
 
 def check_media(page):
-    page.wait_for_function("""() => {
-      const video = document.querySelector('video');
-      return video.readyState >= 2 && video.textTracks.length === 1 && video.textTracks[0].cues && video.textTracks[0].cues.length === 5;
-    }""", timeout=30000)
-    state = page.locator("video").evaluate("""video => ({duration: video.duration, width: video.videoWidth, mode: video.textTracks[0].mode, end: video.textTracks[0].cues[4].endTime})""")
-    assert state == {"duration": 75, "width": 1280, "mode": "showing", "end": 75}, state
-    page.locator("video").evaluate("video => { video.pause(); video.currentTime = 34; }")
-    page.wait_for_function("document.querySelector('video').currentTime >= 34")
-    page.wait_for_function("""() => {
-      const cues = document.querySelector('video').textTracks[0].activeCues;
-      return cues.length === 1 && cues[0].text.includes('Consider exposure');
-    }""")
-    assert "Consider exposure" in page.locator("video").evaluate("video => video.textTracks[0].activeCues[0].text")
+    phase = "load video and captions"
+    try:
+        page.wait_for_function("""() => {
+          const video = document.querySelector('video');
+          return video.readyState >= 2 && video.textTracks.length === 1 && video.textTracks[0].cues && video.textTracks[0].cues.length === 5;
+        }""", timeout=30000)
+        state = page.locator("video").evaluate("""video => ({duration: video.duration, width: video.videoWidth, mode: video.textTracks[0].mode, end: video.textTracks[0].cues[4].endTime})""")
+        assert state == {"duration": 75, "width": 1280, "mode": "showing", "end": 75}, state
+        phase = "start playback"
+        page.wait_for_function("""() => {
+          const video = document.querySelector('video');
+          return !video.paused && video.currentTime > 0;
+        }""")
+        phase = "seek to 34 seconds"
+        page.locator("video").evaluate("video => { video.pause(); video.currentTime = 34; }")
+        page.wait_for_function("document.querySelector('video').currentTime >= 34")
+        phase = "display the caption after seeking"
+        page.wait_for_function("""() => {
+          const cues = document.querySelector('video').textTracks[0].activeCues;
+          return cues.length === 1 && cues[0].text.includes('Consider exposure');
+        }""")
+        assert "Consider exposure" in page.locator("video").evaluate("video => video.textTracks[0].activeCues[0].text")
+    except Exception as error:
+        state = page.locator("video").evaluate("""video => ({
+          readyState: video.readyState, networkState: video.networkState,
+          duration: video.duration, currentTime: video.currentTime,
+          paused: video.paused, seeking: video.seeking, source: video.currentSrc,
+          error: video.error && {code: video.error.code, message: video.error.message},
+          mp4Support: video.canPlayType('video/mp4; codecs="avc1.64001f"'),
+          seekable: Array.from({length: video.seekable.length}, (_, i) => [video.seekable.start(i), video.seekable.end(i)]),
+          tracks: Array.from(video.textTracks, track => ({mode: track.mode,
+            cues: track.cues && track.cues.length,
+            activeCues: track.activeCues && Array.from(track.activeCues, cue => cue.text)}))
+        })""")
+        raise AssertionError(f"Media check failed during {phase}: {error}; state={json.dumps(state)}") from error
 
 
 def check_controls(page, axe_path, report):
@@ -134,6 +156,7 @@ def main():
                                 case["status"] = "failed"
                                 case["error"] = str(error)
                                 report["errors"].append(case)
+                                print(json.dumps(case), flush=True)
                             finally:
                                 report["scenarios"].append(case)
                                 context.close()

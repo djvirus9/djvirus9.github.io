@@ -8,6 +8,10 @@
     });
     video.dataset.loaded = 'true';
     video.load();
+    // This silent tour uses captions as narration. Enable them on first load;
+    // visitors can still change the setting through the native player controls.
+    var captions = video.querySelector('track[default]');
+    if (captions) captions.track.mode = 'showing';
   }
   function playVideo(video) {
     var playback = video.play();
@@ -18,8 +22,8 @@
     var standaloneVideo = standalone.querySelector('video');
     var start = standalone.querySelector('[data-start-tour]');
     start.addEventListener('click', function () {
-      loadVideo(standaloneVideo);
       standaloneVideo.controls = true;
+      loadVideo(standaloneVideo);
       start.hidden = true;
       standaloneVideo.focus();
       playVideo(standaloneVideo);
