@@ -3,7 +3,7 @@ title: "Case Studies"
 permalink: /case-studies/
 layout: single
 wide: true
-description: "Engineering case studies from Danish Siddiqui: building Product Security at Licious, DevSecOps pipelines, AWS controls, and the CyberShield360 platform."
+description: "Engineering case studies from Danish Siddiqui: SecOps Dashboard, Product Security at Licious, DevSecOps pipelines, AWS controls, and CyberShield360."
 summary: "The problems, decisions, and operating models behind my work in product security."
 ---
 

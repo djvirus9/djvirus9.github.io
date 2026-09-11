@@ -1,5 +1,11 @@
 [
   {
+    "slug": "secops-dashboard",
+    "title": "SecOps Dashboard",
+    "category": "Open-source tooling",
+    "summary": "Built a self-hosted workflow for importing, investigating, and triaging security findings. Explore the product and try a sample workflow."
+  },
+  {
     "slug": "licious-product-security",
     "title": "Building Product Security from Scratch",
     "category": "Product security",

@@ -1,0 +1,51 @@
+<section class="sd-demo" id="secops-demo" aria-labelledby="secops-demo-title" data-secops-demo>
+  <header class="sd-demo__header">
+    <div><p class="eyebrow">Interactive sample · Synthetic data</p><h2 id="secops-demo-title">Take a finding from signal to action.</h2></div>
+    <p>Filter the sample findings, inspect the evidence, then update the status or owner. Changes stay in this page and reset when you reload.</p>
+  </header>
+  <ol class="sd-steps" aria-label="Sample workflow"><li><span>01</span> Filter</li><li><span>02</span> Investigate</li><li><span>03</span> Triage</li></ol>
+  <div data-demo-fallback>
+    <p class="sd-fallback-note">These examples describe the sample workflow. Enable JavaScript to try filtering and triage.</p>
+    {% for finding in site.data.secops_demo %}
+    <details class="sd-fallback-finding"><summary>{{ finding.title }} · {{ finding.severity | capitalize }}</summary><p>{{ finding.evidence }}</p><p><strong>Next action:</strong> {{ finding.recommendation }}</p></details>
+    {% endfor %}
+  </div>
+  <div data-demo-app hidden>
+    <dl class="sd-metrics" aria-label="All sample findings">
+      <div><dt>Sample findings</dt><dd data-count="total">5</dd></div>
+      <div><dt>Open</dt><dd data-count="open">3</dd></div>
+      <div><dt>Investigating</dt><dd data-count="investigating">1</dd></div>
+      <div><dt>Resolved / closed</dt><dd data-count="resolved">1</dd></div>
+    </dl>
+    <div class="sd-filters">
+      <div class="sd-search"><label for="sample-search">Search findings</label><input id="sample-search" type="search" placeholder="Title, asset, or scanner" autocomplete="off" maxlength="150" data-filter="search"></div>
+      <div><label for="sample-severity">Severity</label><select id="sample-severity" data-filter="severity"><option value="all">All severities</option><option value="critical">Critical</option><option value="high">High</option><option value="medium">Medium</option><option value="low">Low</option></select></div>
+      <div><label for="sample-filter-status">Status</label><select id="sample-filter-status" data-filter="status"><option value="all">All statuses</option><option value="open">Open</option><option value="investigating">Investigating</option><option value="resolved">Resolved</option><option value="closed">Closed</option></select></div>
+      <button type="button" class="button" data-reset-demo>Reset demo</button>
+    </div>
+    <div class="sd-workspace">
+      <div class="sd-results">
+        <p class="sd-result-count" role="status" aria-live="polite" aria-atomic="true" data-result-count></p>
+        <ul class="sd-findings" id="sample-findings" tabindex="-1" aria-label="Sample findings" data-findings-list></ul>
+        <p class="sd-empty" data-empty hidden>No findings match. Try a different search or filter.</p>
+      </div>
+      <section class="sd-detail" aria-labelledby="sample-finding-title" data-finding-detail>
+        <p class="sd-detail__meta"><span data-detail="id"></span><span class="sd-severity" data-detail="severity"></span></p>
+        <h3 id="sample-finding-title" tabindex="-1" data-detail="title"></h3>
+        <p class="sd-asset" data-detail="asset"></p>
+        <dl class="sd-facts"><div><dt>Scanner</dt><dd data-detail="tool"></dd></div><div><dt>Project</dt><dd data-detail="project"></dd></div><div><dt>Occurrences</dt><dd data-detail="occurrences"></dd></div></dl>
+        <h4>What the evidence says</h4><p data-detail="evidence"></p>
+        <h4>Next action</h4><p data-detail="recommendation"></p>
+        <form class="sd-triage" data-triage-form>
+          <div><label for="sample-new-status">Triage status</label><select id="sample-new-status" name="status"><option value="open">Open</option><option value="investigating">Investigating</option><option value="resolved">Resolved</option><option value="closed">Closed</option></select></div>
+          <div><label for="sample-assignee">Owner</label><select id="sample-assignee" name="assignee"><option>Unassigned</option><option>Application team</option><option>Platform team</option></select></div>
+          <button type="submit" class="button button--primary">Update sample finding</button>
+        </form>
+        <a class="sd-back" href="#sample-findings">Back to sample findings <span aria-hidden="true">↑</span></a>
+      </section>
+    </div>
+    <p class="sd-feedback" role="status" aria-live="polite" aria-atomic="true" data-demo-feedback>Choose a finding to investigate.</p>
+  </div>
+  <footer class="sd-demo__footer">A simplified demonstration of the triage workflow. <a href="https://github.com/djvirus9/secops-dashboard#try-it-locally">Run the full open-source application <span aria-hidden="true">↗</span></a></footer>
+  <script type="application/json" data-demo-findings>{{ site.data.secops_demo | jsonify | replace: '<', '\u003c' }}</script>
+</section>

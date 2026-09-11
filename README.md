@@ -25,6 +25,9 @@ Open `http://127.0.0.1:4173/`.
 - `case-studies/`: detailed accounts of engineering work.
 - `_data/cves.json`: selected public CVEs, publication dates, publisher scores, and direct acknowledgment links.
 - `_data/writing.json` and `blog/`: article index and technical notes.
+- `_data/open_source.json` and `_includes/open-source.html`: the homepage's open-source project cards.
+- `case-studies/secops-dashboard.md`: the SecOps Dashboard case study and source references.
+- `_data/secops_demo.json`, `_includes/secops-demo.html`, and `assets/js/secops-demo.js`: the synthetic, in-memory sample triage workflow.
 - `_sass/custom.scss`: shared layout, typography, and light/dark color variables.
 - `_layouts/` and `_includes/`: semantic layouts, navigation, and metadata.
 
@@ -38,7 +41,23 @@ See the [CyberShield360 showcase review](docs/showcase-review.md) for the intera
 
 Pull requests build the site and check generated headings, descriptions, social images, local assets, links, anchors, and CVE data. The interactive showcase is also checked in Chromium and WebKit for navigation, accessibility, media loading, and captions. Pull-request workflows do not deploy.
 
+The sample triage workflow also runs through Chromium and WebKit checks for filtering, selection, status/owner updates, counts, reset, keyboard navigation, accessibility, and no-JavaScript fallbacks.
+
 The existing GitHub Pages deployment runs after a change reaches `main`, or through a manual workflow on `main`. Build dependencies are locked for macOS and Linux.
+
+## Open-source projects and sample triage
+
+The homepage links the SecOps Dashboard and DevSecOps Roadmap to their public repositories. The dashboard case study uses its actual v0.2.0 repository screenshot and links to the release, threat model, and operating procedures. See [the content and validation review](docs/open-source-review.md).
+
+The embedded sample is a simplified portfolio interaction, not the full application. It uses five synthetic findings, makes no API calls, and retains changes only in memory until reset or reload. Without JavaScript, expandable examples remain readable. The screenshot and sample use different synthetic datasets and are labeled separately.
+
+After building, run:
+
+```sh
+python3 scripts/check_secops.py _site --browsers chromium --axe /path/to/axe.min.js
+```
+
+Use `--browsers chromium webkit` to match CI. Both browser suites run before deployment. `assets/css/open-source.css` loads only on the homepage and SecOps case study; the sample's JavaScript loads only on its case-study page.
 
 ## CyberShield360 showcase
 
