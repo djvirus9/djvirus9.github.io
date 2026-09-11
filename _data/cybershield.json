@@ -1,0 +1,60 @@
+{
+  "title": "CyberShield360",
+  "subtitle": "From an exposed asset to an actionable finding.",
+  "context": "Built at Invia · 2022–2023",
+  "introduction": "I designed the architecture and security workflow for an attack surface management product, and helped take it to launch.",
+  "video": "/assets/cybershield/workflow-tour.mp4",
+  "captions": "/assets/cybershield/workflow-tour.vtt",
+  "poster": "/assets/cybershield/workflow-poster.png",
+  "duration": 75,
+  "stages": [
+    {
+      "id": "discover",
+      "label": "Discover",
+      "title": "Make the external footprint visible.",
+      "description": "Bring domains, IP addresses, and exposed services into a view that a security team can investigate.",
+      "decision": "Start with a defined assessment scope and make discovery repeatable as the environment changes.",
+      "output": "An inventory of assets to assess",
+      "diagram_label": "Illustrative asset map connecting example.com to a web application, an API, and an IP address."
+    },
+    {
+      "id": "enrich",
+      "label": "Enrich",
+      "title": "Add context to every observation.",
+      "description": "Connect each asset to service information and relevant vulnerability data so an analyst has a useful starting point.",
+      "decision": "Keep a version match distinct from evidence of exploitability. Correlation starts an investigation.",
+      "output": "An asset with supporting evidence",
+      "diagram_label": "Illustrative evidence record for api.example.com, combining an observed HTTPS service, service identification, and a vulnerability correlation that needs validation."
+    },
+    {
+      "id": "prioritize",
+      "label": "Prioritize",
+      "title": "Turn signals into a risk decision.",
+      "description": "Use exposure, supporting evidence, and the affected service to decide which findings deserve investigation first.",
+      "decision": "Give the security team the context behind a priority, with uncertainty visible alongside the finding.",
+      "output": "A reasoned investigation priority",
+      "diagram_label": "Illustrative prioritization flow: exposure, evidence, and service context feed an analyst review, which produces an investigation priority."
+    },
+    {
+      "id": "report",
+      "label": "Report",
+      "title": "Give engineering enough to act.",
+      "description": "Present the affected asset, supporting evidence, and remediation context in a report the responsible team can use.",
+      "decision": "Design the output around the next engineering action, making the finding understandable beyond the security team.",
+      "output": "A finding ready for remediation triage",
+      "diagram_label": "Illustrative report handoff with an affected asset, evidence, responsible team, and remediation next step."
+    }
+  ],
+  "ownership": [
+    {"label": "My ownership", "text": "Product architecture, security design, and the discovery-to-reporting workflow."},
+    {"label": "Design trade-off", "text": "Broad discovery needed validation and context to become useful signal."},
+    {"label": "Shipped result", "text": "A launched product, introduced in Invia’s public launch videos."}
+  ],
+  "tour": [
+    {"start": 0, "end": 15, "stage": "discover", "heading": "01 / Discover the external footprint", "caption": "Start with the assessment scope. Bring domains, IP addresses, and exposed services into an inventory the security team can investigate."},
+    {"start": 15, "end": 30, "stage": "enrich", "heading": "02 / Add evidence and context", "caption": "Attach service information and relevant vulnerability data. A version match is a lead for investigation; exploitability still needs validation."},
+    {"start": 30, "end": 45, "stage": "prioritize", "heading": "03 / Decide what to investigate first", "caption": "Consider exposure, supporting evidence, and the affected service together. Keep uncertainty visible so the team understands the priority."},
+    {"start": 45, "end": 60, "stage": "report", "heading": "04 / Make the next action clear", "caption": "Carry the affected asset, evidence, and remediation context into the report. Give the responsible engineering team enough information to act."},
+    {"start": 60, "end": 75, "stage": "report", "heading": "From security assessment to product ownership", "caption": "At Invia, I owned product architecture and security design, defined the discovery and analysis pipeline, and helped take CyberShield360 to launch."}
+  ]
+}

@@ -1,0 +1,53 @@
+{% assign project = site.data.cybershield %}
+<section class="cs-showcase" id="cybershield" aria-labelledby="cybershield-title" data-showcase>
+  <header class="cs-showcase__header">
+    <div>
+      <p class="eyebrow">Featured build <span aria-hidden="true">/</span> {{ project.context }}</p>
+      <h2 id="cybershield-title">{{ project.title }}</h2>
+      <p class="cs-showcase__subtitle">{{ project.subtitle }}</p>
+      <p class="cs-showcase__intro">{{ project.introduction }}</p>
+    </div>
+    <div class="cs-showcase__actions">
+      <a class="button button--primary cs-watch" href="{{ '/case-studies/cybershield360/tour/' | relative_url }}" data-open-tour>
+        <svg width="19" height="19" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6 3.5v13L16 10Z"/></svg>
+        Watch the 75-second tour
+      </a>
+      {% if include.home %}<a class="cs-case-link" href="{{ '/case-studies/cybershield360/' | relative_url }}">Read the case study <span aria-hidden="true">→</span></a>{% else %}<a class="cs-case-link" href="#my-ownership">Read about my ownership <span aria-hidden="true">↓</span></a>{% endif %}
+    </div>
+  </header>
+  <div class="cs-explorer">
+    <div class="cs-explorer__label"><span>Explore the workflow</span><span>Illustration · Example data</span></div>
+    <nav class="cs-tabs" aria-label="Workflow stages" data-stage-list>
+      {% for stage in project.stages %}<a href="#cybershield-{{ stage.id }}" id="cybershield-tab-{{ stage.id }}" data-stage-tab="{{ stage.id }}"><span class="cs-tabs__number" aria-hidden="true">0{{ forloop.index }}</span>{{ stage.label }}<span class="cs-tabs__arrow" aria-hidden="true">↗</span></a>{% endfor %}
+    </nav>
+    <div class="cs-panels">
+      {% for stage in project.stages %}
+      <section id="cybershield-{{ stage.id }}" class="cs-panel" data-stage-panel="{{ stage.id }}" aria-labelledby="cybershield-heading-{{ stage.id }}">
+        <figure class="cs-panel__figure">
+          {% include cybershield-diagram.html stage=stage %}
+          <figcaption><span class="cs-output-dot" aria-hidden="true"></span><span>{{ stage.output }}</span></figcaption>
+        </figure>
+        <div class="cs-panel__copy">
+          <p class="eyebrow">0{{ forloop.index }} <span aria-hidden="true">/</span> {{ stage.label }}</p>
+          <h3 id="cybershield-heading-{{ stage.id }}">{{ stage.title }}</h3>
+          <p>{{ stage.description }}</p>
+          <div class="cs-decision"><span>Design decision</span><p>{{ stage.decision }}</p></div>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+  <dl class="cs-ownership">
+    {% for item in project.ownership %}<div><dt>{{ item.label }}</dt><dd>{{ item.text }}</dd></div>{% endfor %}
+  </dl>
+  <p class="cs-provenance">An illustrated explanation of the documented workflow. <a href="https://www.youtube.com/watch?v=4FVeZtl4WZs">Invia’s original launch video <span aria-hidden="true">↗</span></a></p>
+</section>
+<dialog class="cs-tour-dialog" id="cybershield-tour-dialog" aria-labelledby="cybershield-tour-title" data-tour-dialog>
+  <div class="cs-tour-dialog__header"><div><p class="eyebrow">CyberShield360 · Illustrated workflow</p><h2 id="cybershield-tour-title">An asset’s journey to action</h2></div><form method="dialog"><button class="button cs-tour-close" aria-label="Close the walkthrough">Close <span aria-hidden="true">×</span></button></form></div>
+  <video class="cs-tour-video" controls playsinline preload="none" width="1280" height="720" data-poster="{{ project.poster | relative_url }}" data-tour-video>
+    <source data-src="{{ project.video | relative_url }}" type="video/mp4">
+    <track kind="captions" srclang="en" label="English" data-src="{{ project.captions | relative_url }}" default>
+    <p><a href="{{ project.video | relative_url }}">Download the workflow tour</a>.</p>
+  </video>
+  <div class="cs-tour-dialog__footer"><p>75 seconds · On-screen narration · No audio</p><a href="{{ '/case-studies/cybershield360/tour/' | relative_url }}">Open the tour and transcript <span aria-hidden="true">→</span></a></div>
+</dialog>

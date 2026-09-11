@@ -1,0 +1,134 @@
+<svg class="cs-diagram" viewBox="0 0 720 400" role="img" aria-label="{{ include.stage.diagram_label | escape }}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="cs-grid-{{ include.stage.id }}" width="28" height="28" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#34544f"/></pattern>
+  </defs>
+  <rect width="720" height="400" fill="#102b28"/>
+  <rect width="720" height="400" fill="url(#cs-grid-{{ include.stage.id }})" opacity=".65"/>
+  {% case include.stage.id %}
+  {% when 'discover' %}
+    <rect x="30" y="30" width="660" height="340" rx="24" class="cs-svg-scope"/>
+    <text x="52" y="61" class="cs-svg-label">ASSESSMENT SCOPE</text>
+    <path d="M360 176 C360 115 162 150 162 115 M360 176 C360 115 558 150 558 115 M360 218 V290" class="cs-svg-connection"/>
+    <circle cx="360" cy="197" r="75" class="cs-svg-ring"/>
+    <rect x="245" y="168" width="230" height="58" rx="12" class="cs-svg-node cs-svg-node--active"/>
+    <text x="360" y="204" text-anchor="middle" class="cs-svg-title">example.com</text>
+    <rect x="57" y="80" width="210" height="66" rx="12" class="cs-svg-node"/>
+    <text x="162" y="108" text-anchor="middle" class="cs-svg-value">Web application</text>
+    <text x="162" y="132" text-anchor="middle" class="cs-svg-secondary">app.example.com</text>
+    <rect x="453" y="80" width="210" height="66" rx="12" class="cs-svg-node"/>
+    <text x="558" y="108" text-anchor="middle" class="cs-svg-value">API endpoint</text>
+    <text x="558" y="132" text-anchor="middle" class="cs-svg-secondary">api.example.com</text>
+    <rect x="245" y="283" width="230" height="66" rx="12" class="cs-svg-node"/>
+    <text x="360" y="310" text-anchor="middle" class="cs-svg-value">IP address</text>
+    <text x="360" y="335" text-anchor="middle" class="cs-svg-secondary">198.51.100.24</text>
+    <circle cx="360" cy="258" r="5" class="cs-svg-dot"/>
+    <circle cx="220" cy="150" r="5" class="cs-svg-dot"/>
+    <circle cx="500" cy="150" r="5" class="cs-svg-dot"/>
+  {% when 'enrich' %}
+    <rect x="180" y="30" width="360" height="67" rx="13" class="cs-svg-node cs-svg-node--active"/>
+    <circle cx="212" cy="62" r="6" class="cs-svg-dot"/>
+    <text x="240" y="71" class="cs-svg-title">api.example.com</text>
+    <path d="M360 97 V125 M130 152 V125 H590 V152 M360 125 V152" class="cs-svg-connection"/>
+    <rect x="30" y="152" width="200" height="104" rx="12" class="cs-svg-node"/>
+    <text x="52" y="181" class="cs-svg-label">OBSERVED SERVICE</text>
+    <text x="52" y="220" class="cs-svg-title">HTTPS · 443</text>
+    <rect x="260" y="152" width="200" height="104" rx="12" class="cs-svg-node"/>
+    <text x="282" y="181" class="cs-svg-label">IDENTIFICATION</text>
+    <text x="282" y="220" class="cs-svg-value">Web endpoint</text>
+    <rect x="490" y="152" width="200" height="104" rx="12" class="cs-svg-node"/>
+    <text x="512" y="181" class="cs-svg-label">CORRELATION</text>
+    <text x="512" y="220" class="cs-svg-value">Version match</text>
+    <path d="M360 256 V291" class="cs-svg-connection"/>
+    <rect x="176" y="291" width="368" height="66" rx="12" fill="#3f3421" stroke="#b79a60"/>
+    <text x="360" y="318" text-anchor="middle" class="cs-svg-value cs-svg-warning">Needs validation</text>
+    <text x="360" y="342" text-anchor="middle" class="cs-svg-secondary">Correlation is the start of investigation.</text>
+  {% when 'prioritize' %}
+    <rect x="35" y="40" width="190" height="66" rx="12" class="cs-svg-node"/>
+    <text x="130" y="80" text-anchor="middle" class="cs-svg-title">Exposure</text>
+    <rect x="265" y="40" width="190" height="66" rx="12" class="cs-svg-node"/>
+    <text x="360" y="80" text-anchor="middle" class="cs-svg-title">Evidence</text>
+    <rect x="495" y="40" width="190" height="66" rx="12" class="cs-svg-node"/>
+    <text x="590" y="80" text-anchor="middle" class="cs-svg-title">Context</text>
+    <path d="M130 106 C130 150 360 133 360 174 M360 106 V174 M590 106 C590 150 360 133 360 174" class="cs-svg-connection"/>
+    <rect x="160" y="174" width="400" height="88" rx="15" class="cs-svg-node cs-svg-node--active"/>
+    <text x="360" y="210" text-anchor="middle" class="cs-svg-title">Analyst review</text>
+    <text x="360" y="238" text-anchor="middle" class="cs-svg-secondary">Make the reasoning and uncertainty visible.</text>
+    <path d="M360 262 V301" class="cs-svg-connection"/>
+    <rect x="185" y="301" width="350" height="57" rx="28" fill="#b1f3db"/>
+    <text x="360" y="337" text-anchor="middle" class="cs-svg-title cs-svg-ink">Investigation priority</text>
+  {% when 'report' %}
+    <rect x="85" y="28" width="550" height="343" rx="18" class="cs-svg-node"/>
+    <path d="M85 95 H635" stroke="#41645b"/>
+    <text x="112" y="66" class="cs-svg-title">Finding → engineering action</text>
+    <circle cx="600" cy="60" r="7" class="cs-svg-dot"/>
+    <text x="112" y="129" class="cs-svg-label">AFFECTED ASSET</text>
+    <text x="340" y="130" class="cs-svg-value">api.example.com</text>
+    <path d="M112 150 H608" stroke="#34544f"/>
+    <text x="112" y="185" class="cs-svg-label">SUPPORTING EVIDENCE</text>
+    <text x="340" y="186" class="cs-svg-value">Exposure + impact</text>
+    <path d="M112 206 H608" stroke="#34544f"/>
+    <text x="112" y="241" class="cs-svg-label">RESPONSIBLE TEAM</text>
+    <text x="340" y="242" class="cs-svg-value">Service owner</text>
+    <rect x="112" y="276" width="496" height="67" rx="10" fill="#23483c" stroke="#6aceaa"/>
+    <text x="136" y="301" class="cs-svg-label">NEXT STEP</text>
+    <text x="136" y="327" class="cs-svg-value">Review evidence and plan remediation</text>
+  {% endcase %}
+</svg>
+<svg class="cs-diagram cs-diagram--compact" viewBox="0 0 360 340" role="img" aria-label="{{ include.stage.diagram_label | escape }}" xmlns="http://www.w3.org/2000/svg">
+  <rect width="360" height="340" fill="#102b28"/>
+  {% case include.stage.id %}
+  {% when 'discover' %}
+    <rect x="12" y="12" width="336" height="316" rx="20" class="cs-svg-scope"/>
+    <path d="M180 158 C180 109 92 123 92 90 M180 158 C180 109 268 123 268 90 M180 203 V256" class="cs-svg-connection"/>
+    <circle cx="180" cy="183" r="64" class="cs-svg-ring"/>
+    <rect x="26" y="35" width="132" height="60" rx="10" class="cs-svg-node"/>
+    <text x="92" y="60" text-anchor="middle" class="cs-svg-value">Web application</text>
+    <text x="92" y="80" text-anchor="middle" class="cs-svg-secondary">app.example.com</text>
+    <rect x="202" y="35" width="132" height="60" rx="10" class="cs-svg-node"/>
+    <text x="268" y="60" text-anchor="middle" class="cs-svg-value">API endpoint</text>
+    <text x="268" y="80" text-anchor="middle" class="cs-svg-secondary">api.example.com</text>
+    <rect x="88" y="158" width="184" height="50" rx="10" class="cs-svg-node cs-svg-node--active"/>
+    <text x="180" y="190" text-anchor="middle" class="cs-svg-title">example.com</text>
+    <rect x="90" y="260" width="180" height="54" rx="10" class="cs-svg-node"/>
+    <text x="180" y="282" text-anchor="middle" class="cs-svg-value">IP address</text>
+    <text x="180" y="302" text-anchor="middle" class="cs-svg-secondary">198.51.100.24</text>
+    <circle cx="180" cy="233" r="4" class="cs-svg-dot"/>
+  {% when 'enrich' %}
+    <rect x="30" y="22" width="300" height="52" rx="10" class="cs-svg-node cs-svg-node--active"/>
+    <text x="180" y="55" text-anchor="middle" class="cs-svg-title">api.example.com</text>
+    <path d="M180 74 V95" class="cs-svg-connection"/>
+    <rect x="30" y="95" width="300" height="47" rx="9" class="cs-svg-node"/>
+    <text x="46" y="124" class="cs-svg-value">HTTPS · 443</text><text x="314" y="124" text-anchor="end" class="cs-svg-secondary">Observed service</text>
+    <rect x="30" y="154" width="300" height="47" rx="9" class="cs-svg-node"/>
+    <text x="46" y="183" class="cs-svg-value">Web endpoint</text><text x="314" y="183" text-anchor="end" class="cs-svg-secondary">Identification</text>
+    <rect x="30" y="213" width="300" height="47" rx="9" class="cs-svg-node"/>
+    <text x="46" y="242" class="cs-svg-value">Version match</text><text x="314" y="242" text-anchor="end" class="cs-svg-secondary">Correlation</text>
+    <rect x="30" y="281" width="300" height="40" rx="9" fill="#3f3421" stroke="#b79a60"/>
+    <text x="180" y="307" text-anchor="middle" class="cs-svg-value cs-svg-warning">Needs validation</text>
+  {% when 'prioritize' %}
+    <rect x="16" y="34" width="100" height="49" rx="10" class="cs-svg-node"/>
+    <text x="66" y="64" text-anchor="middle" class="cs-svg-value">Exposure</text>
+    <rect x="130" y="34" width="100" height="49" rx="10" class="cs-svg-node"/>
+    <text x="180" y="64" text-anchor="middle" class="cs-svg-value">Evidence</text>
+    <rect x="244" y="34" width="100" height="49" rx="10" class="cs-svg-node"/>
+    <text x="294" y="64" text-anchor="middle" class="cs-svg-value">Context</text>
+    <path d="M66 83 C66 115 180 112 180 150 M180 83 V150 M294 83 C294 115 180 112 180 150" class="cs-svg-connection"/>
+    <rect x="35" y="150" width="290" height="86" rx="12" class="cs-svg-node cs-svg-node--active"/>
+    <text x="180" y="184" text-anchor="middle" class="cs-svg-title">Analyst review</text>
+    <text x="180" y="211" text-anchor="middle" class="cs-svg-secondary">Reasoning + visible uncertainty</text>
+    <path d="M180 236 V274" class="cs-svg-connection"/>
+    <rect x="43" y="274" width="274" height="47" rx="23" fill="#b1f3db"/>
+    <text x="180" y="304" text-anchor="middle" class="cs-svg-title cs-svg-ink">Investigation priority</text>
+  {% when 'report' %}
+    <rect x="18" y="18" width="324" height="304" rx="14" class="cs-svg-node"/>
+    <text x="38" y="55" class="cs-svg-title">Finding → engineering action</text>
+    <path d="M18 76 H342" stroke="#41645b"/>
+    <text x="38" y="112" class="cs-svg-secondary">Asset</text><text x="146" y="112" class="cs-svg-value">api.example.com</text>
+    <path d="M38 132 H322" stroke="#34544f"/>
+    <text x="38" y="167" class="cs-svg-secondary">Evidence</text><text x="146" y="167" class="cs-svg-value">Exposure + impact</text>
+    <path d="M38 187 H322" stroke="#34544f"/>
+    <text x="38" y="222" class="cs-svg-secondary">Team</text><text x="146" y="222" class="cs-svg-value">Service owner</text>
+    <rect x="38" y="256" width="284" height="46" rx="9" fill="#23483c" stroke="#6aceaa"/>
+    <text x="180" y="284" text-anchor="middle" class="cs-svg-value">Next: plan remediation</text>
+  {% endcase %}
+</svg>
