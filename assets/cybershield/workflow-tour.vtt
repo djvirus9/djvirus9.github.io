@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:15.000
+Start with the assessment scope. Bring domains, IP addresses, and exposed services into an inventory the security team can investigate.
+
+00:00:15.000 --> 00:00:30.000
+Attach service information and relevant vulnerability data. A version match is a lead for investigation; exploitability still needs validation.
+
+00:00:30.000 --> 00:00:45.000
+Consider exposure, supporting evidence, and the affected service together. Keep uncertainty visible so the team understands the priority.
+
+00:00:45.000 --> 00:01:00.000
+Carry the affected asset, evidence, and remediation context into the report. Give the responsible engineering team enough information to act.
+
+00:01:00.000 --> 00:01:15.000
+At Invia, I owned product architecture and security design, defined the discovery and analysis pipeline, and helped take CyberShield360 to launch.

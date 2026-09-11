@@ -1,0 +1,37 @@
+---
+title: "CyberShield360: The Workflow Tour"
+permalink: /case-studies/cybershield360/tour/
+layout: single
+wide: true
+cybershield: true
+toc: false
+section: "Project walkthrough"
+description: "A 75-second illustrated tour of CyberShield360’s discovery, enrichment, prioritization, and reporting workflow, with English captions and a full transcript."
+summary: "Follow an asset from discovery to an actionable finding. This illustrated walkthrough uses example data and explains the workflow documented in my case study."
+---
+{% assign project = site.data.cybershield %}
+<div class="cs-tour-standalone">
+  <div class="cs-tour-player" data-standalone-tour hidden>
+    <video class="cs-tour-video" playsinline preload="none" width="1280" height="720" poster="{{ project.poster | relative_url }}" tabindex="0" aria-label="CyberShield360 illustrated workflow tour">
+      <source data-src="{{ project.video | relative_url }}" type="video/mp4">
+      <track kind="captions" data-src="{{ project.captions | relative_url }}" srclang="en" label="English" default>
+    </video>
+    <button class="button button--primary cs-tour-start" type="button" data-start-tour><span aria-hidden="true">▶</span> Play the 75-second tour</button>
+  </div>
+  <noscript>
+    <video class="cs-tour-video" controls playsinline preload="none" width="1280" height="720" poster="{{ project.poster | relative_url }}">
+      <source src="{{ project.video | relative_url }}" type="video/mp4">
+      <track kind="captions" src="{{ project.captions | relative_url }}" srclang="en" label="English" default>
+      <p><a href="{{ project.video | relative_url }}">Download the workflow tour</a>.</p>
+    </video>
+  </noscript>
+  <div class="cs-tour-meta"><p>75 seconds · On-screen narration · No audio</p><nav aria-label="Tour resources"><a href="{{ project.video | relative_url }}" download>Download video</a><a href="{{ project.captions | relative_url }}" download>English captions</a></nav></div>
+  <section class="cs-transcript" aria-labelledby="tour-transcript">
+    <h2 id="tour-transcript">Walkthrough transcript</h2>
+    <ol>
+      {% for segment in project.tour %}<li><h3>{{ segment.heading }}</h3><p>{{ segment.caption }}</p></li>{% endfor %}
+    </ol>
+    <p><a href="{{ '/case-studies/cybershield360/' | relative_url }}">Read the full case study <span aria-hidden="true">→</span></a></p>
+    <p>For the original product introduction, <a href="https://www.youtube.com/watch?v=4FVeZtl4WZs">watch Invia’s public launch video</a>.</p>
+  </section>
+</div>

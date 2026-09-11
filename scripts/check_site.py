@@ -33,8 +33,11 @@ class Page(HTMLParser):
             self.meta[attrs.get("name", attrs.get("property"))] = attrs.get("content")
         if tag == "a" and attrs.get("href"):
             self.links.append(attrs["href"])
-        if tag in ("img", "script") and attrs.get("src"):
-            self.assets.append(attrs["src"])
+        if tag in ("img", "script", "video", "source", "track"):
+            if attrs.get("src", attrs.get("data-src")):
+                self.assets.append(attrs.get("src", attrs.get("data-src")))
+            if attrs.get("poster", attrs.get("data-poster")):
+                self.assets.append(attrs.get("poster", attrs.get("data-poster")))
         if tag == "link" and attrs.get("href"):
             if attrs.get("rel") == "canonical":
                 self.canonical = attrs["href"]
