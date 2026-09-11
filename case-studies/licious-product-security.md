@@ -2,6 +2,9 @@
 title: "Building Product Security from Scratch"
 permalink: /case-studies/licious-product-security/
 layout: single
+og_title: "Building product security from scratch."
+og_image: "/assets/social/licious.png"
+og_image_alt: "Building product security from scratch at Licious. A case study by Danish Siddiqui, with an illustration connecting application, cloud, and governance controls."
 description: "How Danish Siddiqui established Product Security at Licious: AppSec, AWS controls, DevSecOps, bug bounty governance, and ISO 27001 readiness."
 summary: "As Licious’s first dedicated security engineer, I established a shared operating model for application security, cloud controls, vulnerability management, and governance."
 context: "Licious · SDE-3, Product Security · May 2025–Present"

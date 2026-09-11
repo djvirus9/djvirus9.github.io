@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check the generated portfolio without making network requests."""
 import json
+import struct
 import sys
 from collections import Counter
 from html.parser import HTMLParser
@@ -93,6 +94,25 @@ def main():
             elif resolved.fragment and target in pages and unquote(resolved.fragment) not in pages[target].ids:
                 errors.append(f"{relative}: missing anchor {href}")
     source_root = Path(__file__).resolve().parents[1]
+    projects = json.loads((source_root / "_data/featured_work.json").read_text())
+    social_images = set()
+    for project in projects:
+        case = pages[root / project["url"].lstrip("/") / "index.html"]
+        if case.meta.get("og:title") != project["share_title"] or case.meta.get("twitter:title") != project["share_title"]:
+            errors.append(f"{project['title']}: incorrect project sharing headline")
+        social_url = "https://djvirus9.github.io" + project["share_image"]
+        if case.meta.get("og:image") != social_url or case.meta.get("twitter:image") != social_url:
+            errors.append(f"{project['title']}: incorrect project sharing image")
+        if case.meta.get("og:image:alt") != project["share_alt"] or case.meta.get("twitter:image:alt") != project["share_alt"]:
+            errors.append(f"{project['title']}: incorrect project sharing description")
+        social_images.add(social_url)
+        image = root / project["share_image"].lstrip("/")
+        if image.is_file():
+            header = image.read_bytes()[:24]
+            if len(header) != 24 or header[:8] != b"\x89PNG\r\n\x1a\n" or struct.unpack(">II", header[16:24]) != (1200, 630):
+                errors.append(f"{project['title']}: sharing image must be a 1200 by 630 PNG")
+    if len(social_images) != 3:
+        errors.append("Flagship projects must have three distinct sharing images")
     cves = json.loads((source_root / "_data/cves.json").read_text())
     if len({cve["id"] for cve in cves}) != len(cves):
         errors.append("CVE data contains duplicate IDs")

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="360" viewBox="0 0 660 360">
+  <rect width="660" height="360" fill="#e5ebf8"/>
+  <circle cx="100" cy="348" r="230" fill="#d8e2f5"/>
+  <g fill="none" stroke="#c1d0ee"><path d="M0 70h660M0 290h660M90 0v360M570 0v360"/></g>
+  <rect x="104" y="62" width="452" height="236" rx="20" fill="#fff" stroke="#b9c9e6" stroke-width="2"/>
+  <path d="M104 112h452" stroke="#d1dcee" stroke-width="2"/>
+  <g fill="#6582b8"><circle cx="130" cy="87" r="5"/><circle cx="148" cy="87" r="5"/><circle cx="166" cy="87" r="5"/></g>
+  <g font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.4" fill="#375786"><text x="247" y="91">FINDINGS → FOLLOW-UP</text></g>
+  <g fill="#eef2fa"><rect x="126" y="133" width="408" height="39" rx="8"/><rect x="126" y="184" width="408" height="39" rx="8"/><rect x="126" y="235" width="408" height="39" rx="8"/></g>
+  <g fill="#7a91bf"><rect x="171" y="148" width="133" height="8" rx="4"/><rect x="171" y="199" width="166" height="8" rx="4"/><rect x="171" y="250" width="110" height="8" rx="4"/></g>
+  <circle cx="146" cy="152" r="7" fill="#a65150"/><circle cx="146" cy="203" r="7" fill="#a77531"/><circle cx="146" cy="254" r="7" fill="#397c70"/>
+  <g fill="none" stroke="#607fb5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M377 152h44m-7-7 7 7-7 7M377 203h44m-7-7 7 7-7 7M377 254h44m-7-7 7 7-7 7"/></g>
+  <rect x="452" y="141" width="60" height="22" rx="11" fill="#eadce0"/><rect x="452" y="192" width="60" height="22" rx="11" fill="#f0e6d4"/><rect x="452" y="243" width="60" height="22" rx="11" fill="#d1e8e2"/>
+  <path d="m474 254 6 6 12-12" stroke="#286b59" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

@@ -2,6 +2,9 @@
 title: "SecOps Dashboard"
 permalink: /case-studies/secops-dashboard/
 layout: single
+og_title: "From scanner findings to follow-through."
+og_image: "/assets/social/secops.png"
+og_image_alt: "From scanner findings to follow-through. SecOps Dashboard by Danish Siddiqui, illustrated as findings progressing from import to ownership and resolution."
 wide: true
 secops: true
 open_source: true

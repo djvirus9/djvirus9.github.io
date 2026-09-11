@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="360" viewBox="0 0 660 360">
+  <rect width="660" height="360" fill="#182d36"/>
+  <g fill="none" stroke="#37515c" stroke-width="1.5"><circle cx="287" cy="180" r="76"/><circle cx="287" cy="180" r="134"/><circle cx="287" cy="180" r="198"/><path d="M287 0v360M50 180h474"/></g>
+  <path d="M287 180 444 69a192 192 0 0 1 33 183Z" fill="#2c5660" opacity=".7"/>
+  <g stroke="#80b5bb" stroke-width="2" fill="none"><path d="m174 94 113 86 76-68M177 274l110-94 99 80M287 180h202"/></g>
+  <g fill="#213f48" stroke="#8bbbc1" stroke-width="2"><rect x="151" y="71" width="46" height="46" rx="10"/><rect x="154" y="251" width="46" height="46" rx="10"/><rect x="340" y="89" width="46" height="46" rx="10"/><rect x="363" y="237" width="46" height="46" rx="10"/></g>
+  <g fill="#b5dde0"><circle cx="174" cy="94" r="5"/><circle cx="177" cy="274" r="5"/><circle cx="363" cy="112" r="5"/><circle cx="386" cy="260" r="5"/></g>
+  <circle cx="287" cy="180" r="29" fill="#72cfbf"/>
+  <path d="m287 162 13 6v11c0 9-13 17-13 17s-13-8-13-17v-11Z" fill="none" stroke="#163d39" stroke-width="3"/>
+  <rect x="465" y="135" width="122" height="94" rx="14" fill="#f4e4ca"/>
+  <g fill="#8d683b"><rect x="485" y="158" width="15" height="7" rx="3"/><rect x="485" y="176" width="15" height="7" rx="3"/><rect x="485" y="194" width="15" height="7" rx="3"/></g>
+  <g stroke="#9c7a50" stroke-width="4" stroke-linecap="round"><path d="M514 161h50M514 179h36M514 197h22"/></g>
+  <g font-family="Arial,sans-serif" text-anchor="middle" font-size="12" font-weight="700" letter-spacing="1.5" fill="#b4d5d8"><text x="287" y="333">DISCOVER · UNDERSTAND · PRIORITIZE</text></g>
+</svg>

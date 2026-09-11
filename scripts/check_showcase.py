@@ -104,6 +104,27 @@ def check_controls(page, axe_path, report):
     report["control_checks"] += 1
 
 
+def check_home_navigation(page, base):
+    """Keep every flagship and expanded background usable with or without JS."""
+    expected = ["licious-product-security", "secops-dashboard", "cybershield360"]
+    for index, slug in enumerate(expected):
+        page.locator(".flagship__link").nth(index).click()
+        page.wait_for_url(base + f"/case-studies/{slug}/")
+        assert page.locator("h1").is_visible()
+        page.go_back(wait_until="load")
+    for section in ["experience", "credentials"]:
+        summary = page.locator(f"#{section} summary")
+        summary.focus()
+        page.keyboard.press("Enter")
+        assert page.locator(f"#{section}").get_attribute("open") is not None
+        assert page.locator(f"#{section} li").first.is_visible()
+        page.keyboard.press("Enter")
+        assert page.locator(f"#{section}").get_attribute("open") is None
+    for anchor in ["cybershield", "cybershield-enrich", "open-source", "credentials"]:
+        page.goto(base + "/#" + anchor, wait_until="load")
+        assert page.locator(f"#{anchor}").count() == 1
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("build", type=Path)
@@ -142,7 +163,14 @@ def main():
                                 assert not external, "Unexpected third-party request: " + repr(external)
                                 if args.axe:
                                     assert_axe(page, args.axe, report)
-                                if not path.endswith("/tour/"):
+                                if path == "/":
+                                    assert page.locator(".flagship__link").count() == 3
+                                    assert page.locator("video, [data-stage-panel], [data-secops-demo]").count() == 0
+                                    assert not any(urlsplit(url).path.endswith(("/cybershield.js", "/secops-demo.js", "/cybershield.css", "/open-source.css")) for url in requests)
+                                    assert page.locator(".home-intro__portrait").evaluate("img => img.complete && img.naturalWidth > 0")
+                                    if width == 390 and theme == "light":
+                                        check_home_navigation(page, base)
+                                elif not path.endswith("/tour/"):
                                     assert page.locator('[role="tabpanel"]:visible').count() == 1
                                     assert page.locator('.cs-panel:not([hidden]) .cs-diagram:visible').count() == 1
                                     if width in (390, 1440) and theme == "light":
@@ -164,6 +192,11 @@ def main():
                     context = browser.new_context(java_script_enabled=False, viewport={"width": 390, "height": 900})
                     page = context.new_page()
                     page.goto(base + path, wait_until="load")
+                    if path == "/":
+                        check_home_navigation(page, base)
+                        report["fallback_checks"] += 1
+                        context.close()
+                        continue
                     assert page.locator("[data-stage-panel]:visible").count() == 4
                     page.locator('[data-stage-tab="report"]').click()
                     assert page.url.endswith("#cybershield-report")
@@ -176,7 +209,7 @@ def main():
                 context = browser.new_context(reduced_motion="reduce")
                 context.add_init_script("Object.defineProperty(window, 'localStorage', {get() {throw new Error('Storage unavailable');}})")
                 page = context.new_page()
-                page.goto(base, wait_until="networkidle")
+                page.goto(base + "/case-studies/cybershield360/", wait_until="networkidle")
                 page.locator('[data-stage-tab="report"]').click()
                 assert page.locator('#cybershield-report').is_visible()
                 assert page.locator('#cybershield-report').evaluate("element => getComputedStyle(element).animationName") == "none"
