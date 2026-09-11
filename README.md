@@ -21,11 +21,13 @@ Open `http://127.0.0.1:4173/`.
 
 - `_pages/home.md`: homepage narrative and section order.
 - `_data/experience.json`: employment history sourced from the résumé.
-- `_data/case_studies.json`: case-study card titles, descriptions, and featured selection.
+- `_data/case_studies.json`: the full case-study index.
+- `_data/featured_work.json`: the three homepage projects, illustrations, and sharing-card content.
+- `assets/css/home.css`: the compact homepage layout.
 - `case-studies/`: detailed accounts of engineering work.
 - `_data/cves.json`: selected public CVEs, publication dates, publisher scores, and direct acknowledgment links.
 - `_data/writing.json` and `blog/`: article index and technical notes.
-- `_data/open_source.json` and `_includes/open-source.html`: the homepage's open-source project cards.
+- `_data/open_source.json` and `_includes/open-source.html`: reusable open-source project cards from the earlier homepage.
 - `case-studies/secops-dashboard.md`: the SecOps Dashboard case study and source references.
 - `_data/secops_demo.json`, `_includes/secops-demo.html`, and `assets/js/secops-demo.js`: the synthetic, in-memory sample triage workflow.
 - `_sass/custom.scss`: shared layout, typography, and light/dark color variables.
@@ -35,7 +37,7 @@ The site uses system fonts and local JavaScript. Mobile navigation works without
 
 Read [content provenance and outstanding details](docs/content-notes.md) before adding new quantitative claims or credential links. The `docs`, `scripts`, and `artifacts` directories are excluded from the public build.
 
-See the [CyberShield360 showcase review](docs/showcase-review.md) for the interactive feature and the [original redesign review](docs/review.md) for the wider site refresh.
+See the [homepage refinement review](docs/homepage-review.md) for the compact layout and project sharing cards, the [CyberShield360 showcase review](docs/showcase-review.md) for the interactive feature and the [original redesign review](docs/review.md) for the wider site refresh.
 
 ## Validation and deployment
 
@@ -57,11 +59,11 @@ After building, run:
 python3 scripts/check_secops.py _site --browsers chromium --axe /path/to/axe.min.js
 ```
 
-Use `--browsers chromium webkit` to match CI. Both browser suites run before deployment. `assets/css/open-source.css` loads only on the homepage and SecOps case study; the sample's JavaScript loads only on its case-study page.
+Use `--browsers chromium webkit` to match CI. Both browser suites run before deployment. `assets/css/open-source.css` and the sample's JavaScript load only on the SecOps case-study page.
 
 ## CyberShield360 showcase
 
-The homepage and CyberShield360 case study share `_includes/cybershield-showcase.html`. Content, stages, and the tour transcript live in `_data/cybershield.json`. Diagrams have dedicated desktop and phone layouts in `_includes/cybershield-diagram.html`.
+The CyberShield360 case study uses `_includes/cybershield-showcase.html`. The homepage links to this full experience through a compact project preview. Content, stages, and the tour transcript live in `_data/cybershield.json`. Diagrams have dedicated desktop and phone layouts in `_includes/cybershield-diagram.html`.
 
 The diagrams are explicitly illustrated workflows using example data. Invia’s public links are promotional launch videos, and are attributed as such. The feature does not present them as interface screen recordings.
 
@@ -84,7 +86,9 @@ Rendering requires `ffmpeg`. Browser checks run against a temporary local server
 
 Use `--browsers chromium webkit` after installing both engines, and `--axe /path/to/axe.min.js` for the same axe-core 4.10.3 accessibility checks used in CI. The test dependencies and render scripts are excluded from the public site.
 
-The social preview source is `scripts/social-preview.html`. To regenerate its 1200 × 630 PNG with Playwright:
+Project sharing cards use the authored illustrations in `assets/projects/` and content in `_data/featured_work.json`. Regenerate their 1200 × 630 PNGs with `python3 scripts/render_project_previews.py`, then rebuild the site. Each flagship case study defines its own `og_title`, `og_image`, and `og_image_alt`. These illustrations describe the work; they are not product screenshots.
+
+The default social preview source is `scripts/social-preview.html`. To regenerate its 1200 × 630 PNG with Playwright:
 
 ```sh
 playwright screenshot --browser chromium --viewport-size '1200,630' file:///absolute/path/to/repository/scripts/social-preview.html assets/social-preview.png

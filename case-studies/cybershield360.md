@@ -2,6 +2,9 @@
 title: "Building CyberShield360"
 permalink: /case-studies/cybershield360/
 layout: single
+og_title: "Making an attack surface actionable."
+og_image: "/assets/social/cybershield.png"
+og_image_alt: "Making an attack surface actionable. CyberShield360 architecture by Danish Siddiqui, with an illustration of asset discovery and prioritized exposure."
 description: "Danish Siddiqui’s role in building CyberShield360 at Invia: attack surface discovery, enrichment, prioritization, reporting, and public product demonstrations."
 summary: "At Invia, I designed and helped launch an attack surface management product that turns external asset discovery into prioritized exposure information."
 context: "Invia · Senior Security Engineer · September 2022–November 2023"

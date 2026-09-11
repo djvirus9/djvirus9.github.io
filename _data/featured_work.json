@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Licious",
+    "anchor": "licious",
+    "category": "01 / Security program",
+    "contribution": "Built the security function as the first dedicated security engineer.",
+    "outcome": "Shared controls, clear owners, and a repeatable path to remediation.",
+    "url": "/case-studies/licious-product-security/",
+    "link_label": "Inside the security program",
+    "art": "/assets/projects/licious.svg",
+    "share_image": "/assets/social/licious.png",
+    "share_title": "Building product security from scratch.",
+    "share_context": "Licious · Founding security engineer",
+    "share_alt": "Building product security from scratch at Licious. A case study by Danish Siddiqui, with an illustration connecting application, cloud, and governance controls."
+  },
+  {
+    "title": "SecOps Dashboard",
+    "anchor": "secops",
+    "category": "02 / Open-source product",
+    "contribution": "Designed and built a workspace for investigating and triaging findings.",
+    "outcome": "A self-hosted product with public code, releases, and operating docs.",
+    "url": "/case-studies/secops-dashboard/",
+    "link_label": "Explore the product & demo",
+    "art": "/assets/projects/secops.svg",
+    "share_image": "/assets/social/secops.png",
+    "share_title": "From scanner findings to follow-through.",
+    "share_context": "SecOps Dashboard · Open-source product",
+    "share_alt": "From scanner findings to follow-through. SecOps Dashboard by Danish Siddiqui, illustrated as findings progressing from import to ownership and resolution."
+  },
+  {
+    "title": "CyberShield360",
+    "anchor": "cybershield",
+    "category": "03 / Product architecture",
+    "contribution": "Owned the architecture and helped launch Invia’s attack surface product.",
+    "outcome": "A launched product connecting discovery, exposure, and prioritization.",
+    "url": "/case-studies/cybershield360/",
+    "link_label": "Explore the workflow & tour",
+    "art": "/assets/projects/cybershield.svg",
+    "share_image": "/assets/social/cybershield.png",
+    "share_title": "Making an attack surface actionable.",
+    "share_context": "CyberShield360 · Product architecture at Invia",
+    "share_alt": "Making an attack surface actionable. CyberShield360 architecture by Danish Siddiqui, with an illustration of asset discovery and prioritized exposure."
+  }
+]

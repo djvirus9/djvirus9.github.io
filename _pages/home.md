@@ -3,80 +3,81 @@ title: "Danish Siddiqui"
 permalink: /
 layout: single
 wide: true
-cybershield: true
-open_source: true
-description: "Founding security engineer at Licious. Explore Danish Siddiqui’s work in AppSec, AWS, Kubernetes, DevSecOps, and published vulnerability research."
+home: true
+description: "I build security programs and the tools that make them work. Explore Danish Siddiqui’s work at Licious, SecOps Dashboard, CyberShield360, and published vulnerability research."
 ---
 
-<section class="hero" aria-labelledby="intro-title">
-  <div>
+<section class="home-intro" aria-labelledby="intro-title">
+  <div class="home-intro__identity">
     <p class="eyebrow">Senior Product Security Engineer</p>
-    <h1 id="intro-title">Danish Siddiqui</h1>
-    <p class="hero__lead">I build product security programs—from the first control to engineering-wide adoption.</p>
-    <p class="hero__focus">AppSec &nbsp;·&nbsp; AWS &amp; Kubernetes &nbsp;·&nbsp; DevSecOps</p>
-    <div class="actions">
-      <a class="button button--primary" href="{{ '/case-studies/' | relative_url }}">Explore my work <span aria-hidden="true">→</span></a>
-      <a class="button" href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Résumé PDF</a>
-      <a class="button" href="mailto:danishismyname1@gmail.com">Get in touch</a>
-    </div>
+    <h1 id="intro-title">Danish Siddiqui<span class="home-intro__dot" aria-hidden="true">.</span></h1>
   </div>
-  <div class="hero__profile">
-    <img class="hero__avatar" src="{{ '/assets/avatar-224.jpg' | relative_url }}" alt="Danish Siddiqui" width="112" height="112" fetchpriority="high">
-    <p><strong>Founding security engineer at Licious.</strong><br>Bengaluru, India. Open to global opportunities.</p>
-    <div class="hero__links"><a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a><a href="https://github.com/djvirus9">GitHub</a></div>
+  <img class="home-intro__portrait" src="{{ '/assets/avatar-224.jpg' | relative_url }}" srcset="{{ '/assets/avatar-224.jpg' | relative_url }} 224w, {{ '/assets/avatar.jpg' | relative_url }} 747w" sizes="(max-width: 672px) 108px, 224px" alt="Danish Siddiqui" width="747" height="1024" fetchpriority="high">
+  <p class="home-intro__lead">I build security programs and the tools that make them work.</p>
+  <p class="home-intro__context"><strong>Founding security engineer at Licious.</strong><br>AppSec, cloud security, and DevSecOps.</p>
+  <div class="actions home-intro__actions">
+    <a class="button button--primary" href="#selected-work">Explore my work <span aria-hidden="true">↓</span></a>
+    <a class="button" href="mailto:danishismyname1@gmail.com">Email me <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="home-intro__details">
+    <p>Bengaluru · Open to global opportunities</p>
+    <nav aria-label="Profile links"><a href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Résumé PDF</a><a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a><a href="https://github.com/djvirus9">GitHub</a></nav>
   </div>
 </section>
 
-<div class="proof-strip" aria-label="Experience and research">
-  <a href="#experience"><strong>6+ years</strong><span>Across product and offensive security</span></a>
-  <a href="{{ '/cves/' | relative_url }}"><strong>{{ site.data.cves | size }} advisories</strong><span>Selected CVEs with public credit</span></a>
-  <a href="#credentials"><strong>CKA + CKS</strong><span>Kubernetes administration and security</span></a>
-</div>
-
-<section class="home-section" aria-labelledby="selected-work">
+<section class="home-work" aria-labelledby="selected-work">
   <div class="section-heading">
-    <div><p class="eyebrow">Selected work</p><h2 id="selected-work">Security systems I’ve built</h2></div>
+    <div><p class="eyebrow">Selected work / 01–03</p><h2 id="selected-work">Built, shipped, and put to work.</h2></div>
     <a href="{{ '/case-studies/' | relative_url }}">All case studies <span aria-hidden="true">→</span></a>
   </div>
-  <div class="card-grid card-grid--pair">
-    {% for study in site.data.case_studies %}{% if study.featured and study.slug != 'cybershield360' %}{% include work-card.html study=study featured=true %}{% endif %}{% endfor %}
-  </div>
-</section>
-
-{% include open-source.html %}
-
-{% include cybershield-showcase.html home=true %}
-
-<section class="home-section" aria-labelledby="experience">
-  <div class="section-heading"><div><p class="eyebrow">Experience</p><h2 id="experience">From research to security ownership</h2></div></div>
-  <ol class="experience-list">
-    {% for job in site.data.experience %}
-    <li><span class="period">{{ job.period }}</span><div><h3>{% if job.url %}<a href="{{ job.url | relative_url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</h3><span class="role">{{ job.role }}</span><p>{{ job.summary }}</p></div></li>
+  <div class="flagship-grid">
+    {% for project in site.data.featured_work %}
+    <article class="flagship" id="{{ project.anchor }}">
+      {% if project.anchor == 'cybershield' %}<span id="cybershield-discover"></span><span id="cybershield-enrich"></span><span id="cybershield-prioritize"></span><span id="cybershield-report"></span>{% endif %}
+      <div class="flagship__visual"><img src="{{ project.art | relative_url }}" alt="" width="660" height="360" loading="lazy" decoding="async"></div>
+      <div class="flagship__body">
+        <p class="eyebrow">{{ project.category | escape }}</p>
+        <h3>{{ project.title | escape }}</h3>
+        <p class="flagship__contribution">{{ project.contribution | escape }}</p>
+        <p class="flagship__outcome"><span>Delivered</span>{{ project.outcome | escape }}</p>
+        <a class="flagship__link" href="{{ project.url | relative_url }}">{{ project.link_label | escape }} <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
     {% endfor %}
-  </ol>
-  <div class="credentials" id="credentials" aria-label="Certifications">
-    <span><strong>CKS</strong> · Linux Foundation · 2026</span>
-    <span><strong>CKA</strong> · Linux Foundation · 2026</span>
-    <span><strong>AWS Certified Security – Specialty</strong></span>
   </div>
 </section>
 
-<section class="home-section home-research" aria-labelledby="research">
-  <div>
-    <p class="eyebrow">Research &amp; writing</p><h2 id="research">Public findings, practical lessons</h2>
-    <p>Published research on Traccar and Dovecot, plus notes on the trust boundaries behind the bugs.</p>
-    <a href="{{ '/cves/' | relative_url }}">Browse advisories and credits <span aria-hidden="true">→</span></a>
+<section class="home-proof" aria-labelledby="research">
+  <div><p class="eyebrow">Research with public credit</p><h2 id="research">{{ site.data.cves | size }} selected CVE advisories.</h2><p>Research acknowledged by Traccar and Dovecot’s publisher.</p><a href="{{ '/cves/' | relative_url }}">Explore findings and acknowledgments <span aria-hidden="true">→</span></a></div>
+  <div class="home-proof__sources">
+    <a href="https://github.com/traccar/traccar/security/advisories/GHSA-mc2g-mjqh-8x78"><span>Traccar</span>SVG upload · CVE-2026-25648 <span aria-hidden="true">↗</span></a>
+    <a href="https://documentation.open-xchange.com/dovecot/security/advisories/csaf/2026/oxdc-adv-2026-0001.json"><span>Dovecot</span>MIME parsing · CVE-2026-27859 <span aria-hidden="true">↗</span></a>
   </div>
-  <ul class="research-links">
-    <li><a href="{{ '/blog/svg-upload-trust-boundaries/' | relative_url }}">When an image upload becomes executable content</a><small>Traccar · Stored XSS · CVE-2026-25648</small></li>
-    <li><a href="{{ '/blog/csv-export-trust-boundaries/' | relative_url }}">The trust boundary in a CSV export</a><small>Traccar · Formula injection · CVE-2026-27644</small></li>
-    <li><a href="{{ '/blog/llm-security-owasp-top10/' | relative_url }}">LLM security risks and the OWASP Top 10</a><small>Published on the Halodoc engineering blog</small></li>
-    <li><a href="{{ '/community/' | relative_url }}">Community and recognition</a><small>Conference volunteering and researcher profiles</small></li>
-  </ul>
 </section>
 
-<section class="contact-panel" aria-labelledby="contact-title">
-  <p class="eyebrow">Let’s work together</p><h2 id="contact-title">Building a product security function?</h2>
-  <p>I’m interested in senior Product Security, AppSec, Cloud Security, and security engineering lead opportunities.</p>
-  <div class="actions"><a class="button button--primary" href="mailto:danishismyname1@gmail.com">Email Danish</a><a class="button" href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Read my résumé</a></div>
+<section class="contact-panel home-contact" id="contact" aria-labelledby="contact-title">
+  <div><p class="eyebrow">Let’s work together</p><h2 id="contact-title">Building a product security function?</h2><p>I’m open to senior security engineering and technical leadership opportunities.</p></div>
+  <div class="actions"><a class="button button--primary" href="mailto:danishismyname1@gmail.com">Email Danish <span aria-hidden="true">↗</span></a><a class="button" href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Read my résumé</a></div>
+</section>
+
+<section class="home-background" aria-labelledby="background-title">
+  <h2 id="background-title">A little more background</h2>
+  <details id="experience" class="home-details">
+    <summary><span>Experience <small>Licious · Halodoc · Invia · FireCompass</small></span></summary>
+    <ol class="experience-list">
+      {% for job in site.data.experience %}
+      <li><span class="period">{{ job.period }}</span><div><h3>{% if job.url %}<a href="{{ job.url | relative_url }}">{{ job.company }}</a>{% else %}{{ job.company }}{% endif %}</h3><span class="role">{{ job.role }}</span><p>{{ job.summary }}</p></div></li>
+      {% endfor %}
+    </ol>
+  </details>
+  <details id="credentials" class="home-details">
+    <summary><span>Certifications <small>CKA · CKS · AWS Security – Specialty</small></span></summary>
+    <ul class="home-credentials"><li><strong>CKS</strong> · Linux Foundation · 2026</li><li><strong>CKA</strong> · Linux Foundation · 2026</li><li><strong>AWS Certified Security – Specialty</strong></li></ul>
+    <p>Listed in my <a href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">résumé</a>.</p>
+  </details>
+  <div class="home-more" id="open-source">
+    <a href="https://github.com/djvirus9/awesome-devsecops-mastery-2026"><span>Open-source learning</span>DevSecOps Roadmap <span aria-hidden="true">↗</span></a>
+    <a href="{{ '/blog/' | relative_url }}"><span>Research &amp; writing</span>Practical security lessons <span aria-hidden="true">→</span></a>
+    <a href="{{ '/community/' | relative_url }}"><span>Beyond the day job</span>Community &amp; recognition <span aria-hidden="true">→</span></a>
+  </div>
 </section>

@@ -4,6 +4,8 @@
 {% assign description = page.description | default: page.summary | default: site.description %}
 {% assign canonical = page.url | replace: '/index.html', '/' | absolute_url %}
 {% assign preview_image = page.og_image | default: site.og_image | absolute_url %}
+{% assign preview_alt = page.og_image_alt | default: 'Danish Siddiqui — Senior Product Security Engineer. AppSec, AWS, Kubernetes, and DevSecOps.' %}
+{% assign sharing_title = page.og_title | default: document_title %}
 <title>{{ document_title | escape }}</title>
 <meta name="description" content="{{ description | strip_html | normalize_whitespace | escape }}">
 <meta name="author" content="Danish Siddiqui">
@@ -11,23 +13,24 @@
 <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Danish Siddiqui">
-<meta property="og:title" content="{{ document_title | escape }}">
+<meta property="og:title" content="{{ sharing_title | escape }}">
 <meta property="og:description" content="{{ description | strip_html | normalize_whitespace | escape }}">
 <meta property="og:url" content="{{ canonical }}">
 <meta property="og:image" content="{{ preview_image }}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Danish Siddiqui — Senior Product Security Engineer. AppSec, AWS, Kubernetes, and DevSecOps.">
+<meta property="og:image:alt" content="{{ preview_alt | escape }}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ document_title | escape }}">
+<meta name="twitter:title" content="{{ sharing_title | escape }}">
 <meta name="twitter:description" content="{{ description | strip_html | normalize_whitespace | escape }}">
 <meta name="twitter:image" content="{{ preview_image }}">
-<meta name="twitter:image:alt" content="Danish Siddiqui — Senior Product Security Engineer">
+<meta name="twitter:image:alt" content="{{ preview_alt | escape }}">
 {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">{% endif %}
 <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
 <meta name="color-scheme" content="light dark">
 <script src="{{ '/assets/js/theme-init.js' | relative_url }}"></script>
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if page.home %}<link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">{% endif %}
 {% if page.cybershield %}<link rel="stylesheet" href="{{ '/assets/css/cybershield.css' | relative_url }}">{% endif %}
 {% if page.open_source %}<link rel="stylesheet" href="{{ '/assets/css/open-source.css' | relative_url }}">{% endif %}
 {% if page.url == '/' %}{% include schema.html %}{% endif %}

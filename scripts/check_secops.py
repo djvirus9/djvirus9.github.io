@@ -126,7 +126,8 @@ def main():
                 page.locator('.sd-fallback-finding summary').first.click()
                 assert page.locator('.sd-fallback-finding').first.locator('p').first.is_visible()
                 page.goto(base, wait_until='load')
-                assert page.locator('#open-source .os-card').count() == 2
+                assert page.locator('#secops a[href="/case-studies/secops-dashboard/"]').is_visible()
+                assert page.locator('#open-source a[href="https://github.com/djvirus9/awesome-devsecops-mastery-2026"]').is_visible()
                 report['fallback_checks'] += 1
                 context.close()
                 context = browser.new_context(reduced_motion='reduce')
