@@ -49,6 +49,9 @@ jobs:
       - name: Check interactive showcase and video
         run: python scripts/check_showcase.py _site --browsers chromium webkit --axe /tmp/portfolio-axe.js
 
+      - name: Check sample triage workflow
+        run: python scripts/check_secops.py _site --browsers chromium webkit --axe /tmp/portfolio-axe.js
+
       - name: Upload artifact
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: actions/upload-pages-artifact@v3

@@ -4,6 +4,7 @@ permalink: /
 layout: single
 wide: true
 cybershield: true
+open_source: true
 description: "Founding security engineer at Licious. Explore Danish Siddiqui’s work in AppSec, AWS, Kubernetes, DevSecOps, and published vulnerability research."
 ---
 
@@ -32,17 +33,19 @@ description: "Founding security engineer at Licious. Explore Danish Siddiqui’s
   <a href="#credentials"><strong>CKA + CKS</strong><span>Kubernetes administration and security</span></a>
 </div>
 
-{% include cybershield-showcase.html home=true %}
-
 <section class="home-section" aria-labelledby="selected-work">
   <div class="section-heading">
-    <div><p class="eyebrow">More selected work</p><h2 id="selected-work">Security systems I’ve built</h2></div>
+    <div><p class="eyebrow">Selected work</p><h2 id="selected-work">Security systems I’ve built</h2></div>
     <a href="{{ '/case-studies/' | relative_url }}">All case studies <span aria-hidden="true">→</span></a>
   </div>
   <div class="card-grid card-grid--pair">
     {% for study in site.data.case_studies %}{% if study.featured and study.slug != 'cybershield360' %}{% include work-card.html study=study featured=true %}{% endif %}{% endfor %}
   </div>
 </section>
+
+{% include open-source.html %}
+
+{% include cybershield-showcase.html home=true %}
 
 <section class="home-section" aria-labelledby="experience">
   <div class="section-heading"><div><p class="eyebrow">Experience</p><h2 id="experience">From research to security ownership</h2></div></div>

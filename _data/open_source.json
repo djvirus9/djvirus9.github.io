@@ -1,0 +1,19 @@
+[
+  {
+    "id": "secops",
+    "title": "SecOps Dashboard",
+    "type": "Security tooling",
+    "description": "Bring scanner findings into one place to investigate, assign, and track through remediation.",
+    "detail": "FastAPI · Next.js · PostgreSQL",
+    "url": "https://github.com/djvirus9/secops-dashboard",
+    "case_study": "/case-studies/secops-dashboard/"
+  },
+  {
+    "id": "roadmap",
+    "title": "DevSecOps Roadmap",
+    "type": "Practical learning",
+    "description": "A guide from the first local security check to CI gates, software supply chain controls, and runtime detection.",
+    "detail": "Guides · Labs · Pipeline examples",
+    "url": "https://github.com/djvirus9/awesome-devsecops-mastery-2026"
+  }
+]
