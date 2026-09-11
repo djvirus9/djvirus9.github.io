@@ -68,6 +68,8 @@
 .cs-tour-dialog__footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .4rem 1rem; padding: .9rem 1.4rem; font-size: .8rem; color: var(--muted); }
 .cs-tour-dialog__footer p { margin: 0; }
 .cs-tour-standalone { max-width: 960px; margin: 0 auto; }
+.cs-tour-player { position: relative; }
+.cs-tour-start { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: max-content; max-width: calc(100% - 2rem); min-height: 52px; padding: .8rem 1.2rem; cursor: pointer; box-shadow: 0 8px 30px #0008; }
 .cs-tour-standalone .cs-tour-video { border: 1px solid var(--border); border-radius: 12px; }
 .cs-tour-standalone .cs-transcript { margin: 2.5rem auto; max-width: 760px; }
 .cs-tour-standalone .cs-transcript li { padding: .8rem 0; }

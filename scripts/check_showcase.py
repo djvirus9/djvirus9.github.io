@@ -116,7 +116,8 @@ def main():
                                 assert page.locator("h1").count() == 1
                                 assert page.evaluate("document.documentElement.scrollWidth <= innerWidth"), "Horizontal overflow"
                                 assert not any(urlsplit(url).path.endswith(".mp4") for url in requests), "Video downloaded before interaction"
-                                assert all(urlsplit(url).netloc == urlsplit(base).netloc for url in requests), "Unexpected third-party request"
+                                external = [url for url in requests if urlsplit(url).scheme in ("http", "https") and urlsplit(url).netloc != urlsplit(base).netloc]
+                                assert not external, "Unexpected third-party request: " + repr(external)
                                 if args.axe:
                                     assert_axe(page, args.axe, report)
                                 if not path.endswith("/tour/"):
@@ -125,7 +126,7 @@ def main():
                                     if width in (390, 1440) and theme == "light":
                                         check_controls(page, args.axe, report)
                                 elif width == 390 and theme == "light":
-                                    page.locator("video").evaluate("video => video.play()")
+                                    page.locator("[data-start-tour]").click()
                                     check_media(page)
                                 assert not errors, errors
                                 case["status"] = "passed"
@@ -145,7 +146,7 @@ def main():
                     assert page.url.endswith("#cybershield-report")
                     page.locator('[data-open-tour]').click()
                     assert page.url.endswith("/cybershield360/tour/")
-                    assert page.locator("video source").get_attribute("src").endswith(".mp4")
+                    assert page.locator("video:visible source").get_attribute("src").endswith(".mp4")
                     assert page.locator("#tour-transcript").is_visible()
                     report["fallback_checks"] += 1
                     context.close()
