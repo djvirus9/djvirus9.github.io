@@ -21,7 +21,7 @@ description: "I build security programs and the tools that make them work. Explo
   </div>
   <div class="home-intro__details">
     <p>Bengaluru · Open to global opportunities</p>
-    <nav aria-label="Profile links"><a href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Résumé PDF</a><a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a><a href="https://github.com/djvirus9">GitHub</a></nav>
+    <nav aria-label="Profile links"><a href="https://www.linkedin.com/in/djvirus9">LinkedIn</a><a href="https://github.com/djvirus9">GitHub</a></nav>
   </div>
 </section>
 
@@ -57,7 +57,7 @@ description: "I build security programs and the tools that make them work. Explo
 
 <section class="contact-panel home-contact" id="contact" aria-labelledby="contact-title">
   <div><p class="eyebrow">Let’s work together</p><h2 id="contact-title">Building a product security function?</h2><p>I’m open to senior security engineering and technical leadership opportunities.</p></div>
-  <div class="actions"><a class="button button--primary" href="mailto:danishismyname1@gmail.com">Email Danish <span aria-hidden="true">↗</span></a><a class="button" href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">Read my résumé</a></div>
+  <div class="actions"><a class="button button--primary" href="mailto:danishismyname1@gmail.com">Email Danish <span aria-hidden="true">↗</span></a></div>
 </section>
 
 <section class="home-background" aria-labelledby="background-title">
@@ -73,7 +73,6 @@ description: "I build security programs and the tools that make them work. Explo
   <details id="credentials" class="home-details">
     <summary><span>Certifications <small>CKA · CKS · AWS Security – Specialty</small></span></summary>
     <ul class="home-credentials"><li><strong>CKS</strong> · Linux Foundation · 2026</li><li><strong>CKA</strong> · Linux Foundation · 2026</li><li><strong>AWS Certified Security – Specialty</strong></li></ul>
-    <p>Listed in my <a href="{{ '/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf' | relative_url }}">résumé</a>.</p>
   </details>
   <div class="home-more" id="open-source">
     <a href="https://github.com/djvirus9/awesome-devsecops-mastery-2026"><span>Open-source learning</span>DevSecOps Roadmap <span aria-hidden="true">↗</span></a>

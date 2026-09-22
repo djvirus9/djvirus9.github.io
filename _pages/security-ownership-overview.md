@@ -20,6 +20,6 @@ A useful control needs an accountable owner, evidence of operation, and a remedi
 
 ## Career and contact
 
-See the [experience timeline](/#experience), [résumé](/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf), and [public research](/cves/) for supporting context.
+See the [experience timeline](/#experience) and [public research](/cves/) for supporting context.
 
 I’m interested in senior Product Security, AppSec, Cloud Security, and security engineering lead roles. [Get in touch](mailto:danishismyname1@gmail.com).

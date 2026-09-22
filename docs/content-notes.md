@@ -5,7 +5,7 @@ This file is excluded from the generated website.
 ## Sources used
 
 - Existing portfolio source at commit `83dc252`.
-- The existing public résumé, `assets/Danish_Siddiqui_Security_Engineer_Resume.pdf`, for roles, employment dates, certifications, and reported outcomes.
+- The owner's résumé, previously hosted on the site, for roles, employment dates, certifications, and reported outcomes.
 - Traccar publisher advisories for CVE classifications, CVSS scores, and `djvirus9` reporter credit.
 - Open-Xchange CSAF advisories for Dovecot classifications and `djvirus@yeswehack` credit.
 - CVE Program records for CVE publication dates and CNA severity data.
@@ -19,7 +19,7 @@ Six IDs from the former page did not resolve through the public CVE API during r
 
 CVE-2024-57459 is a published SQL injection issue in CloudClassroom. The public record links a different researcher handle; a connection to Danish’s credit was not established. Restore this entry when the relevant attribution is supplied.
 
-The existing résumé’s overall 22-CVE claim has not been edited. Its PDF and URL are unchanged.
+The source résumé’s overall 22-CVE claim was not edited during the portfolio review. Both résumé PDFs and all public résumé download links were removed from the site on 23 September 2026 at the owner's request.
 
 ## Details that need the owner’s input
 

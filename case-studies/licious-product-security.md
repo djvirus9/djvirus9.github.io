@@ -51,4 +51,4 @@ I owned the security function and worked with application, platform, and leaders
 
 The security function gained defined ownership, a repeatable finding lifecycle, and shared engineering controls. CI/CD integration and custom rule tuning contributed to an approximately **30% reduction in critical production-bound vulnerabilities**.
 
-The detailed [DevSecOps case study](/case-studies/devsecops-pipeline/) explains the controls and trade-offs behind that result. The [résumé](/assets/Danish_Siddiqui_Security_Engineer_Resume.pdf) provides the wider role and employment history.
+The detailed [DevSecOps case study](/case-studies/devsecops-pipeline/) explains the controls and trade-offs behind that result. The [experience timeline](/#experience) provides the wider role and employment history.

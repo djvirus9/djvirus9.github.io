@@ -2,7 +2,7 @@
 
 Live site: [djvirus9.github.io](https://djvirus9.github.io/).
 
-A Jekyll portfolio with engineering case studies, a résumé-backed experience timeline, published vulnerability research, and technical notes. Existing public page and résumé URLs are preserved.
+A Jekyll portfolio with engineering case studies, an experience timeline, published vulnerability research, and technical notes. Résumé downloads are not hosted on the site.
 
 ## Local preview
 
